@@ -22,6 +22,8 @@ const StyledBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
 }))
 
+const iOS =
+  typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
 type PropsType = {
     open: boolean
@@ -47,6 +49,8 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer }) => {
                 onClose={toggleDrawer(false)}
                 onOpen={toggleDrawer(true)}
                 swipeAreaWidth={drawerBleeding}
+                disableBackdropTransition={!iOS} 
+                disableDiscovery={iOS}
                 disableSwipeToOpen={false}
                 ModalProps={{
                     keepMounted: true,
