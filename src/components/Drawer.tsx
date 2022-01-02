@@ -64,6 +64,7 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer }) => {
                         overflow: 'auto',
                     }}
                 >
+                    {/* todo: x onClick={() => close}  */}
                     <Navigation >
                         <WrapperLinks />
                     </Navigation>
