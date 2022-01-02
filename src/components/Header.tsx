@@ -2,7 +2,8 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material"
 import React from "react"
 import SwipeableEdgeDrawer from './Drawer'
-import { BallHeader } from './index.styled'
+import { BallHeader } from './Main/index.styled'
+import {NavLink} from 'react-router-dom'
  
 export const Header: React.FC = () => {
 
@@ -10,20 +11,21 @@ export const Header: React.FC = () => {
     const toggleDrawer = (newOpen: boolean) => () => {
         setOpen(newOpen)
       }
-    //@ts-ignore  
-    const container = window !== undefined ? () => window().document.body : undefined;
 
     return  (
         <AppBar position='static' component='header' sx={{backgroundColor: "white", color: 'black'}}>
             <Toolbar>
                 <BallHeader />
+                
                 <Typography
                     variant='h6'
                     component="span"
                     sx={{flexGrow: 1, fontWeight: 600, fontFamily: "mv boli, georgia"}}
                 >
-                    Michael Okhtov
+                    <NavLink to="/">Michael Okhtov</NavLink>
                 </Typography>
+                
+
                 <IconButton
                 onClick={toggleDrawer(true)}
                 color="inherit"

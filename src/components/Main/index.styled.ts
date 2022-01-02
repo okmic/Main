@@ -46,11 +46,11 @@ export const Title = styled.span`
     font-weight: ${(props: TitleProps) => props.fontWeight ? props.fontWeight : "none"};
     font-family: ${(props: TitleProps) => props.fontFamily ? props.fontFamily : "none"};
 `
-export const Links = styled.div`
+export const Links = styled.nav`
 width: 100%;
 display: flex;
 `
-export const LinkBall = styled.a`
+export const LinkBall = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,46 +94,4 @@ export const BallHeader = styled.span`
     height: 21px;
     border-radius: 50%;
     margin-right: 9px;
-`
-export const WrapperContact = styled.footer`
-    display: flex;
-    justify-content: space-between;
-    aling-items: center;
-    flex-wrap: wrap;
-    border-top: 1px solid #bbbbbb;
-    width: 100%;
-    padding: 3em 0;
-    margin-top: 20vh;
-    @media screen and (max-width: 650px){
-        dispay: flex;
-        flex-direction: column;
-        aling-items: center;
-    }
-`
-export const ItemContact = styled.div`
-    dispay: flex;
-    flex-direction: column;
-    aling-items: center;
-    padding: 0 15px;
-    & a {
-        text-decoration: none;
-        color: black;
-        font-family: sans-serif;
-    };
-    @media screen and (max-width: 650px){
-        margin-bottom: 1.5em;
-    }
-`
-export const WrapperSocial = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-`
-
-export const Navigation = styled.nav`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 `

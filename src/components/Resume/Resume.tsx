@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import { Item } from './index.styled';
 
 type PropsType = {
     titleOne: string
@@ -12,9 +12,6 @@ type PropsType = {
     descriptionTwo?: string
 }
 
-const Item = styled.div`
- background-color: #fff
-`
 
 const BoxRes: React.FC<PropsType> = (
     {titleOne, titleTwo, descTitle, 

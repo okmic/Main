@@ -1,7 +1,8 @@
-import { Content, Description, LinkBall, Links, Me, Title } from "./index.styled";
-import me from '../img/me.jpg'
+import { Content, Description, Links, Me, Title } from "./index.styled";
+import me from '../../img/me.jpg'
+import { WrapperLinks } from "../WrapperLinks";
 
-export const Home: React.FC = () => <Content>
+export const Main: React.FC = () => <Content>
     <Me>
         <img src={me} alt="me" />
     </Me>
@@ -12,9 +13,7 @@ export const Home: React.FC = () => <Content>
             I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
         </Title>
         <Links>
-            <LinkBall color='rgb(238, 163, 2)' href='/#'>Resume</LinkBall>
-            <LinkBall color='rgb(255, 59, 37)' href='/#'>Projects</LinkBall>
-            <LinkBall color='rgb(128, 216, 218)' href='/#'>Contact</LinkBall>
+            <WrapperLinks />
         </Links>
     </Description>
 </Content>

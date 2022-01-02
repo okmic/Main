@@ -1,13 +1,14 @@
 
-import * as React from 'react';
-import { Global } from '@emotion/react';
-import { styled } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { grey } from '@mui/material/colors';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import { LinkBall, Navigation } from './index.styled';
+import * as React from 'react'
+import { Global } from '@emotion/react'
+import { styled } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import { grey } from '@mui/material/colors'
+import Box from '@mui/material/Box'
+import SwipeableDrawer from '@mui/material/SwipeableDrawer'
+import { Navigation } from './Contacts/index.styled'
+import { WrapperLinks } from './WrapperLinks'
+
 
 const drawerBleeding = 56;
 
@@ -26,12 +27,6 @@ type PropsType = {
     open: boolean
     toggleDrawer: (newOpen: boolean) => any
 }
-
-const Navig = () => <Navigation>
-    <LinkBall color='rgb(238, 163, 2)' href='/#'>Resume</LinkBall>
-    <LinkBall color='rgb(255, 59, 37)' href='/#'>Projects</LinkBall>
-    <LinkBall color='rgb(128, 216, 218)' href='/#'>Contact</LinkBall>
-</Navigation>
 
 const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer }) => {
 
@@ -65,11 +60,13 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer }) => {
                         overflow: 'auto',
                     }}
                 >
-                    <Navig />
+                    <Navigation >
+                        <WrapperLinks />
+                    </Navigation>
                 </StyledBox>
             </SwipeableDrawer>
         </Root>
     );
 }
 
-export default SwipeableEdgeDrawer
+    export default SwipeableEdgeDrawer

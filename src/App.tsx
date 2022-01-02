@@ -1,10 +1,10 @@
 import { Header } from './components/Header'
 import { AppWrapper, Loading } from './index.styled'
-import { Contacts } from './components/Contacts'
-import { Home } from './components/Home';
+import { Contacts } from './components/Contacts/Contacts'
+import { Main } from './components/Main/Main';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Suspense } from 'react';
-import { Resume } from './components/Resume';
+import { Resume } from './components/Resume/Resume';
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
         <AppWrapper>
           <Header />
           <Routes>
-            <Route path="/" element={<Resume />} />
+            <Route path="/" element={<Main />} />
+            <Route path="/Resume" element={<Resume />} />
           </Routes>
           <Contacts />
         </AppWrapper>
