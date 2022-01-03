@@ -8,8 +8,6 @@ import Box from '@mui/material/Box'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import { Navigation } from '../Footer/index.styled'
 import { WrapperLinks } from './WrapperLinks'
-import CloseIcon from '@mui/icons-material/Close'
-import { Button } from '@mui/material'
 
 
 const drawerBleeding = 36;
@@ -32,7 +30,7 @@ const Puller = styled(Box)(({ theme }) => ({
     position: 'absolute',
     top: 8,
     left: 'calc(50% - 15px)',
-  }));
+}));
 
 const iOS =
     typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -69,22 +67,6 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen 
                     keepMounted: true,
                 }}
             >
-            <StyledBox
-            onClick={toggleDrawer(true)}
-          sx={{
-            position: 'absolute',
-            top: -drawerBleeding,
-            borderTopLeftRadius: 8,
-            borderTopRightRadius: 8,
-            visibility: 'visible',
-            right: 0,
-            left: 0,
-          }}
-        >
-          <Puller sx={{
-              backgroundColor: '#bbbbbb'
-          }} />
-        </StyledBox>
                 <StyledBox
                     sx={{
                         px: 2,
@@ -93,15 +75,11 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen 
                         overflow: 'auto',
                     }}
                 >
+                    <Puller sx={{
+                        backgroundColor: '#bbbbbb'
+                    }} />
                     <Navigation >
-                        <Button
-                            onClick={toggleDrawer(false)}
-                            sx={{ position: "absolute", top: 0, right: 0 }}
-                        >
-                            <CloseIcon />
-                        </Button>
                         <WrapperLinks setOpen={setOpen} />
-                        
                     </Navigation>
                 </StyledBox>
             </SwipeableDrawer>

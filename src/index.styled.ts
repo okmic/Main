@@ -1,4 +1,19 @@
-import styled from 'styled-components'
+import styled, {createGlobalStyle} from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    font-family: georgia, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: rgb(19, 18, 18);
+    cursor: pointer;
+}
+`
+export default GlobalStyle
 
 export const AppWrapper = styled.div`
 max-width: 1500px;

@@ -6,12 +6,14 @@ import { Suspense } from 'react';
 import { Resume } from './components/Resume/Resume';
 import { Projects } from './components/Projects/Projects';
 import { Contacts } from './components/Contacts/Contacts';
+import ScrollToTop from './ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <Suspense fallback={<Loading>Loading</Loading>}>
       <BrowserRouter >
         <AppWrapper>
+        <ScrollToTop />
           <Header />
           <Routes>
             <Route path="/My-Space" element={<Main />} />

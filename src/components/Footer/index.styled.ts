@@ -13,6 +13,7 @@ export const WrapperContact = styled.footer`
         dispay: flex;
         flex-direction: column;
         aling-items: center;
+        margin-top: 5vh;
     }
 `
 export const ItemContact = styled.div`

@@ -14,6 +14,7 @@ align-items: center;
 export const Me = styled.div`
 display: flex;
 max-width: 500px;
+max-height: 500px;
 justify-content: flex-end;
 padding: ${padding};
 & img {
@@ -22,7 +23,8 @@ padding: ${padding};
     border: black 1px solid;
 }
 @media screen and (max-width: 650px) {
-    max-width: 300px;
+    width: 300px;
+    height: 300px;
   }
 `
 export const Description = styled.div`
