@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Hr, Item, Span, TitleScreen, Wrapper } from "../Resume/index.styled"
+import { Hr, Item, Span, TitleScreen, Wrapper } from "../index.styled"
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import { Social } from "../Footer/Footer"

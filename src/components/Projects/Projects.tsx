@@ -1,4 +1,4 @@
-import { Hr, Item, Span, TitleScreen, Wrapper } from "../Resume/index.styled";
+import { Hr, Item, Span, TitleScreen, Wrapper } from "../index.styled";
 import canvas from '../../img/Canvas.png'
 import hadidja from '../../img/Hadidja.png'
 import { Footer } from "../Footer/Footer";

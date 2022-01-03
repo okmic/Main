@@ -1,7 +1,7 @@
 
 import { Footer } from "../Footer/Footer";
 import { BoxRes } from "./BoxRes";
-import { Hr, TitleScreen } from "./index.styled";
+import { Hr, TitleScreen } from "../index.styled";
 
 export const Resume = () => <>
   <TitleScreen>Resume</TitleScreen>

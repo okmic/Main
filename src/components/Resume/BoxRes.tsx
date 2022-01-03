@@ -1,5 +1,5 @@
 import React from 'react';
-import { Item, Wrapper, Description, Title, DescriptionTitle, Span } from './index.styled';
+import { Item, Wrapper, Description, Title, DescriptionTitle, Span } from '../index.styled';
 
 type PropsType = {
   titleOne: string
