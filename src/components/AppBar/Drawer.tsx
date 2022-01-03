@@ -9,7 +9,7 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import { Navigation } from '../Footer/index.styled'
 import { WrapperLinks } from './WrapperLinks'
 import CloseIcon from '@mui/icons-material/Close'
-import { Button, Typography } from '@mui/material'
+import { Button } from '@mui/material'
 
 
 const drawerBleeding = 36;
@@ -82,7 +82,7 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen 
           }}
         >
           <Puller sx={{
-              backgroundColor: 'rgb(25, 118, 210)'
+              backgroundColor: '#bbbbbb'
           }} />
         </StyledBox>
                 <StyledBox

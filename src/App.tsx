@@ -14,7 +14,7 @@ function App() {
         <AppWrapper>
           <Header />
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/My-Space" element={<Main />} />
             <Route path="/Resume" element={<Resume />} />
             <Route path="/Projects" element={<Projects />} />
             <Route path="/Contact" element={<Contacts />} />

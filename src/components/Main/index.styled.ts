@@ -72,20 +72,20 @@ export const LinkBall = styled.div<{ color?: string }>`
         background-color: #bbbbbb;
     }
 @media screen and (max-width: 750px) {
-    max-width: 75px;
-    max-height: 75px;
+    width: 75px;
+    height: 75px;
 }
 @media screen and (max-width: 650px) {
-    max-width: 90px;
-    max-height: 90px;
+    width:  100px;
+    height: 100px;
 }
 @media screen and (max-width: 350px) {
-    max-width: 80px;
-    max-height: 80px;
+    width: 86px;
+    height: 86px;
 }
 @media screen and (max-width: 300px) {
-    max-width: 70px;
-    max-height: 70px;
+    width: 70px;
+    height: 70px;
 }
 `
 export const BallHeader = styled.span`
