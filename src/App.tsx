@@ -1,24 +1,26 @@
-import { Header } from './components/Header'
+import { Header } from './components/AppBar/Header'
 import { AppWrapper, Loading } from './index.styled'
-import { Contacts } from './components/Contacts/Contacts'
 import { Main } from './components/Main/Main';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Resume } from './components/Resume/Resume';
+import { Projects } from './components/Projects/Projects';
+import { Contacts } from './components/Contacts/Contacts';
 
 function App() {
   return (
     <Suspense fallback={<Loading>Loading</Loading>}>
-      <HashRouter >
+      <BrowserRouter >
         <AppWrapper>
           <Header />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/Resume" element={<Resume />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Contact" element={<Contacts />} />
           </Routes>
-          <Contacts />
         </AppWrapper>
-      </HashRouter>
+      </BrowserRouter>
     </Suspense>
   );
 }

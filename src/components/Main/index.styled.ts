@@ -39,18 +39,18 @@ type TitleProps = {
     width?: string
     fontFamily?: string
 }
-export const Title = styled.span`
-    max-width: ${(props: TitleProps) => props.width ? props.width : "100%"};
-    font-size: ${(props: TitleProps) => props.fontSize ? props.fontSize : "15px"};
-    margin-bottom: ${(props: TitleProps) => props.mb ? props.mb : "0"};
-    font-weight: ${(props: TitleProps) => props.fontWeight ? props.fontWeight : "none"};
-    font-family: ${(props: TitleProps) => props.fontFamily ? props.fontFamily : "none"};
+export const Title = styled.span<TitleProps>`
+    max-width: ${(props) => props.width ? props.width : "100%"};
+    font-size: ${(props) => props.fontSize ? props.fontSize : "15px"};
+    margin-bottom: ${(props) => props.mb ? props.mb : "0"};
+    font-weight: ${(props) => props.fontWeight ? props.fontWeight : "none"};
+    font-family: ${(props) => props.fontFamily ? props.fontFamily : "none"};
 `
 export const Links = styled.nav`
 width: 100%;
 display: flex;
 `
-export const LinkBall = styled.div`
+export const LinkBall = styled.div<{ color?: string }>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@ export const LinkBall = styled.div`
     height: 115px;
     padding: 5px;
     border-radius: 50%;
-    background-color: ${(props: { color?: string }) => props.color ? props.color : "rgb(238, 163, 2)"};
+    background-color: ${(props) => props.color ? props.color : "rgb(238, 163, 2)"};
     border: black 1px solid;
     margin-right: 15px;
     transition: 0.7s;

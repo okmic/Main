@@ -6,11 +6,13 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { grey } from '@mui/material/colors'
 import Box from '@mui/material/Box'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
-import { Navigation } from './Contacts/index.styled'
+import { Navigation } from '../Footer/index.styled'
 import { WrapperLinks } from './WrapperLinks'
+import CloseIcon from '@mui/icons-material/Close'
+import { Button, Typography } from '@mui/material'
 
 
-const drawerBleeding = 56;
+const drawerBleeding = 36;
 
 const Root = styled('div')(({ theme }) => ({
     height: '100%',
@@ -22,15 +24,26 @@ const StyledBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
 }))
 
+const Puller = styled(Box)(({ theme }) => ({
+    width: 30,
+    height: 6,
+    backgroundColor: theme.palette.mode === 'light' ? grey[300] : grey[900],
+    borderRadius: 3,
+    position: 'absolute',
+    top: 8,
+    left: 'calc(50% - 15px)',
+  }));
+
 const iOS =
-  typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+    typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
 type PropsType = {
     open: boolean
     toggleDrawer: (newOpen: boolean) => any
+    setOpen: (open: boolean) => void
 }
 
-const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer }) => {
+const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen }) => {
 
     return (
         <Root>
@@ -39,7 +52,7 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer }) => {
                 styles={{
                     '.MuiDrawer-root > .MuiPaper-root': {
                         height: `calc(50% - ${drawerBleeding}px)`,
-                        overflow: 'visible',
+                        overflow: 'visible'
                     },
                 }}
             />
@@ -49,13 +62,29 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer }) => {
                 onClose={toggleDrawer(false)}
                 onOpen={toggleDrawer(true)}
                 swipeAreaWidth={drawerBleeding}
-                disableBackdropTransition={!iOS} 
+                disableBackdropTransition={!iOS}
                 disableDiscovery={iOS}
                 disableSwipeToOpen={false}
                 ModalProps={{
                     keepMounted: true,
                 }}
             >
+            <StyledBox
+            onClick={toggleDrawer(true)}
+          sx={{
+            position: 'absolute',
+            top: -drawerBleeding,
+            borderTopLeftRadius: 8,
+            borderTopRightRadius: 8,
+            visibility: 'visible',
+            right: 0,
+            left: 0,
+          }}
+        >
+          <Puller sx={{
+              backgroundColor: 'rgb(25, 118, 210)'
+          }} />
+        </StyledBox>
                 <StyledBox
                     sx={{
                         px: 2,
@@ -64,9 +93,15 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer }) => {
                         overflow: 'auto',
                     }}
                 >
-                    {/* todo: x onClick={() => close}  */}
                     <Navigation >
-                        <WrapperLinks />
+                        <Button
+                            onClick={toggleDrawer(false)}
+                            sx={{ position: "absolute", top: 0, right: 0 }}
+                        >
+                            <CloseIcon />
+                        </Button>
+                        <WrapperLinks setOpen={setOpen} />
+                        
                     </Navigation>
                 </StyledBox>
             </SwipeableDrawer>
@@ -74,4 +109,4 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer }) => {
     );
 }
 
-    export default SwipeableEdgeDrawer
+export default SwipeableEdgeDrawer

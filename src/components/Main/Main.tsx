@@ -1,8 +1,10 @@
 import { Content, Description, Links, Me, Title } from "./index.styled";
 import me from '../../img/me.jpg'
-import { WrapperLinks } from "../WrapperLinks";
+import { WrapperLinks } from "../AppBar/WrapperLinks"
+import { Footer } from '../Footer/Footer'
 
-export const Main: React.FC = () => <Content>
+export const Main: React.FC = () => <>
+<Content>
     <Me>
         <img src={me} alt="me" />
     </Me>
@@ -17,3 +19,5 @@ export const Main: React.FC = () => <Content>
         </Links>
     </Description>
 </Content>
+<Footer />
+</>

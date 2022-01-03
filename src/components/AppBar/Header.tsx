@@ -2,7 +2,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material"
 import React from "react"
 import SwipeableEdgeDrawer from './Drawer'
-import { BallHeader } from './Main/index.styled'
+import { BallHeader } from '../Main/index.styled'
 import {NavLink} from 'react-router-dom'
  
 export const Header: React.FC = () => {
@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
                     sx={{fontSize: '50px'}}
                     />
                 </IconButton>
-                <SwipeableEdgeDrawer open={open} toggleDrawer={toggleDrawer} />
+                <SwipeableEdgeDrawer open={open} toggleDrawer={toggleDrawer} setOpen={setOpen} />
             </Toolbar>
         </AppBar>
     )
