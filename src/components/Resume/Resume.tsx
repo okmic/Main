@@ -4,7 +4,7 @@ import { BoxRes } from "./BoxRes";
 import { Hr, TitleScreen } from "../index.styled";
 
 export const Resume = () => <>
-  <TitleScreen>Resume</TitleScreen>
+  <TitleScreen>Curriculum-Vitae</TitleScreen>
   <BoxRes
     titleOne='Work'
     titleTwo='Experience'

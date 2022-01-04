@@ -9,8 +9,8 @@ type PropsType = {
 export const WrapperLinks: React.FC<PropsType> = ({ setOpen }) => <>
     {!setOpen
         ? <>
-            <NavLink to="/Resume">
-                <LinkBall color='rgb(238, 163, 2)'>Resume</LinkBall>
+            <NavLink to="/Curriculum-Vitae">
+                <LinkBall color='rgb(238, 163, 2)'>CV</LinkBall>
             </NavLink>
             <NavLink to="/Projects">
                 <LinkBall color='rgb(255, 59, 37)'>Projects</LinkBall>
@@ -20,8 +20,8 @@ export const WrapperLinks: React.FC<PropsType> = ({ setOpen }) => <>
             </NavLink>
         </>
         : <>
-            <NavLink to="/Resume" onClick={() => setOpen(false)}>
-                <LinkBall color='rgb(238, 163, 2)'>Resume</LinkBall>
+            <NavLink to="/Curriculum-Vitae" onClick={() => setOpen(false)}>
+                <LinkBall color='rgb(238, 163, 2)'>CV</LinkBall>
             </NavLink>
             <NavLink to="/Projects" onClick={() => setOpen(false)}>
                 <LinkBall color='rgb(255, 59, 37)'>Projects</LinkBall>

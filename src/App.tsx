@@ -17,8 +17,8 @@ function App() {
         <ScrollToTop />
           <Header />
           <Routes>
-            <Route path="/My-Space" element={<Main />} />
-            <Route path="/Resume" element={<Resume />} />
+            <Route path="/Main" element={<Main />} />
+            <Route path="/Curriculum-Vitae" element={<Resume />} />
             <Route path="/Projects" element={<Projects />} />
             <Route path="/Contact" element={<Contacts />} />
             <Route path="/*" element={<NotFound />} />

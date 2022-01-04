@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
                     component="span"
                     sx={{flexGrow: 1, fontWeight: 600, fontFamily: "mv boli, georgia"}}
                 >
-                    <NavLink to="/My-Space">Michael Okhtov</NavLink>
+                    <NavLink to="/Main">Michael Okhtov</NavLink>
                 </Typography>
                 
 
