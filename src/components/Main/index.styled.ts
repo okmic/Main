@@ -7,6 +7,7 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+overflow: hidden;
 @media screen and (max-width: 650px) {
     flex-wrap: wrap-reverse;
   }
@@ -20,19 +21,18 @@ padding: ${padding};
 & img {
     max-width: 100%;
     border-radius: 50%;
-    border: black 1px solid;
+    border: #0071c5 1px solid;
 }
 @media screen and (max-width: 650px) {
     width: 300px;
     height: 300px;
-  }
+}
 `
 export const Description = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: ${padding};
-
 `
 type TitleProps = {
     fontSize: string
@@ -51,6 +51,11 @@ export const Title = styled.span<TitleProps>`
 export const Links = styled.nav`
 width: 100%;
 display: flex;
+animation: balls 1.1s 1 forwards;
+@keyframes balls {
+    0% { transform: translateX(15vw); }
+    100% { transform: translateX(0);}
+   }
 `
 export const LinkBall = styled.div<{ color?: string }>`
     display: flex;

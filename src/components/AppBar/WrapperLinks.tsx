@@ -7,7 +7,6 @@ type PropsType = {
 }
 
 export const WrapperLinks: React.FC<PropsType> = ({ setOpen }) => <>
-
     {!setOpen
         ? <>
             <NavLink to="/Resume">
