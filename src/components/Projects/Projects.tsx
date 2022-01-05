@@ -20,8 +20,7 @@ export const Projects = () => <>
     title="Hadidja Sweets"
     link="https://alpha-lucky.github.io/hadidja-sweets/"
     reposit="https://github.com/Alpha-Lucky/hadidja-sweets"
-    description="The online store Hadidja Sweets is focused on selling confectionery, the project may seem simple in appearance, but serious problems arose with the optimization, since the customer insisted on heavy decorative files like (video). This example shows my experience with cross-browser compatibility and web application optimization. The design was also developed by me.
-    The online store Khadija Sweets is focused on selling confectionery, the project may seem simple in appearance, but serious problems arose with the optimization, since the customer insisted on heavy decorative files like (video). This example shows my experience with cross-browser compatibility and web application optimization. The design was also developed by me."
+    description="The online store Hadidja Sweets is focused on selling confectionery, the project may seem simple in appearance, but serious problems arose with the optimization, since the customer insisted on heavy decorative files like (video). This example shows my experience with cross-browser compatibility and web application optimization. The design was also developed by me."
     image={hadidja}
   />
     <Hr />
