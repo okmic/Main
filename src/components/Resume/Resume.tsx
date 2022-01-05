@@ -9,21 +9,19 @@ export const Resume = () => <>
     titleOne='Work'
     titleTwo='Experience'
     descTitle='2017 - Present'
-    description="I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font."
+    description="Since 2017, he has carried out various orders for the development and maintenance of software under the leadership of senior staff, worked with CRM systems, databases, web applications, website, mobile applications, fire extinguishing software and emergency notification systems."
   />
   <Hr/>
   <BoxRes
     titleOne='Education'
-    descTitle='2015 - 2017'
-    description="I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font."
-    descTitleTwo='2012 - 2015'
-    descriptionTwo="I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you."
+    descTitle='20.07.2016 - 26.06.2021'
+    description="09.03.03 Applied Informatics, Bachelor's Degree. 1000924 5276007"
+    descTitleTwo='23.07.2019 - 25.06.2015'
+    descriptionTwo="09.02.04 Information systems (by industry), Diploma of secondary vocational education. Qualification, Information Systems Technician. 110904 0000091."
   />
    <Hr/>
   <BoxRes
     titleOne='Skills'
-    titleTwo='& Expertise'
-    description="I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font."
   />
   <Footer />
 </>

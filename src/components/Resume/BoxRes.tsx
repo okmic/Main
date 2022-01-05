@@ -6,7 +6,7 @@ type PropsType = {
   titleOne: string
   titleTwo?: string
   descTitle?: string
-  description: string
+  description?: string
   descTitleTwo?: string
   descriptionTwo?: string
 }
