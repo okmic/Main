@@ -4,8 +4,16 @@ import React from "react"
 import SwipeableEdgeDrawer from './Drawer'
 import { BallHeader } from '../Main/index.styled'
 import {NavLink} from 'react-router-dom'
- 
-export const Header: React.FC = () => {
+import { LinksType } from '../../types'
+
+type PropsType = {
+    state: {
+        name: string
+    }
+    links: LinksType
+}
+
+export const Header: React.FC<PropsType> = ({state, links}) => {
 
     const [open, setOpen] = React.useState(false)
     const toggleDrawer = (newOpen: boolean) => () => {
@@ -22,9 +30,8 @@ export const Header: React.FC = () => {
                     component="span"
                     sx={{flexGrow: 1, fontWeight: 600, fontFamily: "mv boli, georgia"}}
                 >
-                    <NavLink to="/Main">Michael Okhtov</NavLink>
+                    <NavLink to="/Main">{state.name}</NavLink>
                 </Typography>
-                
 
                 <IconButton
                 onClick={toggleDrawer(true)}
@@ -34,7 +41,7 @@ export const Header: React.FC = () => {
                     sx={{fontSize: '50px'}}
                     />
                 </IconButton>
-                <SwipeableEdgeDrawer open={open} toggleDrawer={toggleDrawer} setOpen={setOpen} />
+                <SwipeableEdgeDrawer links={links} open={open} toggleDrawer={toggleDrawer} setOpen={setOpen} />
             </Toolbar>
         </AppBar>
     )

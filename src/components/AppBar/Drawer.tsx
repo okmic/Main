@@ -8,6 +8,7 @@ import Box from '@mui/material/Box'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import { Navigation } from '../Footer/index.styled'
 import { WrapperLinks } from './WrapperLinks'
+import { LinksType } from '../../types'
 
 
 const drawerBleeding = 36;
@@ -39,9 +40,10 @@ type PropsType = {
     open: boolean
     toggleDrawer: (newOpen: boolean) => any
     setOpen: (open: boolean) => void
+    links: LinksType
 }
 
-const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen }) => {
+const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen, links }) => {
 
     return (
         <Root>
@@ -79,7 +81,7 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen 
                         backgroundColor: '#bbbbbb'
                     }} />
                     <Navigation >
-                        <WrapperLinks setOpen={setOpen} />
+                        <WrapperLinks links={links} setOpen={setOpen} />
                     </Navigation>
                 </StyledBox>
             </SwipeableDrawer>

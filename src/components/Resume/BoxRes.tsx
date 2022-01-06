@@ -1,6 +1,5 @@
 import React from 'react';
 import { Item, Wrapper, Description, Title, DescriptionTitle, Span } from '../index.styled';
-import { Skills } from './Skills';
 
 type PropsType = {
   titleOne: string
@@ -10,7 +9,6 @@ type PropsType = {
   descTitleTwo?: string
   descriptionTwo?: string
 }
-
 export const BoxRes: React.FC<PropsType> = (
     { titleOne, titleTwo, descTitle,
       description, descTitleTwo, descriptionTwo }) => <Wrapper>
@@ -52,6 +50,5 @@ export const BoxRes: React.FC<PropsType> = (
           </Description>
         </>
         }
-          {titleOne === "Skills" && <Skills />  }
       </Item>
     </Wrapper>

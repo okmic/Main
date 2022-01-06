@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react"
 import { Hr, Item, Span, TitleScreen, Wrapper } from "../index.styled"
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
@@ -6,21 +7,20 @@ import { Social } from "../Footer/Footer"
 import { Form } from "./Form"
 import { WrapperForm, Inputs, SocialWrapper } from "./index.styles";
 import { Button } from "@mui/material"
+import { ContactsType } from "../../types"
 
+type PropsType = {
+    contacts: ContactsType
+}
 
-export const Contacts = () => {
+export const Contacts: React.FC<PropsType> = ({contacts}) => {
 
     const [name, setName] = useState('')
-    const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
     let handleNameChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value)
-    } 
-
-    let handleLastNameChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setLastName(event.target.value)
     } 
 
     let handleEmailChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,11 +31,10 @@ export const Contacts = () => {
         setMessage(event.target.value)
     } 
 
-    const handleButton = (name: string, lastName: string, email: string, message: string) => {
+    const handleButton = (name: string, email: string, message: string) => {
         let array = [
             { 
             "Имя пользователя: ": name ,
-            "Фамилия пользователя: ": lastName,
             "Email: " : email,
             "Сообщение: ": message
         }
@@ -44,7 +43,7 @@ export const Contacts = () => {
     }
 
     return <>
-    <TitleScreen>Contact</TitleScreen>
+    <TitleScreen>{contacts.title}</TitleScreen>
     <Wrapper>
         <Item>
             <Span fs="17px" fw="500">
@@ -60,7 +59,7 @@ export const Contacts = () => {
             </Span>
             <Hr />
             <SocialWrapper>
-                <Span>Social</Span>
+                <Span>{contacts.social}</Span>
                 <Social />
             </SocialWrapper>
 
@@ -68,18 +67,17 @@ export const Contacts = () => {
         <Item>
             <WrapperForm>
                 <Inputs>
-                    <Form type="text" value={name} onChangeInput={handleNameChanged} label="First Name" />
-                    <Form type="text" value={lastName} onChangeInput={handleLastNameChanged} label="Last Name" />
+                    <Form type="text" value={name} onChangeInput={handleNameChanged} label={contacts.lebals.name} />
+                    <Form type="email" value={email} onChangeInput={handleEmailChanged} label={contacts.lebals.email} />
                 </Inputs>
                 <Inputs>
-                    <Form type="email" value={email} onChangeInput={handleEmailChanged} label="Email" />
-                    <Form type="text" value={message} onChangeInput={handleMessageChanged} label="Message" />
-                </Inputs>
-                <Button
-                onClick={() => handleButton(name, lastName, email, message)}
-                sx={{marginBottom: '3em'}}
+                    <Form type="text" value={message} onChangeInput={handleMessageChanged} label={contacts.lebals.message} />
+                    <Button
+                onClick={() => handleButton(name, email, message)}
                 variant="contained" 
-                >submit</Button>
+                >{contacts.lebals.submit}</Button>
+                </Inputs>
+
             </WrapperForm>
         </Item>
     </Wrapper>

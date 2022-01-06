@@ -8,6 +8,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 overflow: hidden;
+padding-top: 1em;
 @media screen and (max-width: 650px) {
     flex-wrap: wrap-reverse;
   }

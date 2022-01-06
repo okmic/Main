@@ -6,8 +6,14 @@ type PropsType = {
     title: string
     description: string
     image: string
-    link?: string
-    reposit: string
+    link?: {
+        title: string
+        href: string
+    }
+    reposit: {
+        title: string
+        href: string
+    }
 }
 
 export const BoxProject: React.FC<PropsType> = ({ title, description, image, link, reposit }) => <Wrapper>
@@ -16,12 +22,12 @@ export const BoxProject: React.FC<PropsType> = ({ title, description, image, lin
             <Span fs="23px" fw="550">{title}</Span>
             {link && <AWrapper>
                 <BallHeader />
-                <a target="_blank" rel="noreferrer" href={link}>Link to the deployed version</a>
+                <a target="_blank" rel="noreferrer" href={link.href}>{link.title}</a>
             </AWrapper>}
             <AWrapper>
                 <BallHeader />
-                <a target="_blank" rel="noreferrer" href={reposit}>
-                    {title === "GitHub" ? "GitHub profile link" : "Repository link"}
+                <a target="_blank" rel="noreferrer" href={reposit.href}>
+                    {reposit.title}
                 </a>
             </AWrapper>
         </WrapperLink>

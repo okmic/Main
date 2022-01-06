@@ -4,18 +4,23 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import { WrapperContact, ItemContact, WrapperSocial } from "./index.styled"
+import { FooterType } from "../../types"
 
-export const Footer: React.FC = () => <WrapperContact>
+type PropsType = {
+    footer: FooterType
+}
+
+export const Footer: React.FC<PropsType> = ({footer}) => <WrapperContact>
     <ItemContact>
-        <Typography sx={{ fontWeight: 700 }}>Phone</Typography>
+        <Typography sx={{ fontWeight: 700 }}>{footer.phone}</Typography>
         <a href="tel:+79887166917">+7(988)716-69-17</a>
     </ItemContact>
     <ItemContact>
-        <Typography sx={{ fontWeight: 700 }}>Email</Typography>
+        <Typography sx={{ fontWeight: 700 }}>{footer.email}</Typography>
         <a href="mailto:Okhtov.mz@gmail.com">Okhtov.mz@gmail.com</a>
     </ItemContact>
     <ItemContact>
-        <Typography sx={{ fontWeight: 700 }}>Write me</Typography>
+        <Typography sx={{ fontWeight: 700 }}>{footer.writeMe}</Typography>
         <Social />
     </ItemContact>
 </WrapperContact>

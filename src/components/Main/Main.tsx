@@ -1,23 +1,32 @@
-import { Content, Description, Links, Me, Title } from "./index.styled";
+import { Content, Description, Links, Me, Title } from "./index.styled"
 import me from '../../img/me.jpg'
 import { WrapperLinks } from "../AppBar/WrapperLinks"
 import { Footer } from '../Footer/Footer'
+import { FooterType, LinksType, MainType } from "../../types"
 
-export const Main: React.FC = () => <>
-<Content>
-    <Me>
-        <img src={me} alt="me" />
-    </Me>
-    <Description>
-        <Title fontFamily="mv boli" fontWeight="700" fontSize="95px" mb="15px">Hello</Title>
-        <Title fontFamily="mv boli" fontWeight="500" fontSize="25px" mb='7px'>A Bit About Me</Title>
-        <Title fontFamily='georgia' fontWeight="500" fontSize="15px" mb='15px' width='350px'>
-            I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
-        </Title>
-        <Links>
-            <WrapperLinks />
-        </Links>
-    </Description>
-</Content>
-<Footer />
-</>
+type PropsType = {
+    state: MainType
+    links: LinksType
+    footer: FooterType
+}
+
+export const Main: React.FC<PropsType> = ({ state, links, footer }) => {
+    return <>
+        <Content>
+            <Me>
+                <img src={me} alt="me" />
+            </Me>
+            <Description>
+                <Title fontFamily="mv boli" fontWeight="700" fontSize="95px" mb="15px">{state.title}</Title>
+                <Title fontFamily="mv boli" fontWeight="500" fontSize="25px" mb='7px'>{state.about}</Title>
+                <Title fontFamily='georgia' fontWeight="500" fontSize="15px" mb='15px' width='350px'>
+                   {state.descr}
+                </Title>
+                <Links>
+                    <WrapperLinks links={links} />
+                </Links>
+            </Description>
+        </Content>
+        <Footer footer={footer} />
+    </>
+}
