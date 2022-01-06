@@ -9,6 +9,7 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import { Navigation } from '../Footer/index.styled'
 import { WrapperLinks } from './WrapperLinks'
 import { LinksType } from '../../types'
+import SelectSwitches from '../Select/Select'
 
 
 const drawerBleeding = 36;
@@ -31,7 +32,14 @@ const Puller = styled(Box)(({ theme }) => ({
     position: 'absolute',
     top: 8,
     left: 'calc(50% - 15px)',
-}));
+}))
+
+const Switch = styled(Box)(() => ({
+    width: "100%",
+    maxHeight: '30px',
+    display: 'flex',
+    justifyContent: 'flex-end',
+}))
 
 const iOS =
     typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -41,9 +49,11 @@ type PropsType = {
     toggleDrawer: (newOpen: boolean) => any
     setOpen: (open: boolean) => void
     links: LinksType
+    lang: "Eng" | "Ru"
+    setLang: (lang: "Eng" | "Ru") => void
 }
 
-const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen, links }) => {
+const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen, links, lang, setLang }) => {
 
     return (
         <Root>
@@ -84,9 +94,12 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen,
                         <WrapperLinks links={links} setOpen={setOpen} />
                     </Navigation>
                 </StyledBox>
+                <Switch>
+                    <SelectSwitches lang={lang} setLang={setLang} />
+                </Switch>
             </SwipeableDrawer>
         </Root>
-    );
+    )
 }
 
 export default SwipeableEdgeDrawer
