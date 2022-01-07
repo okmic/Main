@@ -9,30 +9,32 @@ type PropsType = {
         projects: string
         contacts: string
     }
+    color: string
 }
 
-export const WrapperLinks: React.FC<PropsType> = ({ setOpen, links }) => <>
+
+export const WrapperLinks: React.FC<PropsType> = ({ setOpen, links, color }) => <>
     {!setOpen
         ? <>
             <NavLink to="/Curriculum-Vitae">
-                <LinkBall color='rgb(238, 163, 2)'>{links.cv}</LinkBall>
+                <LinkBall background='rgb(238, 163, 2)' color={color}>{links.cv}</LinkBall>
             </NavLink>
             <NavLink to="/Projects">
-                <LinkBall color='rgb(255, 59, 37)'>{links.projects}</LinkBall>
+                <LinkBall background='rgb(255, 59, 37)' color={color}>{links.projects}</LinkBall>
             </NavLink>
             <NavLink to="/Contact">
-                <LinkBall color='rgb(128, 216, 218)'>{links.contacts}</LinkBall>
+                <LinkBall background='rgb(128, 216, 218)' color={color}>{links.contacts}</LinkBall>
             </NavLink>
         </>
         : <>
             <NavLink to="/Curriculum-Vitae" onClick={() => setOpen(false)}>
-                <LinkBall color='rgb(238, 163, 2)'>{links.cv}</LinkBall>
+                <LinkBall background='rgb(238, 163, 2)' color={color}>{links.cv}</LinkBall>
             </NavLink>
             <NavLink to="/Projects" onClick={() => setOpen(false)}>
-                <LinkBall color='rgb(255, 59, 37)'>{links.projects}</LinkBall>
+                <LinkBall background='rgb(255, 59, 37)' color={color}>{links.projects}</LinkBall>
             </NavLink>
             <NavLink to="/Contact" onClick={() => setOpen(false)}>
-                <LinkBall color='rgb(128, 216, 218)'>{links.contacts}</LinkBall>
+                <LinkBall background='rgb(128, 216, 218)' color={color}>{links.contacts}</LinkBall>
             </NavLink>
         </>}
 </>

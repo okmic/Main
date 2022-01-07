@@ -11,9 +11,10 @@ import { ContactsType } from "../../types"
 
 type PropsType = {
     contacts: ContactsType
+    theme: boolean
 }
 
-export const Contacts: React.FC<PropsType> = ({contacts}) => {
+export const Contacts: React.FC<PropsType> = ({contacts, theme }) => {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -67,11 +68,11 @@ export const Contacts: React.FC<PropsType> = ({contacts}) => {
         <Item>
             <WrapperForm>
                 <Inputs>
-                    <Form type="text" value={name} onChangeInput={handleNameChanged} label={contacts.lebals.name} />
-                    <Form type="email" value={email} onChangeInput={handleEmailChanged} label={contacts.lebals.email} />
+                    <Form type="text"  value={name} onChangeInput={handleNameChanged} label={contacts.lebals.name} theme={theme}  />
+                    <Form type="email" value={email} onChangeInput={handleEmailChanged} label={contacts.lebals.email} theme={theme} />
                 </Inputs>
                 <Inputs>
-                    <Form type="text" value={message} onChangeInput={handleMessageChanged} label={contacts.lebals.message} />
+                    <Form type="text" value={message} onChangeInput={handleMessageChanged} label={contacts.lebals.message} theme={theme} />
                     <Button
                 onClick={() => handleButton(name, email, message)}
                 variant="contained" 

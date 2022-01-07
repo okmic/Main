@@ -1,18 +1,19 @@
 import { Content, Description, Links, Me, Title } from "./index.styled"
 import me from '../../img/me.jpg'
 import { WrapperLinks } from "../AppBar/WrapperLinks"
-import { Footer } from '../Footer/Footer'
-import { FooterType, LinksType, MainType } from "../../types"
+import { LinksType, MainType } from "../../types"
 
 type PropsType = {
     state: MainType
     links: LinksType
-    footer: FooterType
+    theme: boolean 
 }
 
-export const Main: React.FC<PropsType> = ({ state, links, footer }) => {
-    return <>
-        <Content>
+export const Main: React.FC<PropsType> = ({ state, links, theme }) => {
+
+    const color = !theme ? "rgb(19, 18, 18)" : '#fff'
+    
+    return <Content>
             <Me>
                 <img src={me} alt="me" />
             </Me>
@@ -23,10 +24,9 @@ export const Main: React.FC<PropsType> = ({ state, links, footer }) => {
                    {state.descr}
                 </Title>
                 <Links>
-                    <WrapperLinks links={links} />
+                    <WrapperLinks color={color} links={links} />
                 </Links>
             </Description>
         </Content>
-        <Footer footer={footer} />
-    </>
 }
+

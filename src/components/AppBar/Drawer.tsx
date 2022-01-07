@@ -10,6 +10,7 @@ import { Navigation } from '../Footer/index.styled'
 import { WrapperLinks } from './WrapperLinks'
 import { LinksType } from '../../types'
 import SelectSwitches from '../Select/Select'
+import { ColorsType } from './Header'
 
 
 const drawerBleeding = 36;
@@ -21,7 +22,7 @@ const Root = styled('div')(({ theme }) => ({
 }))
 
 const StyledBox = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
+    backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800]
 }))
 
 const Puller = styled(Box)(({ theme }) => ({
@@ -51,9 +52,12 @@ type PropsType = {
     links: LinksType
     lang: "Eng" | "Ru"
     setLang: (lang: "Eng" | "Ru") => void
+    theme: boolean
+    setTheme: (ch: boolean) => void
+    colors: ColorsType
 }
 
-const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen, links, lang, setLang }) => {
+const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen, links, lang, setLang, theme, setTheme, colors }) => {
 
     return (
         <Root>
@@ -62,7 +66,7 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen,
                 styles={{
                     '.MuiDrawer-root > .MuiPaper-root': {
                         height: `calc(50% - ${drawerBleeding}px)`,
-                        overflow: 'visible'
+                        overflow: 'visible',
                     },
                 }}
             />
@@ -85,18 +89,21 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen,
                         pb: 2,
                         height: '100%',
                         overflow: 'auto',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        backgroundColor: colors.background
                     }}
                 >
                     <Puller sx={{
-                        backgroundColor: '#bbbbbb'
+                        backgroundColor: colors.color
                     }} />
                     <Navigation >
-                        <WrapperLinks links={links} setOpen={setOpen} />
+                        <WrapperLinks links={links} setOpen={setOpen} color={colors.color} />
                     </Navigation>
-                </StyledBox>
-                <Switch>
-                    <SelectSwitches lang={lang} setLang={setLang} />
+                    <Switch>
+                    <SelectSwitches colors={colors} lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} />
                 </Switch>
+                </StyledBox>
             </SwipeableDrawer>
         </Root>
     )

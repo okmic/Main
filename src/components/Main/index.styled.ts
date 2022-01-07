@@ -58,20 +58,21 @@ animation: balls 1.1s 1 forwards;
     100% { transform: translateX(0);}
    }
 `
-export const LinkBall = styled.div<{ color?: string }>`
+export const LinkBall = styled.div<{ color?: string, background?: string }>`
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: ${(props) => props.color ? props.color : "black"};
+    text-shadow: 0 0 1em black;
     font-size: 15px;
     font-weight: 600;
     width: 115px;
     height: 115px;
     padding: 5px;
     border-radius: 50%;
-    background-color: ${(props) => props.color ? props.color : "rgb(238, 163, 2)"};
-    border: black 1px solid;
+    background-color: ${(props) => props.background ? props.background : "rgb(238, 163, 2)"};
+    border: 1px solid ${(props) => props.color ? props.color : "black"};;
     margin-right: 15px;
     transition: 0.7s;
     font-family: mv boli;
@@ -94,6 +95,14 @@ export const LinkBall = styled.div<{ color?: string }>`
 @media screen and (max-width: 300px) {
     width: 70px;
     height: 70px;
+}
+@media screen and (max-height: 450px) {
+    max-width: 70px;
+    max-height: 70px;
+}
+@media screen and (max-height: 300px) {
+    width: 70px;
+    height: 30px;
 }
 `
 export const BallHeader = styled.span`

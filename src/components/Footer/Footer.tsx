@@ -1,5 +1,6 @@
 import React from "react"
 import { Typography } from "@mui/material"
+import EmailIcon from '@mui/icons-material/Email'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import GitHubIcon from '@mui/icons-material/GitHub'
@@ -8,24 +9,32 @@ import { FooterType } from "../../types"
 
 type PropsType = {
     footer: FooterType
+    theme: boolean
 }
 
-export const Footer: React.FC<PropsType> = ({footer}) => <WrapperContact>
-    <ItemContact>
+export const Footer: React.FC<PropsType> = ({footer, theme}) => { 
+    
+    const color = !theme ? 'rgb(19, 18, 18)' : "#fff"
+    
+    return <WrapperContact>
+    <ItemContact theme={color}>
         <Typography sx={{ fontWeight: 700 }}>{footer.phone}</Typography>
         <a href="tel:+79887166917">+7(988)716-69-17</a>
     </ItemContact>
-    <ItemContact>
-        <Typography sx={{ fontWeight: 700 }}>{footer.email}</Typography>
-        <a href="mailto:Okhtov.mz@gmail.com">Okhtov.mz@gmail.com</a>
-    </ItemContact>
-    <ItemContact>
+    <ItemContact theme={color}>
         <Typography sx={{ fontWeight: 700 }}>{footer.writeMe}</Typography>
         <Social />
     </ItemContact>
-</WrapperContact>
+    <ItemContact>
+        <Typography sx={{ fontWeight: 700 }}>React Application</Typography>
+        <Typography sx={{ fontWeight: 700 }}>By Michael Okhtov.</Typography>
+    </ItemContact>
+</WrapperContact>}
 
 export const Social: React.FC = () => <WrapperSocial>
+    <a href="mailto:Okhtov.mz@gmail.com">
+        <EmailIcon sx={{ fontSize: '25px', marginRight: '5px' }} />
+    </a>
     <a target="_blank" href=" https://wa.me/+79965248184">
         <WhatsAppIcon sx={{ fontSize: '25px' }} />
     </a>

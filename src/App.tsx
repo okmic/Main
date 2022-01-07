@@ -1,5 +1,5 @@
 import { Header } from './components/AppBar/Header'
-import { AppWrapper, Loading } from './index.styled'
+import GlobalStyle, { AppWrapper, Loading} from './index.styled'
 import { Main } from './components/Main/Main'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Suspense, useEffect, useState } from 'react'
@@ -10,6 +10,7 @@ import ScrollToTop from './ScrollToTop/ScrollToTop'
 import {NotFound} from './components/NotFound/NotFound'
 import { DataEng, DataRu } from './data'
 import { dataType } from './types'
+import { Footer } from './components/Footer/Footer'
 
 type LangType = "Eng" | "Ru" 
 
@@ -17,6 +18,8 @@ function App() {
 
   const [lang, setLang] = useState<LangType>("Eng")
   const [state, setState] = useState<dataType>(DataEng)
+  const [theme, setTheme] = useState(false)
+
   
   useEffect(() => {
     if(lang === "Eng") {
@@ -28,18 +31,27 @@ function App() {
 
 
   return (
+
     <Suspense fallback={<Loading>Loading</Loading>}>
       <BrowserRouter >
-        <AppWrapper>
+        <AppWrapper stateTheme={theme}>
         <ScrollToTop />
-          <Header state={state.header} links={state.links} lang={lang} setLang={setLang} />
+          <Header 
+          state={state.header} 
+          links={state.links} 
+          lang={lang} 
+          setLang={setLang}
+          theme={theme}
+          setTheme={setTheme}
+          />
           <Routes>
-            <Route path="/Main" element={<Main state={state.main} links={state.links} footer={state.footer} />} />
-            <Route path="/Curriculum-Vitae" element={<Resume footer={state.footer} cv={state.cv} />} />
-            <Route path="/Projects" element={<Projects footer={state.footer} projects={state.projects} />} />
-            <Route path="/Contact" element={<Contacts contacts={state.contacts} />} />
+            <Route path="/Main" element={<Main state={state.main} links={state.links} theme={theme} />} />
+            <Route path="/Curriculum-Vitae" element={<Resume cv={state.cv} />} />
+            <Route path="/Projects" element={<Projects projects={state.projects} />} />
+            <Route path="/Contact" element={<Contacts contacts={state.contacts} theme={theme} />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
+          <Footer footer={state.footer} theme={theme} />
         </AppWrapper>
       </BrowserRouter>
     </Suspense>

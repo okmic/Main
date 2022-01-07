@@ -8,7 +8,10 @@ export const WrapperContact = styled.footer`
     border-top: 1px solid #bbbbbb;
     width: 100%;
     padding: 3em 0;
-    margin-top: 20vh;
+    margin-top: 10vh;
+    & a {
+        color: #fff;
+    };
     @media screen and (max-width: 650px){
         dispay: flex;
         flex-direction: column;
@@ -16,16 +19,16 @@ export const WrapperContact = styled.footer`
         margin-top: 5vh;
     }
 `
-export const ItemContact = styled.div`
+export const ItemContact = styled.div<{theme: string}>`
     dispay: flex;
     flex-direction: column;
     aling-items: center;
     padding: 0 15px;
     & a {
         text-decoration: none;
-        color: black;
         font-family: sans-serif;
-    };
+        color: ${(props) => props.theme};
+    }
     @media screen and (max-width: 650px){
         margin-bottom: 1.5em;
     }

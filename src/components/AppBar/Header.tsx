@@ -8,6 +8,11 @@ import { LinksType } from '../../types'
 import SelectSwitches from '../Select/Select'
 import styled from 'styled-components'
 
+export type ColorsType = {
+    color: string
+    background: string
+}
+
 type PropsType = {
     state: {
         name: string
@@ -15,6 +20,8 @@ type PropsType = {
     links: LinksType
     lang: "Eng" | "Ru"
     setLang: (lang: "Eng" | "Ru") => void
+    theme: boolean
+    setTheme: (ch: boolean) => void
 }
 const Switch = styled.div`
     @media screen and (max-width: 530px) {
@@ -22,15 +29,20 @@ const Switch = styled.div`
     }
 `
 
-export const Header: React.FC<PropsType> = ({ state, links, lang, setLang }) => {
+export const Header: React.FC<PropsType> = ({ state, links, lang, setLang, theme, setTheme }) => {
 
     const [open, setOpen] = React.useState(false)
     const toggleDrawer = (newOpen: boolean) => () => {
         setOpen(newOpen)
     }
 
+    const colors =  {
+        background: theme ? '#fff' : "rgba(59, 59, 59)",
+        color: theme ? "rgb(19, 18, 18)" : '#fff'
+    } 
+
     return (
-        <AppBar position='static' component='header' sx={{ backgroundColor: "white", color: 'black' }}>
+        <AppBar position='static' component='header' sx={{backgroundColor: colors.background}}>
             <Toolbar>
                 <BallHeader />
                 <Typography
@@ -38,26 +50,26 @@ export const Header: React.FC<PropsType> = ({ state, links, lang, setLang }) => 
                     component="span"
                     sx={{ flexGrow: 1, fontWeight: 600, fontFamily: "mv boli, georgia" }}
                 >
-                    <NavLink to="/Main">{state.name}</NavLink>
+                    <NavLink to="/Main" style={{ color: colors.color }}>{state.name}</NavLink>
                 </Typography>
                 <Switch>
-                    <SelectSwitches lang={lang} setLang={setLang} />
+                    <SelectSwitches colors={colors} lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} />
                 </Switch>
-                <IconButton
+
+                <MenuIcon
                     onClick={toggleDrawer(true)}
-                    color="inherit"
-                >
-                    <MenuIcon
-                        sx={{ fontSize: '50px', color: "rgb(19, 18, 18)" }}
-                    />
-                </IconButton>
+                    sx={{ fontSize: '50px', cursor: 'pointer', color: colors.color}}
+                />
                 <SwipeableEdgeDrawer
+                    colors={colors}
                     links={links}
                     open={open}
                     toggleDrawer={toggleDrawer}
                     setOpen={setOpen}
                     lang={lang}
-                    setLang={setLang} />
+                    setLang={setLang}
+                    theme={theme}
+                    setTheme={setTheme} />
             </Toolbar>
         </AppBar>
     )
