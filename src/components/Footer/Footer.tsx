@@ -23,7 +23,7 @@ export const Footer: React.FC<PropsType> = ({footer, theme}) => {
     </ItemContact>
     <ItemContact theme={color}>
         <Typography sx={{ fontWeight: 700 }}>{footer.writeMe}</Typography>
-        <Social />
+        <Social color={color} />
     </ItemContact>
     <ItemContact>
         <Typography sx={{ fontWeight: 700 }}>React Application</Typography>
@@ -31,18 +31,18 @@ export const Footer: React.FC<PropsType> = ({footer, theme}) => {
     </ItemContact>
 </WrapperContact>}
 
-export const Social: React.FC = () => <WrapperSocial>
+export const Social: React.FC<{color: string}> = ({color}) => <WrapperSocial>
     <a href="mailto:Okhtov.mz@gmail.com">
-        <EmailIcon sx={{ fontSize: '25px', marginRight: '5px' }} />
+        <EmailIcon sx={{ fontSize: '25px', marginRight: '5px', color: color}} />
     </a>
     <a target="_blank" href=" https://wa.me/+79965248184">
-        <WhatsAppIcon sx={{ fontSize: '25px' }} />
+        <WhatsAppIcon sx={{ fontSize: '25px', color: color}} />
     </a>
     <a target="_blank" href=" https://t.me/OkhMichael"
         style={{ marginRight: '3px' }}>
-        <TelegramIcon sx={{ fontSize: '25px' }} />
+        <TelegramIcon sx={{ fontSize: '25px', color: color}} />
     </a>
     <a target="_blank" href=" https://github.com/Alpha-Lucky">
-        <GitHubIcon sx={{ fontSize: '25px' }} />
+        <GitHubIcon sx={{ fontSize: '25px', color: color}} />
     </a>
 </WrapperSocial>

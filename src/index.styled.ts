@@ -11,19 +11,21 @@ body {
 }
 a {
     text-decoration: none;
-    color: rgb(19, 18, 18);
     cursor: pointer;
+
+
+    color: rgb(19, 18, 18);
 }
 /* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
-    width: 15px; /* ширина для вертикального скролла */
+    width: 11px; /* ширина для вертикального скролла */
     height: 5px; /* высота для горизонтального скролла */
     background-color: #bbbbbb;
 }
 
 /* ползунок скроллбара */
 ::-webkit-scrollbar-thumb {
-    background-color: #000;
+    background-color: rgb(19, 18, 18);
     border-radius: 16em;
 }
 

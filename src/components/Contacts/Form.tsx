@@ -6,11 +6,11 @@ type PropsType = {
     value: string
     type: string
     onChangeInput: (event: React.ChangeEvent<HTMLInputElement>) => void
-    theme: boolean
+    color: string
 }
 
-export const Form: React.FC<PropsType> = React.memo(({ value, onChangeInput, label, type, theme }) => {
-/*     const color =  */ 
+const Form: React.FC<PropsType> = ({ value, onChangeInput, label, type, color }) => {
+
     return <>
         <TextField
             type={type}
@@ -19,12 +19,16 @@ export const Form: React.FC<PropsType> = React.memo(({ value, onChangeInput, lab
             variant="outlined"
             value={value}
             onChange={onChangeInput}
-            color="success"
-            
+            color="primary"
+            InputLabelProps={{
+                style: {
+                  color: color
+
+                } }}
             sx={{
                 m: '0 1em 1em 0',
-                color: '#fff'
-            }} />
+           }} />
     </>
 }
-)
+
+export default React.memo(Form)

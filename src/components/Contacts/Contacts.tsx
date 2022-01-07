@@ -4,7 +4,7 @@ import { Hr, Item, Span, TitleScreen, Wrapper } from "../index.styled"
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import { Social } from "../Footer/Footer"
-import { Form } from "./Form"
+import  Form  from "./Form"
 import { WrapperForm, Inputs, SocialWrapper } from "./index.styles";
 import { Button } from "@mui/material"
 import { ContactsType } from "../../types"
@@ -19,6 +19,8 @@ export const Contacts: React.FC<PropsType> = ({contacts, theme }) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+
+    const color = !theme ? 'rgb(19, 18, 18)' : "#fff"
 
     let handleNameChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value)
@@ -47,13 +49,13 @@ export const Contacts: React.FC<PropsType> = ({contacts, theme }) => {
     <TitleScreen>{contacts.title}</TitleScreen>
     <Wrapper>
         <Item>
-            <Span fs="17px" fw="500">
+            <Span fs="17px" fw="500" color={color}>
                 <a href="tel:+79887166917">
                 <PhoneAndroidIcon sx={{marginBottom: "-6px"}}/>  +7(988)716-69-17
                 </a>
             </Span>
             <Hr />
-            <Span fs="17px" fw="500">
+            <Span fs="17px" fw="500" color={color}>
                 <a href="mailto:Okhtov.mz@gmail.com">
                     <MailOutlineIcon sx={{marginBottom: "-6px"}}/>  Okhtov.mz@gmail.com
                 </a>
@@ -61,18 +63,18 @@ export const Contacts: React.FC<PropsType> = ({contacts, theme }) => {
             <Hr />
             <SocialWrapper>
                 <Span>{contacts.social}</Span>
-                <Social />
+                <Social color={color} />
             </SocialWrapper>
 
         </Item>
         <Item>
             <WrapperForm>
                 <Inputs>
-                    <Form type="text"  value={name} onChangeInput={handleNameChanged} label={contacts.lebals.name} theme={theme}  />
-                    <Form type="email" value={email} onChangeInput={handleEmailChanged} label={contacts.lebals.email} theme={theme} />
+                    <Form type="text"  value={name} onChangeInput={handleNameChanged} label={contacts.lebals.name} color={color}  />
+                    <Form type="email" value={email} onChangeInput={handleEmailChanged} label={contacts.lebals.email} color={color} />
                 </Inputs>
                 <Inputs>
-                    <Form type="text" value={message} onChangeInput={handleMessageChanged} label={contacts.lebals.message} theme={theme} />
+                    <Form type="text" value={message} onChangeInput={handleMessageChanged} label={contacts.lebals.message} color={color} />
                     <Button
                 onClick={() => handleButton(name, email, message)}
                 variant="contained" 

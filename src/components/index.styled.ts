@@ -42,9 +42,13 @@ export const DescriptionTitle = styled.div`
 type SpanType = {
     fs?: string
     fw?: string 
+    color?: string 
 }
 export const Span = styled.span<SpanType>`
     font-size: ${(props) => props.fs ? props.fs : "19px"};
     font-weight: ${(props) => props.fw ? props.fw : "700"};
     fontFamily: "mv boli, georgia";
+& a {
+    color: ${(props) => props.color ? props.color : "rgb(19, 18, 18)" }
+}
 `
