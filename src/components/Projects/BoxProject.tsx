@@ -14,29 +14,34 @@ type PropsType = {
         title: string
         href: string
     }
+    theme: boolean
 }
 
-export const BoxProject: React.FC<PropsType> = ({ title, description, image, link, reposit }) => <Wrapper>
-    <Item>
-        <WrapperLink >
-            <Span fs="23px" fw="550">{title}</Span>
-            {link && <AWrapper>
-                <BallHeader />
-                <a target="_blank" rel="noreferrer" href={link.href}>{link.title}</a>
-            </AWrapper>}
-            <AWrapper>
-                <BallHeader />
-                <a target="_blank" rel="noreferrer" href={reposit.href}>
-                    {reposit.title}
-                </a>
-            </AWrapper>
-        </WrapperLink>
-        <Span fs="17px" fw="500">{description}</Span>
-    </Item>
-    <Item>
-        <ImgWrapper>
-            <img src={image} alt={title} />
-        </ImgWrapper>
+export const BoxProject: React.FC<PropsType> = ({ title, description, image, link, reposit, theme }) => {
 
-    </Item>
-</Wrapper>
+    const color = !theme ? 'rgb(19, 18, 18)' : "#fff"
+
+    return <Wrapper>
+        <Item>
+            <WrapperLink >
+                <Span fs="23px" fw="550">{title}</Span>
+                {link && <AWrapper theme={color}>
+                    <BallHeader />
+                    <a target="_blank" rel="noreferrer" href={link.href}>{link.title}</a>
+                </AWrapper>}
+                <AWrapper theme={color}>
+                    <BallHeader />
+                    <a target="_blank" rel="noreferrer" href={reposit.href}>
+                        {reposit.title}
+                    </a>
+                </AWrapper>
+            </WrapperLink>
+            <Span fs="17px" fw="500">{description}</Span>
+        </Item>
+        <Item>
+            <ImgWrapper>
+                <img src={image} alt={title} />
+            </ImgWrapper>
+        </Item>
+    </Wrapper>
+}

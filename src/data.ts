@@ -1,5 +1,5 @@
-import canvas from './img/Canvas.png'
-import hadidja from './img/Hadidja.png'
+import canvas from './img/Canvas.jpg'
+import hadidja from './img/Hadidja.jpg'
 import gb from './img/gb.jpg'
 import html from './img/skills/html.png'
 import js from './img/skills/js.png'
@@ -113,7 +113,6 @@ export const DataEng: dataType = {
     },
     contacts: {
         title: "Contacts",
-        social: 'Social',
         lebals: {
                 name: 'Name',
                 email: 'Email',
@@ -228,7 +227,6 @@ export const DataRu: dataType = {
     },
     contacts: {
         title: "Контакты",
-        social: 'Сети',
         lebals: {
                 name: 'Имя',
                 email: 'Почта',

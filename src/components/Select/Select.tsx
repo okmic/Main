@@ -1,11 +1,11 @@
 import React from "react"
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import styled from "styled-components";
-import LanguageIcon from '@mui/icons-material/Language';
-import ControlledSwitches from "./Switch";
-import { ColorsType } from "../AppBar/Header";
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
+import styled from "styled-components"
+import TranslateIcon from '@mui/icons-material/Translate'
+import { ColorsType } from "../AppBar/Header"
+import UseSwitchesCustom from "./UseSwitchesCustom"
 
 type PropsType = {
     lang: "Eng" | "Ru" 
@@ -30,8 +30,9 @@ const SelectSwitches: React.FC<PropsType> = ({lang, setLang, theme, setTheme, co
     
     return (
         <Wrapper>
-            <LanguageIcon  sx={{color: colors.color, fontSize: "32px"}} />
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 90}}>
+            <UseSwitchesCustom theme={theme} setTheme={setTheme} />
+            <TranslateIcon  sx={{color: colors.color, fontSize: "29px"}} />
+            <FormControl variant="standard" sx={{ m: 1, minWidth: 50}}>
                 <Select
                     labelId="demo-simple-select-standard-label"
                     id="demo-simple-select-standard"
@@ -44,7 +45,6 @@ const SelectSwitches: React.FC<PropsType> = ({lang, setLang, theme, setTheme, co
                     <MenuItem value={"Ru"}>Ru</MenuItem>
                 </Select>
             </FormControl>
-            <ControlledSwitches theme={theme} setTheme={setTheme} />
         </Wrapper>
     );
 }

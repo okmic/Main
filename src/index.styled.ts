@@ -1,21 +1,23 @@
 import styled, {createGlobalStyle} from 'styled-components'
 
+export const fontFamily = '"Comic Sans MS", "Comic Sans", "cursive", georgia, "cursive", sans-serif'
+
 const GlobalStyle = createGlobalStyle`
+* {
+    font-family: "Comic Sans MS", "Comic Sans", "cursive", georgia, 'cursive', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
     max-width: 100vw;
     height: 100%;
-    font-family: georgia, sans-serif;
-
 }
 a {
     text-decoration: none;
     cursor: pointer;
-
-
-    color: rgb(19, 18, 18);
 }
+
 /* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
     width: 11px; /* ширина для вертикального скролла */

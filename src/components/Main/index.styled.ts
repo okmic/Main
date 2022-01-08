@@ -47,7 +47,7 @@ export const Title = styled.span<TitleProps>`
     font-size: ${(props) => props.fontSize ? props.fontSize : "15px"};
     margin-bottom: ${(props) => props.mb ? props.mb : "0"};
     font-weight: ${(props) => props.fontWeight ? props.fontWeight : "none"};
-    font-family: ${(props) => props.fontFamily ? props.fontFamily : "none"};
+    font-family: ${(props) => props.fontFamily ? props.fontFamily : '"Comic Sans MS", "Comic Sans", "cursive", georgia, "cursive", sans-serif'};
 `
 export const Links = styled.nav`
 width: 100%;
@@ -58,7 +58,7 @@ animation: balls 1.1s 1 forwards;
     100% { transform: translateX(0);}
    }
 `
-export const LinkBall = styled.div<{ color?: string, background?: string }>`
+export const LinkBall = styled.div<{ color?: string, background?: string, fontFamily?: string }>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,8 +74,7 @@ export const LinkBall = styled.div<{ color?: string, background?: string }>`
     background-color: ${(props) => props.background ? props.background : "rgb(238, 163, 2)"};
     border: 1px solid ${(props) => props.color ? props.color : "black"};;
     margin-right: 15px;
-    transition: 0.7s;
-    font-family: mv boli;
+    transition: 0.7s;d
     &:hover {
         transition: 0.5s;
         background-color: #bbbbbb;

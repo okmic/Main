@@ -55,7 +55,6 @@ export type CVType = {
 
 export type ContactsType = {
     title: string
-    social: string
     lebals: {
         name: string
         email: string

@@ -8,6 +8,7 @@ import  Form  from "./Form"
 import { WrapperForm, Inputs, SocialWrapper } from "./index.styles";
 import { Button } from "@mui/material"
 import { ContactsType } from "../../types"
+import { fontFamily } from "../../index.styled"
 
 type PropsType = {
     contacts: ContactsType
@@ -62,7 +63,6 @@ export const Contacts: React.FC<PropsType> = ({contacts, theme }) => {
             </Span>
             <Hr />
             <SocialWrapper>
-                <Span>{contacts.social}</Span>
                 <Social color={color} />
             </SocialWrapper>
 
@@ -77,7 +77,8 @@ export const Contacts: React.FC<PropsType> = ({contacts, theme }) => {
                     <Form type="text" value={message} onChangeInput={handleMessageChanged} label={contacts.lebals.message} color={color} />
                     <Button
                 onClick={() => handleButton(name, email, message)}
-                variant="contained" 
+                variant="contained"
+                sx={{fontFamily: fontFamily}}
                 >{contacts.lebals.submit}</Button>
                 </Inputs>
 

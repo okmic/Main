@@ -6,11 +6,14 @@ import TelegramIcon from '@mui/icons-material/Telegram'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import { WrapperContact, ItemContact, WrapperSocial } from "./index.styled"
 import { FooterType } from "../../types"
+import { fontFamily } from "../../index.styled"
 
 type PropsType = {
     footer: FooterType
     theme: boolean
 }
+
+
 
 export const Footer: React.FC<PropsType> = ({footer, theme}) => { 
     
@@ -18,16 +21,16 @@ export const Footer: React.FC<PropsType> = ({footer, theme}) => {
     
     return <WrapperContact>
     <ItemContact theme={color}>
-        <Typography sx={{ fontWeight: 700 }}>{footer.phone}</Typography>
+        <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>{footer.phone}</Typography>
         <a href="tel:+79887166917">+7(988)716-69-17</a>
     </ItemContact>
     <ItemContact theme={color}>
-        <Typography sx={{ fontWeight: 700 }}>{footer.writeMe}</Typography>
+        <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>{footer.writeMe}</Typography>
         <Social color={color} />
     </ItemContact>
     <ItemContact>
-        <Typography sx={{ fontWeight: 700 }}>React Application</Typography>
-        <Typography sx={{ fontWeight: 700 }}>By Michael Okhtov.</Typography>
+        <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>React Application</Typography>
+        <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>By Michael Okhtov.</Typography>
     </ItemContact>
 </WrapperContact>}
 

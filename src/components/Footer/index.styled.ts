@@ -26,7 +26,6 @@ export const ItemContact = styled.div<{theme: string}>`
     padding: 0 15px;
     & a {
         text-decoration: none;
-        font-family: sans-serif;
         color: ${(props) => props.theme};
     }
     @media screen and (max-width: 650px){

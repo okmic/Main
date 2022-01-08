@@ -1,5 +1,5 @@
 import { Header } from './components/AppBar/Header'
-import GlobalStyle, { AppWrapper, Loading} from './index.styled'
+import { AppWrapper, Loading} from './index.styled'
 import { Main } from './components/Main/Main'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Suspense, useEffect, useState } from 'react'
@@ -47,8 +47,8 @@ function App() {
           <Routes>
             <Route path="/Main" element={<Main state={state.main} links={state.links} theme={theme} />} />
             <Route path="/Curriculum-Vitae" element={<Resume cv={state.cv} />} />
-            <Route path="/Projects" element={<Projects projects={state.projects} />} />
-            <Route path="/Contact" element={<Contacts contacts={state.contacts} theme={theme} />} />
+            <Route path="/Projects" element={<Projects projects={state.projects} theme={theme} />} />
+            <Route path="/Contact" element={<Contacts contacts={state.contacts} theme={theme}  />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
           <Footer footer={state.footer} theme={theme} />

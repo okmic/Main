@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const TitleScreen = styled.h1`
   width: 90%;
   text-align: left;
-  font-family: "mv boli" , georgia;
 `
 
 export const Hr = styled.hr`
@@ -14,7 +13,8 @@ export const Hr = styled.hr`
 export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
-
+    max-width: 1500px;
+    margin: 1.5em 0;
 @media screen and (max-width: 650px) {
     flex-wrap: wrap;
 }
@@ -47,7 +47,6 @@ type SpanType = {
 export const Span = styled.span<SpanType>`
     font-size: ${(props) => props.fs ? props.fs : "19px"};
     font-weight: ${(props) => props.fw ? props.fw : "700"};
-    fontFamily: "mv boli, georgia";
 & a {
     color: ${(props) => props.color ? props.color : "rgb(19, 18, 18)" }
 }
