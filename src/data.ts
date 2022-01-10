@@ -113,9 +113,12 @@ export const DataEng: dataType = {
     },
     contacts: {
         title: "Contacts",
+        valid: "The field cannot be empty",
+        mailValid: "Invalid mail format",
+        submit: 'The message has been sent',
         lebals: {
                 name: 'Name',
-                email: 'Email',
+                email: '*Email',
                 message: 'Message',
                 submit: 'submit'
         }
@@ -227,9 +230,12 @@ export const DataRu: dataType = {
     },
     contacts: {
         title: "Контакты",
+        valid: "Поле не может быть пустым",
+        mailValid: "Неверный формат почты",
+        submit: "Сообщение отправлено",
         lebals: {
                 name: 'Имя',
-                email: 'Почта',
+                email: '*Почта',
                 message: 'Сообщение',
                 submit: 'Отправить'
         }

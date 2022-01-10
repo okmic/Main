@@ -55,6 +55,9 @@ export type CVType = {
 
 export type ContactsType = {
     title: string
+    valid: string
+    mailValid: string
+    submit: string
     lebals: {
         name: string
         email: string

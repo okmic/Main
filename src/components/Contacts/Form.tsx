@@ -8,12 +8,18 @@ type PropsType = {
     type: string
     onChangeInput: (event: React.ChangeEvent<HTMLInputElement>) => void
     color: string
+    name?: string
+    validate?: boolean
+    blurHandler?: (event: any) => any
 }
 
-const Form: React.FC<PropsType> = ({ value, onChangeInput, label, type, color }) => {
+const Form: React.FC<PropsType> = ({ value, onChangeInput, label, type, color, name, validate, blurHandler}) => {
 
     return <>
         <TextField
+            //@ts-ignore
+            onBlur={(event: any) => blurHandler(event)}
+            name={name}
             type={type}
             id="outlined-basic"
             label={label}
@@ -21,14 +27,14 @@ const Form: React.FC<PropsType> = ({ value, onChangeInput, label, type, color })
             value={value}
             onChange={onChangeInput}
             color="primary"
+            error={validate}
             InputLabelProps={{
                 style: {
                   color: color,
                   fontFamily: fontFamily
                 } }}
             sx={{
-                m: '0 1em 1em 0',
-                
+                m: '0 1em 1em 0',              
            }} />
     </>
 }

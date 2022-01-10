@@ -50,7 +50,7 @@ export const Header: React.FC<PropsType> = ({ state, links, lang, setLang, theme
                     component="span"
                     sx={{ flexGrow: 1, fontWeight: 600, fontFamily: "mv boli, georgia" }}
                 >
-                    <NavLink to="/Main" style={{ color: colors.color }}>{state.name}</NavLink>
+                    <NavLink to="/" style={{ color: colors.color }}>{state.name}</NavLink>
                 </Typography>
                 <Switch>
                     <SelectSwitches colors={colors} lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} />
