@@ -45,6 +45,9 @@ function App() {
           setTheme={setTheme}
           />
           <Routes>
+            {/* for github */}
+            <Route path="/Main" element={<Main state={state.main} links={state.links} theme={theme} />} />
+            {/* for github */}
             <Route path="/" element={<Main state={state.main} links={state.links} theme={theme} />} />
             <Route path="/Curriculum-Vitae" element={<Resume cv={state.cv} />} />
             <Route path="/Projects" element={<Projects projects={state.projects} theme={theme} />} />
