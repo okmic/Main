@@ -7,12 +7,18 @@ import { CVType } from "../../types"
 
 type PropsType = {
   cv: CVType
+  theme: boolean
 }
 
-export const Resume: React.FC<PropsType> = ({cv}) => <>
+export const Resume: React.FC<PropsType> = ({cv, theme}) => {
+
+  const color = !theme ? 'rgb(19, 18, 18)' : "#fff"
+
+  return <>
   <TitleScreen>{cv.title}</TitleScreen>
   {cv.cv.map((i, index) => <div key={index}>
     <BoxRes
+    color={color}
     key={index}
     titleOne={i.title}
     descTitle={i.about}
@@ -22,5 +28,7 @@ export const Resume: React.FC<PropsType> = ({cv}) => <>
   />
   <Hr/>
   </div>)}
-  <Skills skills={cv.skills}/>
+  <Skills color={color} skills={cv.skills}/>
 </>
+}
+

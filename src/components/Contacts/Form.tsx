@@ -1,6 +1,5 @@
 import { TextField } from "@mui/material"
 import React from "react"
-import { fontFamily } from "../../index.styled"
 
 type PropsType = {
     label: string
@@ -31,7 +30,6 @@ const Form: React.FC<PropsType> = ({ value, onChangeInput, label, type, color, n
             InputLabelProps={{
                 style: {
                   color: color,
-                  fontFamily: fontFamily
                 } }}
             sx={{
                 m: '0 1em 1em 0',              

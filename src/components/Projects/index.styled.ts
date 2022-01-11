@@ -8,6 +8,7 @@ export const WrapperLink = styled.div`
 export const AWrapper = styled.div<{theme: boolean}>`
     display: flex;
     align-items: center;
+    color: ${(props) => props.theme};
 & a {
     font-weight: 700;
     font-size: 17px;

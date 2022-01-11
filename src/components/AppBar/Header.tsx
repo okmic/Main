@@ -1,5 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu'
-import { AppBar, IconButton, Toolbar, Typography } from "@mui/material"
+import { AppBar, Toolbar, Typography } from "@mui/material"
 import React from "react"
 import SwipeableEdgeDrawer from './Drawer'
 import { BallHeader } from '../Main/index.styled'
@@ -7,12 +7,12 @@ import { NavLink } from 'react-router-dom'
 import { LinksType } from '../../types'
 import SelectSwitches from '../Select/Select'
 import styled from 'styled-components'
+import { fontFamily } from '../../index.styled'
 
 export type ColorsType = {
     color: string
     background: string
 }
-
 type PropsType = {
     state: {
         name: string
@@ -48,9 +48,9 @@ export const Header: React.FC<PropsType> = ({ state, links, lang, setLang, theme
                 <Typography
                     variant='h6'
                     component="span"
-                    sx={{ flexGrow: 1, fontWeight: 600, fontFamily: "mv boli, georgia" }}
+                    sx={{ flexGrow: 1, fontWeight: 600 }}
                 >
-                    <NavLink to="/" style={{ color: colors.color }}>{state.name}</NavLink>
+                    <NavLink to="/" style={{ color: colors.color, fontFamily: fontFamily }}>{state.name}</NavLink>
                 </Typography>
                 <Switch>
                     <SelectSwitches colors={colors} lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} />

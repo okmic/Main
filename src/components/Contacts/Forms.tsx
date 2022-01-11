@@ -32,10 +32,8 @@ export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
     }, [emailError])
 
     const blurHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        switch (event.target.name) {
-            case 'email':
+        if (event.target.name === "email") {
                 setEmailDirty(true)
-                break
         }
     }
     let handleNameChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -67,7 +65,7 @@ export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
             })
                 .then(res => res.text())
                 .then(res => {
-                    if (res == "200") {
+                    if (res === "200") {
                         setFeedback(!feedback)
                     }
                 })

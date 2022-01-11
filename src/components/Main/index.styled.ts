@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { fontFamily } from "../../index.styled"
 
 const padding = "1rem"
 
@@ -47,7 +48,7 @@ export const Title = styled.span<TitleProps>`
     font-size: ${(props) => props.fontSize ? props.fontSize : "15px"};
     margin-bottom: ${(props) => props.mb ? props.mb : "0"};
     font-weight: ${(props) => props.fontWeight ? props.fontWeight : "none"};
-    font-family: ${(props) => props.fontFamily ? props.fontFamily : '"Comic Sans MS", "Comic Sans", "cursive", georgia, "cursive", sans-serif'};
+    font-family: ${(props) => props.fontFamily ? props.fontFamily : "Garamond, serif"};
 `
 export const Links = styled.nav`
 width: 100%;
@@ -67,6 +68,7 @@ export const LinkBall = styled.div<{ color?: string, background?: string, fontFa
     text-shadow: 0 0 1em black;
     font-size: 15px;
     font-weight: 600;
+    font-family: ${fontFamily};
     width: 115px;
     height: 115px;
     padding: 5px;
@@ -74,7 +76,7 @@ export const LinkBall = styled.div<{ color?: string, background?: string, fontFa
     background-color: ${(props) => props.background ? props.background : "rgb(238, 163, 2)"};
     border: 1px solid ${(props) => props.color ? props.color : "black"};;
     margin-right: 15px;
-    transition: 0.7s;d
+    transition: 0.7s;
     &:hover {
         transition: 0.5s;
         background-color: #bbbbbb;

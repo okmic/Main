@@ -1,12 +1,11 @@
 import styled, {createGlobalStyle} from 'styled-components'
 
-export const fontFamily = '"Comic Sans MS", "Comic Sans", "cursive", georgia, "cursive", sans-serif'
+export const fontFamily = '"mv boli", "Comic Sans MS", "Comic Sans", "cursive", georgia, "cursive", sans-serif'
 
 const GlobalStyle = createGlobalStyle`
-* {
-    font-family: "Comic Sans MS", "Comic Sans", "cursive", georgia, 'cursive', sans-serif;
+*{
+    font-family:  Garamond, sans-serif;
 }
-
 body {
     margin: 0;
     padding: 0;

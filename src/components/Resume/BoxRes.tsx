@@ -8,16 +8,17 @@ type PropsType = {
   description?: string
   descTitleTwo?: string
   descriptionTwo?: string
+  color: string
 }
 export const BoxRes: React.FC<PropsType> = (
     { titleOne, titleTwo, descTitle,
-      description, descTitleTwo, descriptionTwo }) => <Wrapper>
+      description, descTitleTwo, descriptionTwo, color }) => <Wrapper>
       <Item>
         <Title>
-          <Span>{titleOne}</Span>
+          <Span textColor={color}>{titleOne}</Span>
         </Title>
         {titleTwo && <Title>
-          <Span>{titleTwo}</Span>
+          <Span textColor={color}>{titleTwo}</Span>
         </Title>}
       </Item>
       <Item>
@@ -25,6 +26,7 @@ export const BoxRes: React.FC<PropsType> = (
           <Span
             fs="19px"
             fw="600"
+            textColor={color}
           >{descTitle}
           </Span>
         </DescriptionTitle>
@@ -32,6 +34,7 @@ export const BoxRes: React.FC<PropsType> = (
           <Span
             fs="17px"
             fw="500"
+            textColor={color}
           >{description}</Span>
         </Description>
         {descTitleTwo && <>
@@ -39,6 +42,7 @@ export const BoxRes: React.FC<PropsType> = (
             <Span
               fs="19px"
               fw="600"
+              textColor={color}
             >{descTitleTwo}
             </Span>
           </DescriptionTitle>
@@ -46,6 +50,7 @@ export const BoxRes: React.FC<PropsType> = (
             <Span
               fs="17px"
               fw="500"
+              textColor={color}
             >{descriptionTwo}</Span>
           </Description>
         </>

@@ -18,13 +18,13 @@ type PropsType = {
 }
 
 export const BoxProject: React.FC<PropsType> = ({ title, description, image, link, reposit, theme }) => {
-
+    
     const color = !theme ? 'rgb(19, 18, 18)' : "#fff"
 
     return <Wrapper>
         <Item>
             <WrapperLink >
-                <Span fs="23px" fw="550">{title}</Span>
+                <Span fs="23px" fw="550" textColor={color}>{title}</Span>
                 {link && <AWrapper theme={color}>
                     <BallHeader />
                     <a target="_blank" rel="noreferrer" href={link.href}>{link.title}</a>
@@ -36,7 +36,7 @@ export const BoxProject: React.FC<PropsType> = ({ title, description, image, lin
                     </a>
                 </AWrapper>
             </WrapperLink>
-            <Span fs="17px" fw="500">{description}</Span>
+            <Span fs="17px" fw="500" textColor={color}>{description}</Span>
         </Item>
         <Item>
             <ImgWrapper>

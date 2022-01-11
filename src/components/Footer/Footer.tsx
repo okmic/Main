@@ -32,7 +32,8 @@ export const Footer: React.FC<PropsType> = ({footer, theme}) => {
         <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>React Application</Typography>
         <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>By Michael Okhtov.</Typography>
     </ItemContact>
-</WrapperContact>}
+</WrapperContact>
+}
 
 export const Social: React.FC<{color: string}> = ({color}) => <WrapperSocial>
     <a href="mailto:Okhtov.mz@gmail.com">

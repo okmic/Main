@@ -15,28 +15,31 @@ const SkillItem = styled.div`
 type SkillType = {
     image: string
     description: string
+    color: string
 }
 
-const Skill: React.FC<SkillType> = ({ image, description }) => <SkillItem>
+const Skill: React.FC<SkillType> = ({ image, description, color }) => <SkillItem>
     <img src={image} alt={image} />
-    <Span fw="500">{description}</Span>
+    <Span fw="500" textColor={color}>{description}</Span>
 </SkillItem>
 
 type PropsType = {
     skills: SkillsType
+    color: string
   }
 
 export const Skills: React.FC<PropsType> = (
-    { skills }) => <Wrapper>
+    { skills, color }) => <Wrapper>
       <Item>
         <Title>
-          <Span>{skills.title}</Span>
+          <Span textColor={color}>{skills.title}</Span>
         </Title>
       </Item>
       <Item>
         <Description>
             {skills.skill.map((s, index) => <Skill
                 key={index}
+                color={color}
                 image={s.img}
                 description={s.descr}
             />)}

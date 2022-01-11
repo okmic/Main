@@ -49,7 +49,7 @@ function App() {
             <Route path="/Main" element={<Main state={state.main} links={state.links} theme={theme} />} />
             {/* for github */}
             <Route path="/" element={<Main state={state.main} links={state.links} theme={theme} />} />
-            <Route path="/Curriculum-Vitae" element={<Resume cv={state.cv} />} />
+            <Route path="/Curriculum-Vitae" element={<Resume cv={state.cv} theme={theme} />} />
             <Route path="/Projects" element={<Projects projects={state.projects} theme={theme} />} />
             <Route path="/Contact" element={<Contacts contacts={state.contacts} theme={theme}  />} />
             <Route path="/*" element={<NotFound />} />
