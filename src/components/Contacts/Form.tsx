@@ -17,7 +17,7 @@ const Form: React.FC<PropsType> = ({ value, onChangeInput, label, type, color, n
     return <>
         <TextField
             //@ts-ignore
-            onBlur={(event: any) => blurHandler(event)}
+            onBlur={blurHandler ? (event: any) => blurHandler(event) : ''}
             name={name}
             type={type}
             id="outlined-basic"

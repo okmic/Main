@@ -47,6 +47,7 @@ export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
             setEmailEror(contacts.mailValid)
         } else {
             setEmailEror('')
+            setValidForm(true)
         }
     }
 
@@ -55,13 +56,18 @@ export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
     }
 
     const handleButton = (name: string, email: string, message: string) => {
+        
+        const n = name.toLowerCase()
+        const e = email.toLowerCase()
+        const m = message.toLowerCase()
+
         try {
             fetch("http://b91871dw.beget.tech/telegram.php", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: JSON.stringify({ name, email, message })
+                body: JSON.stringify({ n, e, m })
             })
                 .then(res => res.text())
                 .then(res => {
@@ -69,6 +75,10 @@ export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
                         setFeedback(!feedback)
                     }
                 })
+                setValidForm(false)
+                setName('')
+                setEmail('')
+                setMessage('')
         }
         catch (error) {
             console.error('Error:', error);
