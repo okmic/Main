@@ -106,7 +106,7 @@ export const DataEng: dataType = {
                 },
                 {
                     img: react,
-                    descr: 'I got introduced to React in 2019 and has since become the main tool in my luggage. I have experience developing fast, responsive user interfaces using the React library. From project to project, I try to improve my qualifications so that my code is more readable and reliable, important parts of the application are always accompanied by unit tests. I am using Redux for state management. To work with HTTP, I use the Axios library.'
+                    descr: 'I got introduced to React in 2019 and has since become the main tool in my luggage. I have experience developing fast, responsive user interfaces using the React library. From project to project, I try to improve my qualifications so that my code is more readable and reliable, important parts of the application are always accompanied by unit tests. I am using Redux for state management.'
                 }
             ]
         }
@@ -223,7 +223,7 @@ export const DataRu: dataType = {
                 },
                 {
                     img: react,
-                    descr: 'Я познакомился с React в 2019 году и с тех пор он стал моим основным инструментом. У меня есть опыт разработки быстрых, отзывчивых пользовательских интерфейсов с использованием библиотеки React. От проекта к проекту я стараюсь повышать свою квалификацию, чтобы мой код был более читабельным и надежным, важные части приложения всегда сопровождались модульными тестами. Я использую Redux для управления состоянием. Для работы с HTTP я использую библиотеку Axios.'
+                    descr: 'Я познакомился с React в 2019 году и с тех пор он стал моим основным инструментом. У меня есть опыт разработки быстрых, отзывчивых пользовательских интерфейсов с использованием библиотеки React. От проекта к проекту я стараюсь повышать свою квалификацию, чтобы мой код был более читабельным и надежным, важные части приложения всегда сопровождались модульными тестами. Я использую Redux для управления состоянием.'
                 }
             ]
         }
