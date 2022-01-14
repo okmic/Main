@@ -61,7 +61,7 @@ export const DataEng: dataType = {
                 title: 'GitHub',
                 linkRep: {
                     title: 'GitHub profile link', 
-                    href: 'https://github.com/Alpha-Lucky?tab=repositories'
+                    href: 'https://github.com/Alpha-Lucky'
                 },
                 img: gb,
                 descr: 'Since the vast majority of my projects are private, I am not allowed to show them publicly. But on the web service GitHub I have posted all my projects and templates, there you can see how I write the code. There you can also find a project where I train my JS-technology skills "Social-Network/Way-of-the-Samurai"'
@@ -178,7 +178,7 @@ export const DataRu: dataType = {
                 title: 'GitHub',
                 linkRep: {
                     title: 'Ссылка на профиль GitHub', 
-                    href: 'https://github.com/Alpha-Lucky?tab=repositories'
+                    href: 'https://github.com/Alpha-Lucky'
                 },
                 img: gb,
                 descr: 'Поскольку подавляющее большинство моих проектов являются частными, мне не разрешено показывать их публично. Но на веб-сервисе GitHub я разместил все свои Pet-проекты и шаблоны, там вы можете увидеть, как я пишу код. Там же вы найдете проект, в котором я тренирую свои навыки работы с JS-технологиями "Social-Network/Way-of-the-Samurai"'
