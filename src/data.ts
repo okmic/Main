@@ -13,7 +13,7 @@ export const DataEng: dataType = {
     main: {
         title: 'Hello',
         about: 'A Bit About Me',
-        descr: "My name is Mikhail, I am 26 years old, I have become addicted to programming since my school days, I tried different things. I wrote my first website at the age of 17 and gradually learned the basics of programming. I tried myself in Java, C#, GO, but JavaScript turned out to be the most enjoyable for me. At the moment I'm looking forward to challenging and interesting projects that will propel me forward!"
+        descr: "My name is Mikhail, I am 26 years old, I have been fond of programming since my school days, I have tried different directions. I wrote my first website at the age of 17 and gradually mastered the basics of programming. Tried myself in Java, C#, GO, but most of all I liked JavaScript. I am currently looking forward to challenging and interesting projects that will propel me forward!"
     },
     header: {
         name: "Michael Okhtov"
@@ -130,7 +130,7 @@ export const DataRu: dataType = {
     main: {
         title: "Привет",
         about: 'Немного обо мне',
-        descr: "Меня зовут Михаил, мне 26 лет, я пристрастился к программированию со школьных времен, пробовал разные вещи. Я написал свой первый сайт в 17 лет и постепенно изучил основы программирования. Я пробовал себя в Java, C#, GO, но JavaScript оказался для меня самым приятным. На данный момент я с нетерпением жду сложных и интересных проектов, которые продвинут меня вперед!"
+        descr: "Меня зовут Михаил, мне 26 лет, программированием увлекаюсь со школьных времен, пробовал разные направления. Свой первый сайт я написал в 17 лет и постепенно осваивал азы программирования. Пробовал себя в Java, C#, GO, но больше всего понравился JavaScript. В настоящее время я с нетерпением жду сложных и интересных проектов, которые будут продвигать меня вперед!"
     },
     header: {
         name: "Михаил Охтов"
