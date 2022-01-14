@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FocusEvent } from "react"
 import { Button } from "@mui/material"
 import { useEffect, useState } from "react"
 import { fontFamily } from "../../index.styled"
@@ -31,7 +31,7 @@ export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
 
     }, [emailError])
 
-    const blurHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const blurHandler = (event: FocusEvent<HTMLInputElement>) => {
         if (event.target.name === "email") {
                 setEmailDirty(true)
         }

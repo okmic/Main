@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material"
-import React from "react"
+import React, { FocusEvent } from "react"
 
 type PropsType = {
     label: string
@@ -9,15 +9,14 @@ type PropsType = {
     color: string
     name?: string
     validate?: boolean
-    blurHandler?: (event: any) => any
+    blurHandler?: (event: FocusEvent<HTMLInputElement>) => void
 }
 
 const Form: React.FC<PropsType> = ({ value, onChangeInput, label, type, color, name, validate, blurHandler}) => {
 
     return <>
         <TextField
-            //@ts-ignore
-            onBlur={blurHandler ? (event: any) => blurHandler(event) : ''}
+            onBlur={blurHandler && blurHandler}
             name={name}
             type={type}
             id="outlined-basic"

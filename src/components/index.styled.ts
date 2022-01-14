@@ -13,7 +13,7 @@ export const Hr = styled.hr`
 export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 1.5em 0;
 @media screen and (max-width: 650px) {
     flex-wrap: wrap;
