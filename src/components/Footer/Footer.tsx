@@ -46,7 +46,7 @@ export const Social: React.FC<{color: string}> = ({color}) => <WrapperSocial>
         style={{ marginRight: '3px' }}>
         <TelegramIcon sx={{ fontSize: '25px', color: color}} />
     </a>
-    <a target="_blank" href=" https://github.com/Alpha-Lucky">
+    <a target="_blank" href=" https://github.com/okmic">
         <GitHubIcon sx={{ fontSize: '25px', color: color}} />
     </a>
 </WrapperSocial>
