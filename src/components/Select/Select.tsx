@@ -41,8 +41,8 @@ const SelectSwitches: React.FC<PropsType> = ({lang, setLang, theme, setTheme, co
                     label={lang}
                     sx={{color: colors.color, backgroundColor: colors.background}}
                 >
-                    <MenuItem value={"Eng"}>Eng</MenuItem>
                     <MenuItem value={"Ru"}>Ru</MenuItem>
+                    <MenuItem value={"Eng"}>Eng</MenuItem>
                 </Select>
             </FormControl>
         </Wrapper>

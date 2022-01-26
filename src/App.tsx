@@ -11,21 +11,22 @@ import {NotFound} from './components/NotFound/NotFound'
 import { DataEng, DataRu } from './data'
 import { dataType } from './types'
 import { Footer } from './components/Footer/Footer'
+import { Browser } from './components/Browser/Browser'
 
 type LangType = "Eng" | "Ru" 
 
 function App() {
 
-  const [lang, setLang] = useState<LangType>("Eng")
+  const [lang, setLang] = useState<LangType>("Ru")
   const [state, setState] = useState<dataType>(DataEng)
   const [theme, setTheme] = useState(false)
 
   
   useEffect(() => {
-    if(lang === "Eng") {
-        setState(DataEng)
+    if(lang === "Ru") {
+        setState(DataRu)
     } else {
-      setState(DataRu)
+      setState(DataEng)
     }
   }, [lang])
 
@@ -52,6 +53,7 @@ function App() {
             <Route path="/Curriculum-Vitae" element={<Resume cv={state.cv} theme={theme} />} />
             <Route path="/Projects" element={<Projects projects={state.projects} theme={theme} />} />
             <Route path="/Contact" element={<Contacts contacts={state.contacts} theme={theme}  />} />
+            <Route path="/Browser" element={<Browser />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
           <Footer footer={state.footer} theme={theme} />
