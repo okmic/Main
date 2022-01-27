@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { bgColor, tColor } from "../index.styled"
+import { bgColor, mediaScr, tColor } from "../index.styled"
 
 export const WrapperSearch = styled.div`
     height: 50px;
@@ -14,20 +14,35 @@ export const WrapperSearch = styled.div`
         background: none;
         border: none;
         color: ${tColor};
+    };
+    @media screen and (max-width: 690px) {
+        justify-content: center;
     }
 `
 export const ControlPanel = styled.div`
     width: 90%;
     display: flex;
 `
+export const Desctop = styled.div`
+    display: flex;
+    ${mediaScr}
+`
+export const Mobile = styled.button`
+    display: black;
+    @media screen and (min-width: 690px) {
+        display: none;
+    }
+`
 export const SearchPanel = styled.div`
-    width: 50%;
+    width: 90%;
     & input {
         width: 100%;
         height: 25px;
         padding-left: 1em;
         border: none;
         border-radius: 25px;
+        background-color: ${bgColor};
+        color: ${tColor}
     }
 `
 export const AboutPanel = styled.div`
@@ -35,16 +50,5 @@ export const AboutPanel = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: -5px;
-`
-export const Person = styled.div`
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #bbbbbb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    & button {
-        color: ${bgColor}
-    }
+    
 `

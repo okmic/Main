@@ -16,7 +16,9 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
-
+button {
+    cursor: pointer;
+}
 /* полоса прокрутки (скроллбар) */
 ::-webkit-scrollbar {
     width: 11px; /* ширина для вертикального скролла */

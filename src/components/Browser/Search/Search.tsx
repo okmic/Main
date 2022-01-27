@@ -1,26 +1,37 @@
 import React from "react"
-import { AboutPanel, ControlPanel, Person, SearchPanel, WrapperSearch } from "./index.styled"
+import { AboutPanel, Desctop, ControlPanel, SearchPanel, WrapperSearch, Mobile } from "./index.styled"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import ReplayIcon from '@mui/icons-material/Replay'
-import MoreVertIcon from '@mui/icons-material/MoreVert'
-import PersonIcon from '@mui/icons-material/Person'
+import HomeIcon from '@mui/icons-material/Home'
+import DesktopMacIcon from '@mui/icons-material/DesktopMac'
+import MobileScreenShareIcon from '@mui/icons-material/MobileScreenShare'
 
-export const Search = () => <WrapperSearch>
+type PropsType = {
+    handleSubmit: (order: boolean) => void
+}
+
+export const Search: React.FC<PropsType> = ({handleSubmit}) => {
+
+    return <WrapperSearch>
         <ControlPanel>
-            <button><ArrowBackIcon /></button>
-            <button><ArrowForwardIcon /></button>
-            <button><ReplayIcon /></button>
+            <Desctop>
+                <button><ArrowBackIcon /></button>
+                <button><ArrowForwardIcon /></button>
+                <button><ReplayIcon /></button>
+            </Desctop>
+            <Mobile><HomeIcon /></Mobile>
             <SearchPanel>
-            <input type="text" value="http://okmic/" />
+                <input type="text" value="http://okmic/" onChange={() => { }} />
             </SearchPanel>
         </ControlPanel>
         <AboutPanel>
-            <Person>
-                <button>
-                    <PersonIcon />
-                </button>
-            </Person>
-            <button><MoreVertIcon sx={{fontSize: "30px"}} /></button>
+            <button onClick={() => handleSubmit(true)} >
+                <DesktopMacIcon sx={{ fontSize: "25px" }} />
+            </button>
+            <button onClick={() =>  handleSubmit(false)}>
+                <MobileScreenShareIcon sx={{ fontSize: "25px" }} />
+            </button>
         </AboutPanel>
-</WrapperSearch>
+    </WrapperSearch>
+}

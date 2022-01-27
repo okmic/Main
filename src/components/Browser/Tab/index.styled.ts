@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { bgColor, tColor } from "../index.styled";
+import { bgColor, mediaScr, tColor } from "../index.styled";
 
 export const TabsBrowser = styled.div`
     display: flex;
@@ -7,6 +7,7 @@ export const TabsBrowser = styled.div`
     padding: 3px 1px 0 3px;
     width: 100%;
     background-color: #bbbbbb;
+    ${mediaScr}
 `
 export const Tabs = styled.div`
     display: flex;
@@ -27,6 +28,13 @@ export const TabB = styled.div`
     border-top-right-radius: 11px 11px;
     border-bottom-left-radius: -11px -11px;
     border-bottom-right-radius: -11px -11px;
+`
+export const TitleTab = styled.div`
+    margin: 0 0 0 15px;
+    & img {
+        max-height: 17px;
+        margin-bottom: -3px;
+    };
     & span {
         margin-left: 9px;
         font-size: 15px;
@@ -52,7 +60,7 @@ export const AddTab = styled.div`
         font-size: 23px;
     }
 `
-export const Button = styled.button`
+export const Button = styled.button<{hoverColor?: string}>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,4 +70,9 @@ export const Button = styled.button`
     width: 27px;
     margin: 1px;
     color: ${tColor};
+    transition: 0.3s;
+    &:hover {
+        transition: 0.3s;
+        background-color: ${props => props.hoverColor ? props.hoverColor : bgColor};
+    }
 `

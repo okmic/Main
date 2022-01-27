@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const bgColor = 'rgba(31, 27, 27, 0.713)'
 export const tColor = 'rgb(230, 217, 217)'
-export const borderB = '1px solid black'
+export const borderB = '1px solid rgba(31, 27, 27, 0.713)'
+export const mediaScr = '@media screen and (max-width: 690px) {display: none;}'
 
 export const WrapperBrowser = styled.div`
     max-width: 100vw;
@@ -10,7 +11,8 @@ export const WrapperBrowser = styled.div`
     padding: 1em 1em 0 1em;
 `
 export const BContainer = styled.div`
-    width: 80vw;
+    max-width: 80vw;
+    max-width: 1500px;
     border: ${borderB};
 `
 export const HeaderBrow = styled.div`
@@ -20,12 +22,13 @@ export const HeaderBrow = styled.div`
     max-height: 50vh;
 `
 export const ContentBrow = styled.div`
+    transition: 0.3s;
     width: 100%;
     height: 70vh;
     background-color: #bbbbbb;
 
 `
 export const Content = styled.div`
-        max-height: 100%;
-        overflow-y: scroll 
+    max-height: 100%;
+    overflow-y: auto; 
 `
