@@ -1,18 +1,16 @@
 
-import React from "react"
 import { BoxRes } from "./BoxRes"
 import { Hr, TitleScreen } from "../index.styled"
 import { Skills } from "./Skills"
-import { CVType } from "../../types"
+import { useSelector } from "react-redux"
+import { stateType } from "../../redux/store"
+import { memo } from "react"
 
-type PropsType = {
-  cv: CVType
-  theme: boolean
-}
 
-export const Resume: React.FC<PropsType> = ({cv, theme}) => {
-
-  const color = !theme ? 'rgb(19, 18, 18)' : "#fff"
+export default memo(function Resume (){
+  
+  const cv = useSelector((state: stateType) => state.appReducer.language.cv)
+  const color = useSelector((state: stateType) => state.appReducer.theme.styles.app.color)
 
   return <>
   <TitleScreen>{cv.title}</TitleScreen>
@@ -30,5 +28,4 @@ export const Resume: React.FC<PropsType> = ({cv, theme}) => {
   </div>)}
   <Skills color={color} skills={cv.skills}/>
 </>
-}
-
+})

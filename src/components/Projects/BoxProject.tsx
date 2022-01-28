@@ -13,30 +13,26 @@ type PropsType = {
     reposit: {
         title: string
         href: string
-    }
-    theme: boolean
+    },
+    textColor: string
 }
 
-export const BoxProject: React.FC<PropsType> = ({ title, description, image, link, reposit, theme }) => {
-    
-    const color = !theme ? 'rgb(19, 18, 18)' : "#fff"
-
-    return <Wrapper>
+export const BoxProject: React.FC<PropsType> = ({ title, description, image, link, reposit, textColor }) =>  <Wrapper>
         <Item>
             <WrapperLink >
-                <Span fs="23px" fw="550" textColor={color}>{title}</Span>
-                {link && <AWrapper theme={color}>
+                <Span fs="23px" fw="550" textColor={textColor}>{title}</Span>
+                {link && <AWrapper textColor={textColor}>
                     <BallHeader />
                     <a target="_blank" rel="noreferrer" href={link.href}>{link.title}</a>
                 </AWrapper>}
-                <AWrapper theme={color}>
+                <AWrapper textColor={textColor}>
                     <BallHeader />
                     <a target="_blank" rel="noreferrer" href={reposit.href}>
                         {reposit.title}
                     </a>
                 </AWrapper>
             </WrapperLink>
-            <Span fs="17px" fw="500" textColor={color}>{description}</Span>
+            <Span fs="17px" fw="500" textColor={textColor}>{description}</Span>
         </Item>
         <Item>
             <ImgWrapper>
@@ -44,4 +40,3 @@ export const BoxProject: React.FC<PropsType> = ({ title, description, image, lin
             </ImgWrapper>
         </Item>
     </Wrapper>
-}

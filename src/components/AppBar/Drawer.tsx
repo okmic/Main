@@ -1,4 +1,3 @@
-
 import * as React from 'react'
 import { Global } from '@emotion/react'
 import { styled } from '@mui/material/styles'
@@ -8,9 +7,10 @@ import Box from '@mui/material/Box'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import { Navigation } from '../Footer/index.styled'
 import { WrapperLinks } from './WrapperLinks'
-import { LinksType } from '../../types'
 import SelectSwitches from '../Select/Select'
 import { ColorsType } from './Header'
+import { useSelector } from 'react-redux'
+import { stateType } from '../../redux/store'
 
 
 const drawerBleeding = 36;
@@ -49,16 +49,13 @@ type PropsType = {
     open: boolean
     toggleDrawer: (newOpen: boolean) => any
     setOpen: (open: boolean) => void
-    links: LinksType
-    lang: "Eng" | "Ru"
-    setLang: (lang: "Eng" | "Ru") => void
-    theme: boolean
-    setTheme: (ch: boolean) => void
     colors: ColorsType
 }
 
-const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen, links, lang, setLang, theme, setTheme, colors }) => {
+const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen, colors }) => {
 
+    const state = useSelector((state: stateType) => state.appReducer.language.links)
+    
     return (
         <Root>
             <CssBaseline />
@@ -98,10 +95,10 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen,
                         backgroundColor: colors.color
                     }} />
                     <Navigation >
-                        <WrapperLinks links={links} setOpen={setOpen} color={colors.color} />
+                        <WrapperLinks links={state} setOpen={setOpen} color={colors.color} />
                     </Navigation>
                     <Switch>
-                    <SelectSwitches colors={colors} lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} />
+                    <SelectSwitches colors={colors} />
                 </Switch>
                 </StyledBox>
             </SwipeableDrawer>

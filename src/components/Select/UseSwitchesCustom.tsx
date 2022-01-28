@@ -1,22 +1,23 @@
-import React from 'react'
-import clsx from 'clsx';
-import { SwitchInput, SwitchRoot, SwitchThumb, SwitchTrack } from './index.styled';
+import clsx from 'clsx'
+import { SwitchInput, SwitchRoot, SwitchThumb, SwitchTrack } from './index.styled'
+import { useDispatch, useSelector } from 'react-redux'
+import { stateType } from '../../redux/store'
+import { changeTheme } from '../../redux/appReducer'
 
-type ThemesType = {
-  theme: boolean
-  setTheme: (th: boolean) => void
-}
 
-const MUISwitch: React.FC<ThemesType> = ({theme, setTheme}) => {
+export default function UseSwitchesCustom ()  {
+  
+  const dispatch = useDispatch()
+  const checked = useSelector((state: stateType) => state.appReducer.theme.status)
 
-  let checked = theme
-  let onChange = () => setTheme(!theme)
-  const color = !theme ? "rgb(238, 163, 2)" : "#000" 
+  const onChange = () => dispatch(changeTheme())
+
+  const color = !checked ? "rgb(238, 163, 2)" : "#000" 
   
   const stateClasses = {
     checked,
     onChange
-  };
+  }
 
   return (
     <SwitchRoot className={clsx(stateClasses)} onClick={onChange}>
@@ -26,8 +27,4 @@ const MUISwitch: React.FC<ThemesType> = ({theme, setTheme}) => {
       <SwitchInput />
     </SwitchRoot>
   );
-}
-
-export default function UseSwitchesCustom({theme, setTheme}: ThemesType) {
-  return <MUISwitch theme={theme} setTheme={setTheme} />
 }

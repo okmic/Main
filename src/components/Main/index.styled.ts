@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { fontFamily } from "../../index.styled"
 
 const padding = "1rem"
 
@@ -41,15 +40,15 @@ type TitleProps = {
     mb?: string
     fontWeight?: string
     width?: string
-    fontFamily?: string
 }
 export const Title = styled.span<TitleProps>`
     max-width: ${(props) => props.width ? props.width : "100%"};
     font-size: ${(props) => props.fontSize ? props.fontSize : "15px"};
     margin-bottom: ${(props) => props.mb ? props.mb : "0"};
     font-weight: ${(props) => props.fontWeight ? props.fontWeight : "none"};
-    font-family: ${(props) => props.fontFamily ? props.fontFamily : "Garamond, serif"};
 `
+/* font-family: ${(props) => props.fontFamily ? props.fontFamily : "Garamond, serif"}; */
+
 export const Links = styled.nav`
 width: 100%;
 display: flex;
@@ -68,7 +67,6 @@ export const LinkBall = styled.div<{ color?: string, background?: string, fontFa
     text-shadow: 0 0 1em black;
     font-size: 15px;
     font-weight: 600;
-    font-family: ${fontFamily};
     width: 115px;
     height: 115px;
     padding: 5px;

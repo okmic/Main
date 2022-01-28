@@ -67,6 +67,7 @@ export type ContactsType = {
 }
 
 export type dataType = {
+    order: "Ru" | "Eng"
     main: MainType
     header: {
         name: string

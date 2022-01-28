@@ -10,6 +10,7 @@ import { dataType } from './types'
 
 
 export const DataEng: dataType = {
+    order: "Eng",
     main: {
         title: 'Hello',
         about: 'A Bit About Me',
@@ -127,6 +128,7 @@ export const DataEng: dataType = {
     
 }
 export const DataRu: dataType = {
+    order: "Ru",
     main: {
         title: "Привет",
         about: 'Немного обо мне',

@@ -1,39 +1,33 @@
-import React from "react"
+import React, { memo } from "react"
 import { Typography } from "@mui/material"
 import EmailIcon from '@mui/icons-material/Email'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import { WrapperContact, ItemContact, WrapperSocial } from "./index.styled"
-import { FooterType } from "../../types"
-import { fontFamily } from "../../index.styled"
+import { useSelector } from "react-redux"
+import { stateType } from "../../redux/store"
 
-type PropsType = {
-    footer: FooterType
-    theme: boolean
-}
+export default memo(function Footer (){ 
 
-
-
-export const Footer: React.FC<PropsType> = ({footer, theme}) => { 
-    
-    const color = !theme ? 'rgb(19, 18, 18)' : "#fff"
+    const footer = useSelector((state: stateType) => state.appReducer.language.footer)
+    const color = useSelector((state: stateType) => state.appReducer.theme.styles.app.color)
     
     return <WrapperContact>
     <ItemContact theme={color}>
-        <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>{footer.phone}</Typography>
+        <Typography sx={{ fontWeight: 700}}>{footer.phone}</Typography>
         <a href="tel:+79887166917">+7(988)716-69-17</a>
     </ItemContact>
     <ItemContact theme={color}>
-        <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>{footer.writeMe}</Typography>
+        <Typography sx={{ fontWeight: 700}}>{footer.writeMe}</Typography>
         <Social color={color} />
     </ItemContact>
     <ItemContact>
-        <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>React Application</Typography>
-        <Typography sx={{ fontWeight: 700, fontFamily: fontFamily }}>By Michael Okhtov.</Typography>
+        <Typography sx={{ fontWeight: 700}}>React Application</Typography>
+        <Typography sx={{ fontWeight: 700}}>By Michael Okhtov.</Typography>
     </ItemContact>
 </WrapperContact>
-}
+})
 
 export const Social: React.FC<{color: string}> = ({color}) => <WrapperSocial>
     <a href="mailto:Okhtov.mz@gmail.com">

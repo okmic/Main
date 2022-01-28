@@ -1,27 +1,30 @@
-import React from "react"
-import { Hr, TitleScreen} from "../index.styled"
+import { Hr, TitleScreen } from "../index.styled"
 import { BoxProject } from "./BoxProject"
-import {  ProjectsType } from "../../types"
+import { useSelector } from "react-redux"
+import { stateType } from "../../redux/store"
+import { memo } from "react"
 
-type PropsType = {
-  projects: ProjectsType
-  theme: boolean
-}
 
-export const Projects: React.FC<PropsType> = ({projects, theme}) => <>
-  <TitleScreen>{projects.title}</TitleScreen>
-  {projects.projects.map((p, index) => <div key={index}>
-    <BoxProject
-    theme={theme}
-    title={p.title}
-    link={p.link}
-    reposit={p.linkRep}
-    description={p.descr}
-    image={p.img}
-  />
-  {p.title === "GitHub" ? <br /> : <Hr />}
-  </div>
-)}
-</>
+export default memo(function Projects (){
+
+  const projects = useSelector((state: stateType) => state.appReducer.language.projects)
+  const textColor = useSelector((state: stateType) => state.appReducer.theme.styles.app.color)
+
+  return <>
+    <TitleScreen>{projects.title}</TitleScreen>
+    {projects.projects.map((p, index) => <div key={index}>
+      <BoxProject
+        textColor={textColor}
+        title={p.title}
+        link={p.link}
+        reposit={p.linkRep}
+        description={p.descr}
+        image={p.img}
+      />
+      {p.title === "GitHub" ? <br /> : <Hr />}
+    </div>
+    )}
+  </>
+})
 
 

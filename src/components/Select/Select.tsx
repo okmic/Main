@@ -6,12 +6,11 @@ import styled from "styled-components"
 import TranslateIcon from '@mui/icons-material/Translate'
 import { ColorsType } from "../AppBar/Header"
 import UseSwitchesCustom from "./UseSwitchesCustom"
+import { useDispatch, useSelector } from "react-redux"
+import { switchLang } from "../../redux/appReducer"
+import { stateType } from "../../redux/store"
 
 type PropsType = {
-    lang: "Eng" | "Ru" 
-    setLang: (lang: "Eng" | "Ru" ) => void
-    theme: boolean
-    setTheme: (ch: boolean) => void
     colors: ColorsType
 }
 
@@ -19,18 +18,19 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     overflow: hidden;
-
 `
 
-const SelectSwitches: React.FC<PropsType> = ({lang, setLang, theme, setTheme, colors}) => {
+const SelectSwitches: React.FC<PropsType> = ({colors}) => {
 
+    const lang = useSelector((state: stateType) => state.appReducer.language.order)
+    const dispatch = useDispatch()
     const handleChange = (event: SelectChangeEvent) => {
-        setLang(event.target.value as "Eng" | "Ru")
+        dispatch(switchLang(event.target.value as "Eng" | "Ru"))
     }
     
     return (
         <Wrapper>
-            <UseSwitchesCustom theme={theme} setTheme={setTheme} />
+            <UseSwitchesCustom />
             <TranslateIcon  sx={{color: colors.color, fontSize: "29px"}} />
             <FormControl variant="standard" sx={{ m: 1, minWidth: 50}}>
                 <Select

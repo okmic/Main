@@ -5,16 +5,16 @@ export const WrapperLink = styled.div`
     flex-direction: column;
     align-items: flex-start;
 `
-export const AWrapper = styled.div<{theme: boolean}>`
+export const AWrapper = styled.div<{textColor: string}>`
     display: flex;
     align-items: center;
-    color: ${(props) => props.theme};
+    color: ${(props) => props.textColor};
 & a {
     font-weight: 700;
     font-size: 17px;
     margin: 9px 0;
     transition: 0.5s;
-    color: ${(props) => props.theme};
+    color: ${(props) => props.textColor};
 }
 & a: hover {
     transition: 0.3s;

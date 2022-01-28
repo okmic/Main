@@ -1,7 +1,6 @@
 import React, { FocusEvent } from "react"
 import { Button } from "@mui/material"
 import { useEffect, useState } from "react"
-import { fontFamily } from "../../index.styled"
 import { ContactsType } from "../../types"
 import { Span } from "../index.styled"
 import Form from "./Form"
@@ -9,7 +8,10 @@ import { Inputs, WrapperForm } from "./index.styles"
 
 type PropsType = {
     contacts: ContactsType
-    color: string
+    color: {
+        color: string
+        background: string
+    }
 }
 
 export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
@@ -92,7 +94,7 @@ export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
                 value={name}
                 onChangeInput={handleNameChanged}
                 label={contacts.lebals.name}
-                color={color} />
+                color={color.color} />
             {(emailDirty && emailError) && <Span marginB="9px" textColor="tomato" fs="15px">{emailError}</Span>}
             <Form
                 blurHandler={blurHandler}
@@ -101,7 +103,7 @@ export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
                 value={email}
                 onChangeInput={handleEmailChanged}
                 label={contacts.lebals.email}
-                color={color}
+                color={color.color}
                 validate={emailDirty && emailError ? true : false} />
         </Inputs>
         <Inputs>
@@ -112,13 +114,16 @@ export const Forms: React.FC<PropsType> = ({ contacts, color }) => {
                 value={message}
                 onChangeInput={handleMessageChanged}
                 label={contacts.lebals.message}
-                color={color} />
+                color={color.color} />
             <Button
                 disabled={!validForm}
                 onClick={() => handleButton(name, email, message)}
                 variant="contained"
-                sx={{ fontFamily: fontFamily }}
-            >{contacts.lebals.submit}</Button>
+                sx={{
+                    color: color.background,
+                    backgroundColor: color.color
+                }}
+                >{contacts.lebals.submit}</Button>
         </Inputs>
     </WrapperForm>
         : <Span>{contacts.submit}</Span>

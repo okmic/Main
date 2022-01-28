@@ -28,7 +28,7 @@ const Form: React.FC<PropsType> = ({ value, onChangeInput, label, type, color, n
             error={validate}
             InputLabelProps={{
                 style: {
-                  color: color,
+                  color: color
                 } }}
             sx={{
                 m: '0 1em 1em 0',              

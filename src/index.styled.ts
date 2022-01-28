@@ -1,10 +1,9 @@
 import styled, {createGlobalStyle} from 'styled-components'
 
-export const fontFamily = '"mv boli", "Comic Sans MS", "Comic Sans", "cursive", georgia, "cursive", sans-serif'
-
 const GlobalStyle = createGlobalStyle`
 *{
-    font-family:  Garamond, sans-serif;
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 body {
     margin: 0;
@@ -42,7 +41,7 @@ export const Theme = styled.div<{stateTheme: boolean}>`
     color: ${(props) => !props.stateTheme ? 'rgb(19, 18, 18)' : '#fff' };
 `
 
-export const AppWrapper = styled.div<{stateTheme: boolean}>`
+export const AppWrapper = styled.div<{colorText: string, backgroundColor: string}>`
 min-height: 100vh;
 position: relative;
 top: 0;
@@ -51,8 +50,8 @@ margin: 0 auto;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: ${(props) => !props.stateTheme ? '#fff' : 'rgba(59, 59, 59)' };
-color: ${(props) => !props.stateTheme ? '#000' : '#fff' };
+background-color: ${(props) => props.backgroundColor};
+color: ${(props) => props.colorText};
 `
 export const Loading = styled.div`
 padding: 1em;

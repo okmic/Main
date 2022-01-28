@@ -1,45 +1,41 @@
 import MenuIcon from '@mui/icons-material/Menu'
 import { AppBar, Toolbar, Typography } from "@mui/material"
-import React from "react"
+import { memo, useEffect, useState } from "react"
 import SwipeableEdgeDrawer from './Drawer'
 import { BallHeader } from '../Main/index.styled'
 import { NavLink } from 'react-router-dom'
-import { LinksType } from '../../types'
 import SelectSwitches from '../Select/Select'
 import styled from 'styled-components'
-import { fontFamily } from '../../index.styled'
+import { useDispatch, useSelector } from 'react-redux'
+import { stateType } from '../../redux/store'
+import { changeHeaderAndBarTheme } from '../../redux/appReducer'
 
 export type ColorsType = {
     color: string
     background: string
 }
-type PropsType = {
-    state: {
-        name: string
-    }
-    links: LinksType
-    lang: "Eng" | "Ru"
-    setLang: (lang: "Eng" | "Ru") => void
-    theme: boolean
-    setTheme: (ch: boolean) => void
-}
+
 const Switch = styled.div`
     @media screen and (max-width: 530px) {
         display: none;
     }
 `
 
-export const Header: React.FC<PropsType> = ({ state, links, lang, setLang, theme, setTheme }) => {
+export default memo(function Header () {
+    const name = useSelector((state: stateType) => state.appReducer.language.header.name) 
+    const colors = useSelector((state: stateType) => state.appReducer.theme.styles.header)
+    const theme = useSelector((state: stateType) => state.appReducer.theme.status)
 
-    const [open, setOpen] = React.useState(false)
+    const dispatch = useDispatch()
+
+    const [open, setOpen] = useState(false)
     const toggleDrawer = (newOpen: boolean) => () => {
         setOpen(newOpen)
     }
 
-    const colors =  {
-        background: theme ? '#fff' : "rgba(59, 59, 59)",
-        color: theme ? "rgb(19, 18, 18)" : '#fff'
-    } 
+    useEffect(() => {
+        dispatch(changeHeaderAndBarTheme())
+    }, [theme, dispatch])
 
     return (
         <AppBar position='static' component='header' sx={{backgroundColor: colors.background}}>
@@ -50,10 +46,10 @@ export const Header: React.FC<PropsType> = ({ state, links, lang, setLang, theme
                     component="span"
                     sx={{ flexGrow: 1, fontWeight: 600 }}
                 >
-                    <NavLink to="/" style={{ color: colors.color, fontFamily: fontFamily }}>{state.name}</NavLink>
+                    <NavLink to="/" style={{ color: colors.color}}>{name}</NavLink>
                 </Typography>
                 <Switch>
-                    <SelectSwitches colors={colors} lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} />
+                    <SelectSwitches colors={colors} />
                 </Switch>
 
                 <MenuIcon
@@ -62,15 +58,11 @@ export const Header: React.FC<PropsType> = ({ state, links, lang, setLang, theme
                 />
                 <SwipeableEdgeDrawer
                     colors={colors}
-                    links={links}
                     open={open}
                     toggleDrawer={toggleDrawer}
                     setOpen={setOpen}
-                    lang={lang}
-                    setLang={setLang}
-                    theme={theme}
-                    setTheme={setTheme} />
+                />
             </Toolbar>
         </AppBar>
     )
-}
+})

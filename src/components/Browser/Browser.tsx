@@ -1,11 +1,14 @@
-import React, { useState } from "react"
+import React, { memo, useState } from "react"
 import { BContainer, Content, ContentBrow, HeaderBrow, WrapperBrowser } from "./index.styled"
 import { Search } from "./Search/Search"
 import { TabsItems } from "./Tab/TabsItems"
-import desktop from '../../img/hadidjaPage.png'
-import mobile from '../../img/hadidjaMobile.png'
 
-export const Browser = () => {
+type PropsType = {
+    desktop?: string
+    mobile?: string
+}
+
+export default memo(function Browser ({desktop, mobile}: PropsType) {
 
     const width = window.innerWidth
 
@@ -38,6 +41,6 @@ export const Browser = () => {
             </ContentBrow>
         </BContainer>
     </WrapperBrowser>
-}
+})
 
 
