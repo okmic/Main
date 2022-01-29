@@ -6,6 +6,10 @@ import js from './img/skills/js.png'
 import node from './img/skills/node.png'
 import jq from './img/skills/jq.svg'
 import react from './img/skills/react.svg'
+import canvasD from './img/canvasPage.png'
+import canvasM from './img/canvasPage.png'
+import hadidjaD from './img/hadidjaPage.png'
+import hadidjaM from './img/hadidjaMobile.png'
 import { dataType } from './types'
 
 
@@ -36,11 +40,14 @@ export const DataEng: dataType = {
                 title: 'Fine Art Canvas',
                 link: {
                     title: 'Link to the deployed version', 
-                    href: 'https://okmic.github.io/Canvas/'
+                    href: 'https://okmic.github.io/Canvas/',
+                    desctopImg: canvasD,
+                    mobileImg: canvasM,
+                    name: 'Canvas'
                 },
                 linkRep: {
                     title: 'Repository link', 
-                    href: 'https://github.com/okmic/Canvas'
+                    href: 'https://github.com/okmic/Canvas',
                 },
                 img: canvas,
                 descr: 'The Fine Art Canvas project is my graduate work at the university, aimed at promoting artists free of charge, as well as selling their paintings without commission. Currently, the development of this project is not stopped, but is actively moving towards the SEO and the server side.'
@@ -49,7 +56,10 @@ export const DataEng: dataType = {
                 title: 'Hadidja Sweets',
                 link: {
                     title: 'Link to the deployed version', 
-                    href: 'https://okmic.github.io/hadidja-sweets/'
+                    href: 'https://okmic.github.io/hadidja-sweets/',
+                    desctopImg: hadidjaD,
+                    mobileImg: hadidjaM,
+                    name: 'hadidja-sweets'
                 },
                 linkRep: {
                     title: 'Repository link', 
@@ -154,7 +164,10 @@ export const DataRu: dataType = {
                 title: 'Fine Art Canvas',
                 link: {
                     title: 'Ссылка на развернутую версию', 
-                    href: 'https://okmic.github.io/Canvas/'
+                    href: 'https://okmic.github.io/Canvas/',
+                    desctopImg: canvasD,
+                    mobileImg: canvasM,
+                    name: 'Canvas'
                 },
                 linkRep: {
                     title: 'Ссылка на репозиторий', 
@@ -167,7 +180,10 @@ export const DataRu: dataType = {
                 title: 'Hadidja Sweets',
                 link: {
                     title: 'Ссылка на развернутую версию', 
-                    href: 'https://okmic.github.io/hadidja-sweets/'
+                    href: 'https://okmic.github.io/hadidja-sweets/',
+                    desctopImg: hadidjaD,
+                    mobileImg: hadidjaM,
+                    name: 'hadidja-sweets'
                 },
                 linkRep: {
                     title: 'Ссылка на репозиторий', 

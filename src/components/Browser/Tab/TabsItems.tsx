@@ -1,5 +1,5 @@
-import React from "react"
 import { ButtonsBrow, TabsBrowser, TabB, Tabs, Button, AddTab, TitleTab } from "./index.styled"
+import { Link } from "react-router-dom"
 import UnfoldLessIcon from '@mui/icons-material/UnfoldLess'
 import CloseIcon from '@mui/icons-material/Close'
 import RemoveIcon from '@mui/icons-material/Remove'
@@ -25,8 +25,10 @@ export const TabsItems = () => <TabsBrowser>
         <Button>
             <UnfoldLessIcon sx={{ fontSize: '19px' }} />
         </Button>
-        <Button hoverColor="red">
-            <CloseIcon sx={{ fontSize: '19px' }} />
-        </Button>
+        <Link to="/Projects">
+            <Button hoverColor="red">
+                <CloseIcon sx={{ fontSize: '19px' }} />
+            </Button>
+        </Link>
     </ButtonsBrow>
 </TabsBrowser>

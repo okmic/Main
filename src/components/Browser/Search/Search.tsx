@@ -1,37 +1,22 @@
 import React from "react"
-import { AboutPanel, Desctop, ControlPanel, SearchPanel, WrapperSearch, Mobile } from "./index.styled"
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import ReplayIcon from '@mui/icons-material/Replay'
-import HomeIcon from '@mui/icons-material/Home'
-import DesktopMacIcon from '@mui/icons-material/DesktopMac'
-import MobileScreenShareIcon from '@mui/icons-material/MobileScreenShare'
+import About from "./About"
+import Control from "./Control"
+import { WrapperSearch } from "./index.styled"
 
 type PropsType = {
     handleSubmit: (order: boolean) => void
+    setBrowserWidth: (f: boolean) => void
+    projectName: string
 }
 
-export const Search: React.FC<PropsType> = ({handleSubmit}) => {
+export const Search: React.FC<PropsType> = ({handleSubmit, projectName, setBrowserWidth}) => {
+
+    const disabledButton = projectName.length > 1 ? false : true
 
     return <WrapperSearch>
-        <ControlPanel>
-            <Desctop>
-                <button><ArrowBackIcon /></button>
-                <button><ArrowForwardIcon /></button>
-                <button><ReplayIcon /></button>
-            </Desctop>
-            <Mobile><HomeIcon /></Mobile>
-            <SearchPanel>
-                <input type="text" value="http://okmic/" onChange={() => { }} />
-            </SearchPanel>
-        </ControlPanel>
-        <AboutPanel>
-            <button onClick={() => handleSubmit(true)} >
-                <DesktopMacIcon sx={{ fontSize: "25px" }} />
-            </button>
-            <button onClick={() =>  handleSubmit(false)}>
-                <MobileScreenShareIcon sx={{ fontSize: "25px" }} />
-            </button>
-        </AboutPanel>
+        <Control projectName={projectName} setBrowserWidth={setBrowserWidth} />
+        <About setBrowserWidth={setBrowserWidth} disabledButton={disabledButton} handleSubmit={handleSubmit} />
     </WrapperSearch>
 }
+
+

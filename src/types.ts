@@ -18,6 +18,9 @@ export type ProjectsDataType = {
     link?: {
         title: string
         href: string
+        desctopImg?: string
+        mobileImg?: string
+        name?: string
     }
     linkRep: {
         title: string

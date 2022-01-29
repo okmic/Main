@@ -10,9 +10,9 @@ export const WrapperBrowser = styled.div`
     max-height: 100vh;
     padding: 1em 1em 0 1em;
 `
-export const BContainer = styled.div`
-    max-width: 80vw;
-    max-width: 1500px;
+export const BContainer = styled.div<{browserWidth: boolean}>`
+    ${props => !props.browserWidth ? "width: 90vw;" : "max-width: 1500vw;"};
+    min-height: 70vh;
     border: ${borderB};
 `
 export const HeaderBrow = styled.div`

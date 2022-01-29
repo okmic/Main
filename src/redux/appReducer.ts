@@ -36,7 +36,7 @@ const initialState = {
 
 const appReducer = createSlice(
     {
-    name: "toolkit",
+    name: "appReducer",
     initialState,
     reducers: {
         switchLang(state, action) {
