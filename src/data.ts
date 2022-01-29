@@ -10,7 +10,7 @@ import canvasD from './img/canvasPage.png'
 import canvasM from './img/canvasPage.png'
 import hadidjaD from './img/hadidjaPage.png'
 import hadidjaM from './img/hadidjaMobile.png'
-import { dataType } from './types'
+import { dataType, InitTypeBrowser } from './types'
 
 
 export const DataEng: dataType = {
@@ -260,3 +260,26 @@ export const DataRu: dataType = {
     }
 
 }
+
+export const BrowserInitialState = {
+    links: {
+        deployed: {
+            href: null,
+            title: null
+        },
+        repository: {
+            href: null,
+            title: null
+        }
+    },
+    images: {
+        desktopImg: null,
+        mobileImg: null,
+        name: ''
+    },
+    mainScreen: [
+        {img: canvas, desktop: canvasD, mobile: canvasD, name: "Canvas"},
+        {img: hadidja, desktop: hadidjaD, mobile: hadidjaM, name: "hadidja-sweets"},
+        {img: gb, link: 'https://github.com/okmic', desktop: null, mobile: null, name: "" }
+    ]
+} as InitTypeBrowser

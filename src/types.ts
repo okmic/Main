@@ -18,8 +18,8 @@ export type ProjectsDataType = {
     link?: {
         title: string
         href: string
-        desctopImg?: string
-        mobileImg?: string
+        desctopImg: string
+        mobileImg: string
         name?: string
     }
     linkRep: {
@@ -80,4 +80,35 @@ export type dataType = {
     projects: ProjectsType
     cv: CVType
     contacts: ContactsType
+}
+
+export type InitTypeBrowser = {
+    links: BrowserLinksType
+    images: ImagesType
+    mainScreen: Array<MainScreenType>
+}
+
+export type BrowserLinksType = {
+    deployed: {
+        title: string | null
+        href: string | null
+    }
+    repository: {
+        title: string | null
+        href: string | null
+    }
+}
+
+export type ImagesType = {
+    desktopImg: string | null
+    mobileImg: string | null
+    name: string
+}
+
+export type MainScreenType = {
+    img: string 
+    desktop: string | null
+    mobile: string | null
+    link?: string
+    name: string
 }

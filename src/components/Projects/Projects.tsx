@@ -9,7 +9,7 @@ export default memo(function Projects (){
 
   const projects = useSelector((state: stateType) => state.appReducer.language.projects)
   const textColor = useSelector((state: stateType) => state.appReducer.theme.styles.app.color)
-debugger
+
   return <>
     <TitleScreen>{projects.title}</TitleScreen>
     {projects.projects.map((p, index) => <div key={index}>

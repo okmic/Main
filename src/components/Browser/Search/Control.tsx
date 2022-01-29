@@ -28,7 +28,10 @@ export default memo(function Control({ setBrowserWidth, projectName }: PropsType
             <button><ArrowForwardIcon /></button>
             <button><ReplayIcon /></button>
         </Desctop>
-        <Mobile onClick={() => dispatch(removeImages())}>
+        <Mobile onClick={() => {
+            dispatch(removeImages())
+            setBrowserWidth(false)
+            }}>
             <HomeIcon />
         </Mobile>
         <SearchPanel>

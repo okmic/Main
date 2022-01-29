@@ -11,9 +11,14 @@ export const WrapperBrowser = styled.div`
     padding: 1em 1em 0 1em;
 `
 export const BContainer = styled.div<{browserWidth: boolean}>`
-    ${props => !props.browserWidth ? "width: 90vw;" : "max-width: 1500vw;"};
+    ${props => !props.browserWidth ? "width: 70vw;" : "max-width: 1300px;"};
+    max-width: 1300px;
     min-height: 70vh;
     border: ${borderB};
+    @media screen and (max-width: 750px) {
+        width: 100%;
+        max-width: 1300px;
+    }
 `
 export const HeaderBrow = styled.div`
     display: flex;

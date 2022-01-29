@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit"
+import { InitTypeBrowser } from "../types"
 import appReducer, { InitType } from "./appReducer"
-import browserReducer, { InitTypeBrowser } from "./browserReducer"
+import browserReducer from "./browserReducer"
 
 export type stateType = {
     appReducer: InitType

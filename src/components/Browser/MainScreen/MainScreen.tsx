@@ -1,10 +1,12 @@
 import { memo } from "react"
 import { useDispatch } from "react-redux"
 import styled from "styled-components"
-import { addImages, MainScreenType } from "../../../redux/browserReducer"
+import { addImages } from "../../../redux/browserReducer"
+import { MainScreenType } from "../../../types"
 
 export const WrapperMS = styled.div`
-    min-width: 80vw;
+    padding: 1em;
+    width: 100%;
     max-width: 1500px;
     min-height: 55vh;
     display: flex;
