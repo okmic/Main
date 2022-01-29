@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.js": "/Main/static/js/main.daff4ffe.js",
+    "main.js": "/Main/static/js/main.e45c4cd5.js",
     "static/js/787.182fd71d.chunk.js": "/Main/static/js/787.182fd71d.chunk.js",
     "static/media/hadidjaPage.png": "/Main/static/media/hadidjaPage.30de54ff9c9b9716f750.png",
     "static/media/hadidjaMobile.png": "/Main/static/media/hadidjaMobile.478a9c31f1837d2184b4.png",
+    "static/media/canvasPage.png": "/Main/static/media/canvasPage.52672bf9c2cb04e0133c.png",
     "static/media/me.jpg": "/Main/static/media/me.f1f9e1298e914d2db901.jpg",
     "static/media/404.png": "/Main/static/media/404.af59d96597b39392118f.png",
     "static/media/Hadidja.jpg": "/Main/static/media/Hadidja.93fd7da2697f6732ccb5.jpg",
@@ -11,10 +12,10 @@
     "static/media/jq.svg": "/Main/static/media/jq.55de1cbe3d0e28be96ee007742f8f2ab.svg",
     "static/media/react.svg": "/Main/static/media/react.cfbc1fb0cceb442c7774b91230a51de0.svg",
     "index.html": "/Main/index.html",
-    "main.daff4ffe.js.map": "/Main/static/js/main.daff4ffe.js.map",
+    "main.e45c4cd5.js.map": "/Main/static/js/main.e45c4cd5.js.map",
     "787.182fd71d.chunk.js.map": "/Main/static/js/787.182fd71d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.daff4ffe.js"
+    "static/js/main.e45c4cd5.js"
   ]
 }
