@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit"
-
 import { BrowserInitialState } from "../data"
 
 
@@ -10,6 +9,12 @@ type AddImagesType = {
         name: string
     }
 }
+type AddDescriptionType = {
+    payload: {
+        l1: string | null
+        l2: string
+    }
+}
 
 const browserReducer = createSlice(
     {
@@ -17,19 +22,27 @@ const browserReducer = createSlice(
     initialState: BrowserInitialState,
     reducers: {
         addImages(state, action: AddImagesType) {
-            debugger
            state.images.desktopImg = action.payload.desktop
            state.images.mobileImg = action.payload.mobile
            state.images.name = action.payload.name
+        },
+        addDescription(state, action: AddDescriptionType) {
+            state.links.deployed.href = action.payload.l1
+            state.links.repository.href = action.payload.l2
         },
         removeImages(state) {
             state.images.desktopImg = null
             state.images.mobileImg = null
             state.images.name = ''
+        },
+        removeDescriptions(state) {
+            state.links.deployed.title = null
+            state.links.deployed.href = null
+            state.links.repository.title = null
+            state.links.repository.href = null
         }
     }
-    //todo: do add description
 })
 
 export default browserReducer.reducer
-export const {addImages, removeImages} = browserReducer.actions
+export const {addImages, addDescription, removeImages, removeDescriptions} = browserReducer.actions

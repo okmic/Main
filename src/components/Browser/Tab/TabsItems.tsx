@@ -4,8 +4,15 @@ import UnfoldLessIcon from '@mui/icons-material/UnfoldLess'
 import CloseIcon from '@mui/icons-material/Close'
 import RemoveIcon from '@mui/icons-material/Remove'
 import img from '../../../img/M.png'
+import { memo } from "react"
+import { useDispatch } from "react-redux"
+import { removeDescriptions } from "../../../redux/browserReducer"
 
-export const TabsItems = () => <TabsBrowser>
+export default memo( function TabsItems()  {
+    
+    const dispatch = useDispatch()
+
+    return <TabsBrowser>
     <Tabs>
         <TabB>
             <TitleTab>
@@ -25,10 +32,11 @@ export const TabsItems = () => <TabsBrowser>
         <Button>
             <UnfoldLessIcon sx={{ fontSize: '19px' }} />
         </Button>
-        <Link to="/Projects">
+        <Link to="/Projects" onClick={() => dispatch(removeDescriptions())}>
             <Button hoverColor="red">
                 <CloseIcon sx={{ fontSize: '19px' }} />
             </Button>
         </Link>
     </ButtonsBrow>
 </TabsBrowser>
+}) 

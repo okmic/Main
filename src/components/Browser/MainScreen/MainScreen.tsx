@@ -1,50 +1,37 @@
 import { memo } from "react"
-import { useDispatch } from "react-redux"
-import styled from "styled-components"
-import { addImages } from "../../../redux/browserReducer"
+import { useDispatch, useSelector } from "react-redux"
+import { addDescription, addImages } from "../../../redux/browserReducer"
+import { stateType } from "../../../redux/store"
 import { MainScreenType } from "../../../types"
+import { ProjectBrowser, WrapperMS } from "./index.styled"
 
-export const WrapperMS = styled.div`
-    padding: 1em;
-    width: 100%;
-    max-width: 1500px;
-    min-height: 55vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-`
-export const ProjectBrowser = styled.div`
-    max-width: 250px;
-    max-height: 250px;
-    border-radius: 50%;
-    border: tomato 1px solid;
-    overflow: hidden;
-    & img{
-        transition: 0.3s;
-        transform: scale(1);
-        max-width: 100%;
-        cursor: pointer;
-    };
-    & img:hover {
-        transition: 0.3s;
-        transform: scale(1.1);
-    }
-`
+
 type PropsType = {
     mainScreen: Array<MainScreenType>
     setImage: (url: string) => void
 }
 
+
 export default memo(function MainScreen({mainScreen, setImage}: PropsType) {
 
     const dispatch = useDispatch()
-    const handleSubmit = (desktop: string | null, mobile: string | null, name: string) => {
+    const links = useSelector((state: stateType) => state.appReducer.language.projects.projects)
+
+    
+    const mapDescription = (links: any, type: string) => {
+        links.filter((item: any) => item.title === type).map((item: any) =>  dispatch(addDescription({
+            l1: item.link?.href === null || undefined ? null : item.link!.href,
+            l2: item.linkRep.href
+        })))}
+
+    
+    const handleSubmit = (desktop: string | null, mobile: string | null, name: string, typeArg: string) => {
         dispatch(addImages({desktop, mobile, name}))
-    }
+        mapDescription(links, typeArg)
+        }
 
     return <WrapperMS>
-            {mainScreen.map((item, index) => <ProjectBrowser key={index} onClick={() => handleSubmit(item.desktop, item.mobile, item.name)}>
+            {mainScreen.map((item, index) => <ProjectBrowser key={index} onClick={() => {handleSubmit(item.desktop, item.mobile, item.name, item.type)}}>
                 {!item.link 
                 ?<img src={item.img} alt={item.img} />
                 : <a target="_blank"  href={item.link} rel="noreferrer">

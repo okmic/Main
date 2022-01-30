@@ -49,6 +49,8 @@ export const AboutPanel = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -5px;
-    
+    margin-top: -5px;   
+`
+export const AboutButton = styled.button`
+    color: red;
 `

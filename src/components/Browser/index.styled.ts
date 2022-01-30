@@ -7,14 +7,25 @@ export const mediaScr = '@media screen and (max-width: 690px) {display: none;}'
 
 export const WrapperBrowser = styled.div`
     max-width: 100vw;
-    max-height: 100vh;
     padding: 1em 1em 0 1em;
 `
+
+export const BPreloading = styled.div<{preloading: boolean}>`
+    display: ${({preloading}) => preloading ? 'none' : 'block' };
+    top: 63px;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: black;
+    z-index: 188;
+    transtition: 1s;
+`
+
 export const BContainer = styled.div<{browserWidth: boolean}>`
     ${props => !props.browserWidth ? "width: 70vw;" : "max-width: 1300px;"};
     max-width: 1300px;
     min-height: 70vh;
-    border: ${borderB};
+    z-index: 1;
     @media screen and (max-width: 750px) {
         width: 100%;
         max-width: 1300px;

@@ -1,6 +1,6 @@
 import { memo } from "react"
 import { useDispatch } from "react-redux"
-import { removeImages } from "../../../redux/browserReducer"
+import { removeDescriptions, removeImages } from "../../../redux/browserReducer"
 import { ControlPanel, Desctop, Mobile, SearchPanel } from "./index.styled"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
@@ -10,28 +10,30 @@ import HomeIcon from '@mui/icons-material/Home'
 type PropsType = {
     setBrowserWidth: (f: boolean) => void
     projectName: string
+    setStatusWidth: (s: boolean | null) => void
 }
 
-export default memo(function Control({ setBrowserWidth, projectName }: PropsType) {
+export default memo(function Control({ setBrowserWidth, projectName, setStatusWidth }: PropsType) {
 
     const dispatch = useDispatch()
     const href = !projectName ? 'https://github.com/okmic' : `https://okmic.github.io/${projectName}`
 
+    const handleSubmit = () => {
+        dispatch(removeImages())
+        setBrowserWidth(false)
+        setStatusWidth(null)
+        dispatch(removeDescriptions())
+    }
+
     return <ControlPanel>
         <Desctop>
-            <button onClick={() => {
-                dispatch(removeImages())
-                setBrowserWidth(false)
-            }}>
+            <button onClick={handleSubmit}>
                 <ArrowBackIcon />
             </button>
             <button><ArrowForwardIcon /></button>
-            <button><ReplayIcon /></button>
+            <button onClick={handleSubmit}><ReplayIcon /></button>
         </Desctop>
-        <Mobile onClick={() => {
-            dispatch(removeImages())
-            setBrowserWidth(false)
-            }}>
+        <Mobile onClick={handleSubmit}>
             <HomeIcon />
         </Mobile>
         <SearchPanel>

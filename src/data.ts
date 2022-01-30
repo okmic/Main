@@ -15,6 +15,10 @@ import { dataType, InitTypeBrowser } from './types'
 
 export const DataEng: dataType = {
     order: "Eng",
+    linksTitle: {
+        t1: 'Link to the deployed version',
+        t2: 'Repository link',
+    },
     main: {
         title: 'Hello',
         about: 'A Bit About Me',
@@ -139,6 +143,10 @@ export const DataEng: dataType = {
 }
 export const DataRu: dataType = {
     order: "Ru",
+    linksTitle: {
+        t1: 'Ссылка на развернутую версию',
+        t2: 'Ссылка на репозиторий',
+    },
     main: {
         title: "Привет",
         about: 'Немного обо мне',
@@ -278,8 +286,8 @@ export const BrowserInitialState = {
         name: ''
     },
     mainScreen: [
-        {img: canvas, desktop: canvasD, mobile: canvasD, name: "Canvas"},
-        {img: hadidja, desktop: hadidjaD, mobile: hadidjaM, name: "hadidja-sweets"},
-        {img: gb, link: 'https://github.com/okmic', desktop: null, mobile: null, name: "" }
+        {img: canvas, desktop: canvasD, mobile: canvasD, name: "Canvas", type: "Fine Art Canvas"},
+        {img: hadidja, desktop: hadidjaD, mobile: hadidjaM, name: "hadidja-sweets", type: 'Hadidja Sweets'},
+        {img: gb, link: 'https://github.com/okmic', desktop: null, mobile: null, name: "", type: 'GitHub' }
     ]
 } as InitTypeBrowser

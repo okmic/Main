@@ -71,6 +71,10 @@ export type ContactsType = {
 
 export type dataType = {
     order: "Ru" | "Eng"
+    linksTitle: {
+        t1: string
+        t2: string
+    }
     main: MainType
     header: {
         name: string
@@ -111,4 +115,5 @@ export type MainScreenType = {
     mobile: string | null
     link?: string
     name: string
+    type: string
 }
