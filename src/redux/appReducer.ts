@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { DataEng, DataRu } from "../data"
-import {dataType} from '../types'
+import { DataEng, DataRu } from "./data"
+import {dataType} from '../types/types'
 
 export type InitType = {
     language: dataType

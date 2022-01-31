@@ -1,7 +1,7 @@
 import React, { FocusEvent } from "react"
 import { Button } from "@mui/material"
 import { useEffect, useState } from "react"
-import { ContactsType } from "../../types"
+import { ContactsType } from "../../types/types"
 import { Span } from "../index.styled"
 import Form from "./Form"
 import { Inputs, WrapperForm } from "./index.styles"

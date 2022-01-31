@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit"
-import { InitTypeBrowser } from "../types"
+import { InitTypeBrowser } from "../types/types"
 import appReducer, { InitType } from "./appReducer"
 import browserReducer from "./browserReducer"
 

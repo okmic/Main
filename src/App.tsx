@@ -17,7 +17,22 @@ import { useDispatch, useSelector } from 'react-redux'
 import { stateType } from './redux/store'
 import { changeAppTheme } from './redux/appReducer'
 
+type RoutesType = {
+  path: string
+  Component: React.NamedExoticComponent<object>
+}
+
 function App() {
+
+  const routes = [
+    {path: '/', Component: Main} ,
+    {path: '/Main', Component: Main},
+    {path: '/Curriculum-Vitae', Component: Resume},
+    {path: '/Projects', Component: Projects},
+    {path: '/Contact', Component: Contacts},
+    {path: '/Browser', Component: Browser},
+    {path: '/*', Component: NotFound},
+  ] as Array<RoutesType>
 
   const theme = useSelector((state: stateType) => state.appReducer.theme)
   const dispatch = useDispatch()
@@ -34,15 +49,7 @@ function App() {
         <ScrollToTop />
           <Header />
           <Routes>
-            {/* for github */}
-            <Route path="/Main" element={<Main />} />
-            {/* for github */}
-            <Route path="/" element={<Main />} />
-            <Route path="/Curriculum-Vitae" element={<Resume />} />
-            <Route path="/Projects" element={<Projects />} />
-            <Route path="/Contact" element={<Contacts />} />
-            <Route path="/Browser" element={<Browser />} />
-            <Route path="/*" element={<NotFound />} />
+                {routes.map(({path, Component}, index) => <Route key={index} path={path} element={<Component />} />)}
           </Routes>
           <Footer />
         </AppWrapper>
@@ -51,3 +58,12 @@ function App() {
 }
 
 export default App
+
+/*             
+<Route path="/Main" element={<Main />} />
+<Route path="/" element={<Main />} />
+<Route path="/Curriculum-Vitae" element={<Resume />} />
+<Route path="/Projects" element={<Projects />} />
+<Route path="/Contact" element={<Contacts />} />
+<Route path="/Browser" element={<Browser />} />
+<Route path="/*" element={<NotFound />} /> */

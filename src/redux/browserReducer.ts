@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { BrowserInitialState } from "../data"
+import { BrowserInitialState } from "./data"
 
 
 type AddImagesType = { 

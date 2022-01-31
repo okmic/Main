@@ -1,16 +1,15 @@
-import canvas from './img/Canvas.jpg'
-import hadidja from './img/Hadidja.jpg'
-import gb from './img/gb.jpg'
-import html from './img/skills/html.png'
-import js from './img/skills/js.png'
-import node from './img/skills/node.png'
-import jq from './img/skills/jq.svg'
-import react from './img/skills/react.svg'
-import canvasD from './img/canvasPage.png'
-import canvasM from './img/canvasPage.png'
-import hadidjaD from './img/hadidjaPage.png'
-import hadidjaM from './img/hadidjaMobile.png'
-import { dataType, InitTypeBrowser } from './types'
+import canvas from '../img/Canvas.jpg'
+import hadidja from '../img/Hadidja.jpg'
+import gb from '../img/gb.jpg'
+import html from '../img/skills/html.png'
+import js from '../img/skills/js.png'
+import node from '../img/skills/node.png'
+import react from '../img/skills/react.svg'
+import canvasD from '../img/canvasPage.png'
+import canvasM from '../img/canvasMobile.png'
+import hadidjaD from '../img/hadidjaPage.png'
+import hadidjaM from '../img/hadidjaMobile.png'
+import { dataType, InitTypeBrowser } from '../types/types'
 
 
 export const DataEng: dataType = {
@@ -21,8 +20,8 @@ export const DataEng: dataType = {
     },
     main: {
         title: 'Hello',
-        about: 'A Bit About Me',
-        descr: "My name is Michael, I am 26 years old, I have been fond of programming since my school days, I have tried different directions. I wrote my first website at the age of 17 and gradually mastered the basics of programming. Tried myself in Java, C#, GO, but most of all I liked JavaScript. I am currently looking forward to challenging and interesting projects that will propel me forward!"
+        about: 'About me',
+        descr: "My name is Michael. I am into programming since school. I have tried different directions. I created my first website at the age of 17 and gradually mastered the basics of programming. I have dealt with Java, C#, GO, but I’m leaning towards JavaScript. Currently looking forward to challenging and interesting projects that will boost my skills!"
     },
     header: {
         name: "Michael Okhtov"
@@ -33,9 +32,9 @@ export const DataEng: dataType = {
         contacts: "Contacts"
     },
     footer: {
-        phone: "Phone",
+        phone: "Call me",
         email: 'Email',
-        writeMe: "Write me"
+        writeMe: "Text me"
     },
     projects: {
         title: 'Projects',
@@ -45,6 +44,7 @@ export const DataEng: dataType = {
                 link: {
                     title: 'Link to the deployed version', 
                     href: 'https://okmic.github.io/Canvas/',
+                    browserTitle: 'Browser Emulator',
                     desctopImg: canvasD,
                     mobileImg: canvasM,
                     name: 'Canvas'
@@ -61,6 +61,7 @@ export const DataEng: dataType = {
                 link: {
                     title: 'Link to the deployed version', 
                     href: 'https://okmic.github.io/hadidja-sweets/',
+                    browserTitle: 'Browser Emulator',
                     desctopImg: hadidjaD,
                     mobileImg: hadidjaM,
                     name: 'hadidja-sweets'
@@ -79,7 +80,7 @@ export const DataEng: dataType = {
                     href: 'https://github.com/okmic'
                 },
                 img: gb,
-                descr: 'Since the vast majority of my projects are private, I am not allowed to show them publicly. But on the web service GitHub I have posted all my projects and templates, there you can see how I write the code. There you can also find a project where I train my JS-technology skills "Social-Network/Way-of-the-Samurai"'
+                descr: 'Since the vast majority of my projects are private, I am not allowed to show them publicly. But I have posted all my public projects and templates on the GitHub web service, where you can see how I write code!'
             },
 
         ]
@@ -112,16 +113,12 @@ export const DataEng: dataType = {
                     descr: "If necessary, I can work with native JavaScript and create interactive applications without modern frameworks. I also keep my code readable and understandable by setting static typing with TypeScript, which will improve other developers' understanding of the code."
                 },
                 {
-                    img: jq,
-                    descr: 'When it comes to small web projects I use jQuery, it greatly simplifies things like viewing and manipulating HTML documents, event handling, animation, and Ajax with an easy-to-use API that works across multiple browsers. Through a combination of versatility, extensibility and development speed'
-                },
-                {
                     img: node,
                     descr: "I don't have much backend experience, but in small projects like online shopping or landing pages with feedback forms, I can develop an API to transfer data over HTTP and Websocket in PHP or JS (nodeJS) using databases MySql or MongoDB."
                 },
                 {
                     img: react,
-                    descr: 'I got introduced to React in 2019 and has since become the main tool in my luggage. I have experience developing fast, responsive user interfaces using the React library. From project to project, I try to improve my qualifications so that my code is more readable and reliable, important parts of the application are always accompanied by unit tests. I am using Redux for state management.'
+                    descr: 'I got introduced to React in 2019 and since then it became the main tool in my luggage. I have experience in developing fast, responsive user interfaces, using the React library. From project to project, I try to improve my qualifications so that my code becomes more readable and reliable, important parts of the application are always accompanied by unit tests.'
                 }
             ]
         }
@@ -150,7 +147,7 @@ export const DataRu: dataType = {
     main: {
         title: "Привет",
         about: 'Немного обо мне',
-        descr: "Меня зовут Михаил, мне 26 лет, программированием увлекаюсь со школьных времен, пробовал разные направления. Свой первый сайт я написал в 17 лет и постепенно осваивал азы программирования. Пробовал себя в Java, C#, GO, но больше всего понравился JavaScript. В настоящее время я с нетерпением жду сложных и интересных проектов, которые будут продвигать меня вперед!"
+        descr: "Меня зовут Михаил. Программированием увлекаюсь со школы. Я пробовал разные направления. Свой первый сайт я создал в 17 лет и постепенно осваивал азы программирования. Пробовал себя в Java, C#, GO, но склонился к JavaScript. В настоящее время с нетерпением жду сложных и интересных проектов, которые повысят мои навыки!"
     },
     header: {
         name: "Михаил Охтов"
@@ -173,6 +170,7 @@ export const DataRu: dataType = {
                 link: {
                     title: 'Ссылка на развернутую версию', 
                     href: 'https://okmic.github.io/Canvas/',
+                    browserTitle: 'Эмулятор браузера',
                     desctopImg: canvasD,
                     mobileImg: canvasM,
                     name: 'Canvas'
@@ -189,6 +187,7 @@ export const DataRu: dataType = {
                 link: {
                     title: 'Ссылка на развернутую версию', 
                     href: 'https://okmic.github.io/hadidja-sweets/',
+                    browserTitle: 'Эмулятор браузера',
                     desctopImg: hadidjaD,
                     mobileImg: hadidjaM,
                     name: 'hadidja-sweets'
@@ -207,7 +206,7 @@ export const DataRu: dataType = {
                     href: 'https://github.com/okmic'
                 },
                 img: gb,
-                descr: 'Поскольку подавляющее большинство моих проектов являются частными, мне не разрешено показывать их публично. Но на веб-сервисе GitHub я разместил все свои Pet-проекты и шаблоны, там вы можете увидеть, как я пишу код. Там же вы найдете проект, в котором я тренирую свои навыки работы с JS-технологиями "Social-Network/Way-of-the-Samurai"'
+                descr: 'Поскольку подавляющее большинство моих проектов являются частными, мне не разрешается показывать их публично. Но я разместил все свои публичные проекты и шаблоны на веб-сервисе GitHub, где вы можете увидеть, как я пишу код!'
             },
 
         ]
@@ -240,16 +239,12 @@ export const DataRu: dataType = {
                     descr: 'При необходимости я могу работать с нативным JavaScript и создавать интерактивные приложения без современных фреймворков. Я также сохраняю свой код читабельным и понятным, устанавливая статическую типизацию с помощью TypeScript, что улучшит понимание кода другими разработчиками.'
                 },
                 {
-                    img: jq,
-                    descr: 'Когда дело доходит до небольших веб-проектов, я использую jQuery, он значительно упрощает такие вещи, как просмотр и управление HTML-документами, обработку событий, анимаций и Ajax запросов с помощью простого в использовании API, который  является кроссбраузерным. Благодаря сочетанию универсальности, расширяемости и скорости разработки повляет быстро и качественно разработавыть целевые страницы.'
-                },
-                {
                     img: node,
                     descr: 'У меня нет большого опыта работы с серверной частью, но в небольших проектах, таких как интернет-магазины или целевые страницы с формами обратной связи, я могу разработать API для передачи данных через HTTP и Websocket на PHP или JS (nodeJS) с использованием баз данных MySql или MongoDB.'
                 },
                 {
                     img: react,
-                    descr: 'Я познакомился с React в 2019 году и с тех пор он стал моим основным инструментом. У меня есть опыт разработки быстрых, отзывчивых пользовательских интерфейсов с использованием библиотеки React. От проекта к проекту я стараюсь повышать свою квалификацию, чтобы мой код был более читабельным и надежным, важные части приложения всегда сопровождались модульными тестами. Я использую Redux для управления состоянием.'
+                    descr: 'Я познакомился с React в 2019 году и с тех пор он стал моим основным инструментом. У меня есть опыт разработки быстрых, отзывчивых пользовательских интерфейсов с использованием библиотеки React. От проекта к проекту я стараюсь повышать свою квалификацию, чтобы мой код был более читабельным и надежным, важные части приложения всегда сопровождались модульными тестами.'
                 }
             ]
         }
@@ -269,7 +264,7 @@ export const DataRu: dataType = {
 
 }
 
-export const BrowserInitialState = {
+export const BrowserInitialState: InitTypeBrowser = {
     links: {
         deployed: {
             href: null,
@@ -286,8 +281,8 @@ export const BrowserInitialState = {
         name: ''
     },
     mainScreen: [
-        {img: canvas, desktop: canvasD, mobile: canvasD, name: "Canvas", type: "Fine Art Canvas"},
+        {img: canvas, desktop: canvasD, mobile: canvasM, name: "Canvas", type: "Fine Art Canvas"},
         {img: hadidja, desktop: hadidjaD, mobile: hadidjaM, name: "hadidja-sweets", type: 'Hadidja Sweets'},
         {img: gb, link: 'https://github.com/okmic', desktop: null, mobile: null, name: "", type: 'GitHub' }
     ]
-} as InitTypeBrowser
+} 

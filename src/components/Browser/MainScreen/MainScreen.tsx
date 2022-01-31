@@ -2,17 +2,16 @@ import { memo } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { addDescription, addImages } from "../../../redux/browserReducer"
 import { stateType } from "../../../redux/store"
-import { MainScreenType } from "../../../types"
+import { MainScreenType } from "../../../types/types"
 import { ProjectBrowser, WrapperMS } from "./index.styled"
 
 
 type PropsType = {
     mainScreen: Array<MainScreenType>
-    setImage: (url: string) => void
 }
 
 
-export default memo(function MainScreen({mainScreen, setImage}: PropsType) {
+export default memo(function MainScreen({mainScreen}: PropsType) {
 
     const dispatch = useDispatch()
     const links = useSelector((state: stateType) => state.appReducer.language.projects.projects)
@@ -26,8 +25,12 @@ export default memo(function MainScreen({mainScreen, setImage}: PropsType) {
 
     
     const handleSubmit = (desktop: string | null, mobile: string | null, name: string, typeArg: string) => {
-        dispatch(addImages({desktop, mobile, name}))
-        mapDescription(links, typeArg)
+            if(desktop) {
+                dispatch(addImages({desktop, mobile, name}))
+                mapDescription(links, typeArg)
+            } else {
+                return
+            }
         }
 
     return <WrapperMS>
@@ -38,5 +41,5 @@ export default memo(function MainScreen({mainScreen, setImage}: PropsType) {
                 <img src={item.img} alt={item.img} />
                 </a>}
         </ProjectBrowser>)}
-    </WrapperMS>
+    </WrapperMS> 
 })

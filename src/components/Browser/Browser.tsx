@@ -1,18 +1,14 @@
-import React, { memo, useEffect, useState } from "react"
+import { memo, useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { stateType } from "../../redux/store"
-import DescriptionBrowser from "./DescriptionBrowser"
-import { BContainer, BPreloading, Content, ContentBrow, HeaderBrow, WrapperBrowser } from "./index.styled"
+import DescriptionBrowser from "./About/DescriptionBrowser"
+import { BContainer, Content, ContentBrow, HeaderBrow, WrapperBrowser } from "./index.styled"
 import MainScreen from "./MainScreen/MainScreen"
 import { Search } from "./Search/Search"
 import TabsItems from "./Tab/TabsItems"
+import { ContBrowserWrapper } from "./About/ContBrowserWrapper"
 
-type PropsType = {
-    image?: string
-    setStatusWidth: (s: boolean | null) => void
-}
-
-function incImg(src: string | undefined, setStatusWidth: (s: boolean | null) => void) {
+export function incImg(src: string | undefined, setStatusWidth: (s: boolean | null) => void) {
     if (src) {
         const res = src.includes('Page')
         setStatusWidth(res)
@@ -31,24 +27,15 @@ export default memo(function Browser() {
 
     const [statusWidth, setStatusWidth] = useState<boolean | null>(null)
     const [browserWidth, setBrowserWidth] = useState(false)
-    /*     const [preloading, setPreloading] = useState(false) */
 
-    /*     const preloadingTM = () => {
-           const timeout = setTimeout(() => {
-                setPreloading(true)
-            }, 3000)
-            return () => clearTimeout(timeout)
-        } */
+
     useEffect(() => {
         setImage(img)
         incImg(img!, setStatusWidth)
     }, [screen.images.desktopImg, img])
 
-    /*     useEffect(() => {
-            preloadingTM() 
-        }, []) */
 
-    const handleSubmit = (order: boolean) => {
+    const handleSubmitImages = (order: boolean) => {
         if (order) {
             setImage(screen.images.desktopImg)
         } else {
@@ -58,15 +45,13 @@ export default memo(function Browser() {
 
 
     return <>
-        {/*        <BPreloading preloading={preloading} />    */}
         <WrapperBrowser>
-
             <BContainer browserWidth={browserWidth}>
                 <HeaderBrow>
                     <TabsItems />
                     <Search
                         statusWidth={statusWidth}
-                        handleSubmit={handleSubmit}
+                        handleSubmit={handleSubmitImages}
                         projectName={screen.images.name}
                         setBrowserWidth={setBrowserWidth}
                         setStatusWidth={setStatusWidth} />
@@ -76,7 +61,7 @@ export default memo(function Browser() {
                     <Content>
                         <ContBrowserWrapper image={image!} setStatusWidth={setStatusWidth} />
                         {!screen.images.desktopImg &&
-                            <MainScreen mainScreen={screen.mainScreen} setImage={setImage} />
+                            <MainScreen mainScreen={screen.mainScreen} />
                         }
                     </Content>
                 </ContentBrow>
@@ -87,13 +72,4 @@ export default memo(function Browser() {
 
 })
 
-const ContBrowserWrapper: React.FC<PropsType> = ({ image, setStatusWidth }) => {
 
-    useEffect(() => {
-        incImg(image, setStatusWidth)
-    }, [image])
-
-    return <div>
-        {image && <img src={image} alt="okmic" style={{ maxWidth: '100%' }} />}
-    </div>
-}

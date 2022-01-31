@@ -6,26 +6,32 @@ export const borderB = '1px solid rgba(31, 27, 27, 0.713)'
 export const mediaScr = '@media screen and (max-width: 690px) {display: none;}'
 
 export const WrapperBrowser = styled.div`
-    max-width: 100vw;
+    width: 98vw;
+    max-width: 1500px;
     padding: 1em 1em 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
-export const BPreloading = styled.div<{preloading: boolean}>`
-    display: ${({preloading}) => preloading ? 'none' : 'block' };
-    top: 63px;
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    background-color: black;
+/* display: ${({preloading}) => preloading ? 'none' : 'block' }; */
+export const BPreloading = styled.div<{display: string}>`
+    display: ${({display}) => display};
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
     z-index: 188;
     transtition: 1s;
+
 `
 
 export const BContainer = styled.div<{browserWidth: boolean}>`
-    ${props => !props.browserWidth ? "width: 70vw;" : "max-width: 1300px;"};
-    max-width: 1300px;
+    ${props => !props.browserWidth ? "width: 100%;" : "max-width: 100%"};
     min-height: 70vh;
     z-index: 1;
+    border: ${bgColor} 10px double;
+    border-radius: 15px;
+    background-color: #bbbbbb;
     @media screen and (max-width: 750px) {
         width: 100%;
         max-width: 1300px;
