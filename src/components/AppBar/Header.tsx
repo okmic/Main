@@ -3,7 +3,6 @@ import { AppBar, Toolbar, Typography } from "@mui/material"
 import { memo, useEffect, useState } from "react"
 import SwipeableEdgeDrawer from './Drawer'
 import { BallHeader } from '../Main/index.styled'
-import { NavLink } from 'react-router-dom'
 import SelectSwitches from '../Select/Select'
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
@@ -46,7 +45,7 @@ export default memo(function Header () {
                     component="span"
                     sx={{ flexGrow: 1, fontWeight: 600 }}
                 >
-                    <NavLink to="/" style={{ color: colors.color}}>{name}</NavLink>
+                    <a href='#top' style={{ color: colors.color}}>{name}</a>
                 </Typography>
                 <Switch>
                     <SelectSwitches colors={colors} />

@@ -1,6 +1,6 @@
 
 import { BoxRes } from "./BoxRes"
-import { Hr, TitleScreen } from "../index.styled"
+import { ChildrenContent, Hr, TitleScreen } from "../index.styled"
 import { Skills } from "./Skills"
 import { useSelector } from "react-redux"
 import { stateType } from "../../redux/store"
@@ -12,13 +12,12 @@ export default memo(function Resume (){
   const cv = useSelector((state: stateType) => state.appReducer.language.cv)
   const color = useSelector((state: stateType) => state.appReducer.theme.styles.app.color)
 
-  return <>
+  return <ChildrenContent id="Curriculum-Vitae">
   <TitleScreen>{cv.title}</TitleScreen>
-  {cv.cv.map((i, index) => <div key={index}>
+      {cv.cv.map((i, index) => <div key={index}>
     <BoxRes
     color={color}
     key={index}
-    titleOne={i.title}
     descTitle={i.about}
     descTitleTwo={i.aboutTwo}
     description={i.descr}
@@ -27,5 +26,5 @@ export default memo(function Resume (){
   <Hr/>
   </div>)}
   <Skills color={color} skills={cv.skills}/>
-</>
+</ChildrenContent>
 })

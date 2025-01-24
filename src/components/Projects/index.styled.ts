@@ -1,5 +1,12 @@
 import styled from "styled-components"
 
+export const WrapperProject = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+`
+
 export const WrapperLink = styled.div`
     display: flex;
     flex-direction: column;

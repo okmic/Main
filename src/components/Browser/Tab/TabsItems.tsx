@@ -1,5 +1,4 @@
 import { ButtonsBrow, TabsBrowser, TabB, Tabs, Button, AddTab, TitleTab } from "./index.styled"
-import { Link } from "react-router-dom"
 import UnfoldLessIcon from '@mui/icons-material/UnfoldLess'
 import CloseIcon from '@mui/icons-material/Close'
 import RemoveIcon from '@mui/icons-material/Remove'
@@ -32,11 +31,11 @@ export default memo( function TabsItems()  {
         <Button>
             <UnfoldLessIcon sx={{ fontSize: '19px' }} />
         </Button>
-        <Link to="/Projects" onClick={() => dispatch(removeDescriptions())}>
+        <a href="projects" onClick={() => dispatch(removeDescriptions())}>
             <Button hoverColor="red">
                 <CloseIcon sx={{ fontSize: '19px' }} />
             </Button>
-        </Link>
+        </a>
     </ButtonsBrow>
 </TabsBrowser>
 }) 

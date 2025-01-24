@@ -36,7 +36,6 @@ export type ProjectsType = {
 }
 
 export type CVDataType = {
-    title: string
     about: string
     aboutTwo?: string
     descr: string
@@ -44,7 +43,6 @@ export type CVDataType = {
 }
 
 export type SkillsType = {
-    title: string
     skill: Array<{
         img: string
         descr: string 

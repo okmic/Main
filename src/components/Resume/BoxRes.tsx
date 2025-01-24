@@ -2,7 +2,6 @@ import React from 'react';
 import { Item, Wrapper, Description, Title, DescriptionTitle, Span } from '../index.styled';
 
 type PropsType = {
-  titleOne: string
   titleTwo?: string
   descTitle?: string
   description?: string
@@ -11,12 +10,8 @@ type PropsType = {
   color: string
 }
 export const BoxRes: React.FC<PropsType> = (
-    { titleOne, titleTwo, descTitle,
-      description, descTitleTwo, descriptionTwo, color }) => <Wrapper>
+    { titleTwo, descTitle, description, descTitleTwo, descriptionTwo, color }) => <Wrapper>
       <Item>
-        <Title>
-          <Span textColor={color}>{titleOne}</Span>
-        </Title>
         {titleTwo && <Title>
           <Span textColor={color}>{titleTwo}</Span>
         </Title>}

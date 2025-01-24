@@ -1,10 +1,16 @@
 import canvas from '../img/Canvas.jpg'
 import hadidja from '../img/Hadidja.jpg'
 import gb from '../img/gb.jpg'
-import html from '../img/skills/html.png'
-import js from '../img/skills/js.png'
-import node from '../img/skills/node.png'
-import react from '../img/skills/react.svg'
+import html from '../img/skills/htmlcss.png'
+import node from '../img/skills/nodejs.png'
+import react from '../img/skills/react.png'
+import go from '../img/skills/go.png'
+import sql from '../img/skills/sql.png'
+import docker from "../img/skills/docker.svg"
+import python from "../img/skills/python.png"
+import kubernetes from "../img/skills/kubernetes.svg"
+import microservices from "../img/skills/microservices.png"
+
 import canvasD from '../img/canvasPage.png'
 import canvasM from '../img/canvasMobile.png'
 import hadidjaD from '../img/hadidjaPage.png'
@@ -19,9 +25,9 @@ export const DataEng: dataType = {
         t2: 'Repository link',
     },
     main: {
-        title: 'Hello',
-        about: 'About me',
-        descr: "My name is Michael. I am into programming since school. I have tried different directions. I created my first website at the age of 17 and gradually mastered the basics of programming. I have dealt with Java, C#, GO, but I’m leaning towards JavaScript. Currently looking forward to challenging and interesting projects that will boost my skills!"
+        title: '👋',
+        about: '✨ About Me',
+        descr: "I am a passionate software developer with a strong focus on creating innovative solutions. Since 2017, I have been actively engaged in software development and maintenance, working on various projects that have enriched my experience and skills."
     },
     header: {
         name: "Michael Okhtov"
@@ -29,50 +35,81 @@ export const DataEng: dataType = {
     links: {
         cv: 'CV',
         projects: "Projects",
-        contacts: "Contacts"
+        contacts: "📫 Contacts"
     },
     footer: {
         phone: "Call me",
         email: 'Email',
         writeMe: "Text me"
     },
+    cv: {
+        title: 'Curriculum Vitae',
+        cv: [
+            {
+                about: '2017 - Present',
+                descr: 'Developed comprehensive ecosystems for managing customer data, enhancing client interactions. Worked with CRM systems, databases, web applications, mobile applications, satellite data, fire safety software, and emergency notification systems. Currently studying prompt engineering and working with GPT models for effective queries.'
+            },
+            {
+                about: '20.07.2016 - 26.06.2021',
+                descr: "Bachelor's Degree in Applied Informatics. 1000924 5276007",
+                aboutTwo: '23.07.2011 - 25.06.2015',
+                descrTwo: 'Diploma in Information Systems (by Industry). Qualification, Information Systems Technician. 110904 0000091.'
+            }
+        ],
+        skills: {
+            skill: [
+                {
+                    img: react,
+                    descr: 'Proficient in creating fast and adaptive user interfaces using the React library. Application of best practices for writing clean and maintainable code, including unit testing to enhance the reliability of key components.'
+                },
+                {
+                    img: node,
+                    descr: "Expertise in developing server-side applications using Node.js. Creation of high-performance RESTful APIs for data transmission over HTTP and WebSocket, as well as integration with MySQL and MongoDB databases. Utilization of asynchronous programming to optimize performance and scalability of applications."
+                },
+                {
+                    img: python,
+                    descr: "Utilization of Python for task automation and scripting, enhancing workflow efficiency and simplifying routine operations."
+                },
+                {
+                    img: go, 
+                    descr: "Development of high-performance and scalable applications using the Go programming language, enabling the creation of effective solutions for complex challenges."
+                },
+                {
+                    img: sql,
+                    descr: "Experience with SQL for database management and optimization, including schema design and writing complex queries for data retrieval."
+                },
+                {
+                    img: docker,
+                    descr: "Application of Docker for containerizing applications, ensuring stability and portability of environments, while simplifying deployment processes."
+                },
+                {
+                    img: kubernetes,
+                    descr: "Knowledge in Kubernetes for orchestrating containerized applications, including management of deployments and scaling, contributing to the reliability and availability of services."
+                },
+                {
+                    img: microservices,
+                    descr: "Experience in developing applications using microservices architecture, including interactions via HTTP and gRPC, allowing for the creation of flexible and scalable solutions that adapt to changing business requirements."
+                }
+            ]            
+        }
+    },
+    
+    contacts: {
+        title: "Contacts",
+        valid: "The field cannot be empty",
+        mailValid: "Invalid mail format",
+        submit: 'The message has been sent',
+        lebals: {
+            name: 'Name',
+            email: '*Email',
+            message: 'Message',
+            submit: 'submit'
+        }
+    },
+
     projects: {
         title: 'Projects',
         projects: [
-            {
-                title: 'Fine Art Canvas',
-                link: {
-                    title: 'Link to the deployed version', 
-                    href: 'https://okmic.github.io/Canvas/',
-                    browserTitle: 'Browser Emulator',
-                    desctopImg: canvasD,
-                    mobileImg: canvasM,
-                    name: 'Canvas'
-                },
-                linkRep: {
-                    title: 'Repository link', 
-                    href: 'https://github.com/okmic/Canvas',
-                },
-                img: canvas,
-                descr: 'The Fine Art Canvas project is my graduate work at the university, aimed at promoting artists free of charge, as well as selling their paintings without commission. Currently, the development of this project is not stopped, but is actively moving towards the SEO and the server side.'
-            },
-            {
-                title: 'Hadidja Sweets',
-                link: {
-                    title: 'Link to the deployed version', 
-                    href: 'https://okmic.github.io/hadidja-sweets/',
-                    browserTitle: 'Browser Emulator',
-                    desctopImg: hadidjaD,
-                    mobileImg: hadidjaM,
-                    name: 'hadidja-sweets'
-                },
-                linkRep: {
-                    title: 'Repository link', 
-                    href: 'https://github.com/okmic/hadidja-sweets'
-                },
-                img: hadidja,
-                descr: 'The online store Hadidja Sweets is focused on selling confectionery, the project may seem simple in appearance, but serious problems arose with the optimization, since the customer insisted on heavy decorative files like (video). This example shows my experience with cross-browser compatibility and web application optimization. The design was also developed by me.'
-            },
             {
                 title: 'GitHub',
                 linkRep: {
@@ -85,57 +122,6 @@ export const DataEng: dataType = {
 
         ]
     },
-    cv: {
-        title: 'Curriculum Vitae',
-        cv: [
-            {
-                title: 'Work Experience',
-                about: '2017 - Present',
-                descr: 'Since 2017, he has carried out various orders for the development and maintenance of software under the leadership of senior staff, worked with CRM systems, databases, web applications, website, mobile applications, fire extinguishing software and emergency notification systems.'
-            },
-            {
-                title: 'Education',
-                about: '20.07.2016 - 26.06.2021',
-                descr: "09.03.03 Applied Informatics, Bachelor's Degree. 1000924 5276007",
-                aboutTwo: '23.07.2011 - 25.06.2015',
-                descrTwo: '09.02.04 Information systems (by industry), Diploma of secondary vocational education. Qualification, Information Systems Technician. 110904 0000091.'
-            }
-        ],
-        skills: {
-            title: 'Skills',
-            skill: [
-                {
-                    img: html,
-                    descr: 'I have practical experience in developing optimized, cross-browser, responsive and modern layouts, compatible with browsers, implemented using flex and grid technologies according to the BEM methodology. I am using a Sass preprocessor and can create CSS animations. If necessary, I can use the Bootstrap library.'
-                },
-                {
-                    img: js,
-                    descr: "If necessary, I can work with native JavaScript and create interactive applications without modern frameworks. I also keep my code readable and understandable by setting static typing with TypeScript, which will improve other developers' understanding of the code."
-                },
-                {
-                    img: node,
-                    descr: "I don't have much backend experience, but in small projects like online shopping or landing pages with feedback forms, I can develop an API to transfer data over HTTP and Websocket in PHP or JS (nodeJS) using databases MySql or MongoDB."
-                },
-                {
-                    img: react,
-                    descr: 'I got introduced to React in 2019 and since then it became the main tool in my luggage. I have experience in developing fast, responsive user interfaces, using the React library. From project to project, I try to improve my qualifications so that my code becomes more readable and reliable, important parts of the application are always accompanied by unit tests.'
-                }
-            ]
-        }
-    },
-    contacts: {
-        title: "Contacts",
-        valid: "The field cannot be empty",
-        mailValid: "Invalid mail format",
-        submit: 'The message has been sent',
-        lebals: {
-                name: 'Name',
-                email: '*Email',
-                message: 'Message',
-                submit: 'submit'
-        }
-    }
-
     
 }
 export const DataRu: dataType = {
@@ -145,60 +131,78 @@ export const DataRu: dataType = {
         t2: 'Ссылка на репозиторий',
     },
     main: {
-        title: "Привет",
-        about: 'Немного обо мне',
-        descr: "Меня зовут Михаил. Программированием увлекаюсь со школы. Я пробовал разные направления. Свой первый сайт я создал в 17 лет и постепенно осваивал азы программирования. Пробовал себя в Java, C#, GO, но склонился к JavaScript. В настоящее время с нетерпением жду сложных и интересных проектов, которые повысят мои навыки!"
+        title: '👋',
+        about: '✨ Обо мне',
+        descr: "Я увлеченный разработчик программного обеспечения с сильным акцентом на создание инновационных решений. С 2017 года я активно занимаюсь разработкой и поддержкой программного обеспечения, работая над различными проектами, которые обогатили мой опыт и навыки."
     },
     header: {
         name: "Михаил Охтов"
-    } ,
+    },
     links: {
         cv: 'Резюме',
         projects: "Проекты",
         contacts: "Контакты"
     },
     footer: {
-        phone: "Звоните",
-        email: 'Почта',
-        writeMe: "Пишите"
+        phone: "Позвоните мне",
+        email: 'Электронная почта',
+        writeMe: "Напишите мне"
+    },
+    cv: {
+        title: 'Резюме',
+        cv: [
+            {
+                about: '2017 - Настоящее время',
+                descr: 'Разработал комплексные экосистемы для управления данными клиентов, улучшая взаимодействие с клиентами. Работал с CRM-системами, базами данных, веб-приложениями, мобильными приложениями, спутниковыми данными, программным обеспечением для обеспечения пожарной безопасности и системами экстренного уведомления. В настоящее время изучаю инженерное проектирование запросов и работаю с моделями GPT для эффективных запросов.'
+            },
+            {
+                about: '20.07.2016 - 26.06.2021',
+                descr: "Степень бакалавра в области прикладной информатики.",
+                aboutTwo: '23.07.2011 - 25.06.2015',
+                descrTwo: 'Диплом в области информационных систем (по отраслям). Квалификация: техник информационных систем.'
+            }
+        ],
+        skills: {
+            skill: [
+                {
+                    img: react,
+                    descr: 'Опыт создания быстрых и адаптивных пользовательских интерфейсов с использованием библиотеки React. Применение лучших практик написания чистого и поддерживаемого кода, включая модульное тестирование для повышения надежности ключевых компонентов.'
+                },
+                {
+                    img: node,
+                    descr: "Экспертный опыт в разработке серверных приложений с использованием Node.js. Создание высокопроизводительных RESTful API для передачи данных по HTTP и WebSocket, а также интеграция с базами данных MySQL и MongoDB. Применение асинхронного программирования для оптимизации производительности и масштабируемости приложений."
+                },
+                {
+                    img: python,
+                    descr: "Использование Python для автоматизации задач и написания скриптов, что повышает эффективность рабочих процессов и упрощает рутинные операции."
+                },
+                {
+                    img: go, 
+                    descr: "Разработка высокопроизводительных и масштабируемых приложений с использованием языка Go, что позволяет создавать эффективные решения для сложных задач."
+                },
+                {
+                    img: sql,
+                    descr: "Опыт работы с SQL для управления и оптимизации баз данных, включая проектирование схем и написание сложных запросов для извлечения данных."
+                },
+                {
+                    img: docker,
+                    descr: "Применение Docker для контейнеризации приложений, что обеспечивает стабильность и переносимость окружений, а также упрощает процессы развертывания."
+                },
+                {
+                    img: kubernetes,
+                    descr: "Знания в области Kubernetes для оркестрации контейнеризированных приложений, включая управление развертыванием и масштабированием, что способствует надежности и доступности сервисов."
+                },
+                {
+                    img: microservices,
+                    descr: "Опыт разработки приложений с использованием архитектуры микросервисов, включая взаимодействие через HTTP и gRPC, что позволяет создавать гибкие и масштабируемые решения, адаптирующиеся к изменениям в бизнес-требованиях."
+                }
+            ]
+            
+        }
     },
     projects: {
-        title: 'Проекты',
+        title: '',
         projects: [
-            {
-                title: 'Fine Art Canvas',
-                link: {
-                    title: 'Ссылка на развернутую версию', 
-                    href: 'https://okmic.github.io/Canvas/',
-                    browserTitle: 'Эмулятор браузера',
-                    desctopImg: canvasD,
-                    mobileImg: canvasM,
-                    name: 'Canvas'
-                },
-                linkRep: {
-                    title: 'Ссылка на репозиторий', 
-                    href: 'https://github.com/okmic/Canvas'
-                },
-                img: canvas,
-                descr: 'Проект Fine Art Canvas - это моя дипломная работа в университете, направленная на бесплатное продвижение художников, а также на продажу их картин без комиссии. В настоящее время развитие этого проекта не остановлено, но активно продвигается в сторону SEO и серверной части.'
-            },
-            {
-                title: 'Hadidja Sweets',
-                link: {
-                    title: 'Ссылка на развернутую версию', 
-                    href: 'https://okmic.github.io/hadidja-sweets/',
-                    browserTitle: 'Эмулятор браузера',
-                    desctopImg: hadidjaD,
-                    mobileImg: hadidjaM,
-                    name: 'hadidja-sweets'
-                },
-                linkRep: {
-                    title: 'Ссылка на репозиторий', 
-                    href: 'https://github.com/okmic/hadidja-sweets'
-                },
-                img: hadidja,
-                descr: 'Интернет-магазин Hadidja Sweets ориентирован на продажу кондитерских изделий, проект может показаться простым на вид, но с оптимизацией возникли серьезные проблемы, так как заказчик настаивал на тяжелых декоративных файлах типа (видео). В этом примере показан мой опыт кроссбраузерной совместимости и оптимизации веб-приложений. Дизайн тоже был разработан мной.'
-            },
             {
                 title: 'GitHub',
                 linkRep: {
@@ -211,59 +215,20 @@ export const DataRu: dataType = {
 
         ]
     },
-    cv: {
-        title: 'Резюме',
-        cv: [
-            {
-                title: 'Опыт работы',
-                about: '2017 - Настоящее время',
-                descr: 'С 2017 года выполнял различные заказы по разработке и сопровождению программного обеспечения под руководством руководителей проектов, работал с CRM-системами, базами данных, веб-приложениями, веб-сайтами, мобильными приложениями, программным обеспечением для пожаротушения и системами экстренного оповещения.'
-            },
-            {
-                title: 'Образование',
-                about: '20.07.2016 - 26.06.2021',
-                descr: '09.03.03 Прикладная информатика, бакалавриат. 1000924 5276007',
-                aboutTwo: '23.07.2011 - 25.06.2015',
-                descrTwo: '09.02.04 Информационные системы (по отраслям). Диплом о среднем профессиональном образовании. Квалификация, техник информационных систем. 110904 0000091.'
-            }
-        ],
-        skills: {
-            title: 'Навыки и умения',
-            skill: [
-                {
-                    img: html,
-                    descr: 'Имею практический опыт разработки оптимизированных, кросс-браузерных, адаптивных и современных макетов, совместимых с браузерами, реализованных с использованием Flex и Grid технологий по методологии БЭМ. Я использую препроцессор Sass и могу создавать анимацию CSS. При необходимости могу воспользоваться библиотекой Bootstrap.'
-                },
-                {
-                    img: js,
-                    descr: 'При необходимости я могу работать с нативным JavaScript и создавать интерактивные приложения без современных фреймворков. Я также сохраняю свой код читабельным и понятным, устанавливая статическую типизацию с помощью TypeScript, что улучшит понимание кода другими разработчиками.'
-                },
-                {
-                    img: node,
-                    descr: 'У меня нет большого опыта работы с серверной частью, но в небольших проектах, таких как интернет-магазины или целевые страницы с формами обратной связи, я могу разработать API для передачи данных через HTTP и Websocket на PHP или JS (nodeJS) с использованием баз данных MySql или MongoDB.'
-                },
-                {
-                    img: react,
-                    descr: 'Я познакомился с React в 2019 году и с тех пор он стал моим основным инструментом. У меня есть опыт разработки быстрых, отзывчивых пользовательских интерфейсов с использованием библиотеки React. От проекта к проекту я стараюсь повышать свою квалификацию, чтобы мой код был более читабельным и надежным, важные части приложения всегда сопровождались модульными тестами.'
-                }
-            ]
-        }
-    },
     contacts: {
         title: "Контакты",
         valid: "Поле не может быть пустым",
-        mailValid: "Неверный формат почты",
-        submit: "Сообщение отправлено",
+        mailValid: "Неверный формат электронной почты",
+        submit: 'Сообщение отправлено',
         lebals: {
-                name: 'Имя',
-                email: '*Почта',
-                message: 'Сообщение',
-                submit: 'Отправить'
+            name: 'Имя',
+            email: '*Электронная почта',
+            message: 'Сообщение',
+            submit: 'Отправить'
         }
     }
-
+    
 }
-
 export const BrowserInitialState: InitTypeBrowser = {
     links: {
         deployed: {

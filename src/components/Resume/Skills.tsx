@@ -31,11 +31,6 @@ type PropsType = {
 export const Skills: React.FC<PropsType> = (
     { skills, color }) => <Wrapper>
       <Item>
-        <Title>
-          <Span textColor={color}>{skills.title}</Span>
-        </Title>
-      </Item>
-      <Item>
         <Description>
             {skills.skill.map((s, index) => <Skill
                 key={index}

@@ -1,8 +1,32 @@
 import styled from "styled-components"
 
+export const ChildrenContent = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+flex-direction: column;
+`
+
 export const TitleScreen = styled.h1`
   width: 90%;
   text-align: left;
+  position: relative;
+  margin: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background:rgba(150, 150, 150, 0.5);
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+  }
 `
 
 export const Hr = styled.hr`
@@ -13,7 +37,7 @@ export const Hr = styled.hr`
 export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    max-width: 1300px;
+    min-width: 100%;
     margin: 1.5em 0;
 @media screen and (max-width: 650px) {
     flex-wrap: wrap;
@@ -27,24 +51,29 @@ export const Item = styled.div`
     flex-direction: column;
     align-items: flex-start;
 `
+
 export const Title = styled.div`
     min-width: 250px;
     overflow: auto;
-& span{
+& span {
 
 }
 `
+
 export const Description = styled.div`
 `
+
 export const DescriptionTitle = styled.div`
 
 `
+
 type SpanType = {
     fs?: string
     fw?: string 
     textColor?: string
     marginB?: string
 }
+
 export const Span = styled.span<SpanType>`
     font-size: ${(props) => props.fs ? props.fs : "19px"};
     font-weight: ${(props) => props.fw ? props.fw : "700"};

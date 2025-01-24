@@ -13,7 +13,7 @@ export default memo(function Footer (){
     const footer = useSelector((state: stateType) => state.appReducer.language.footer)
     const color = useSelector((state: stateType) => state.appReducer.theme.styles.app.color)
     
-    return <WrapperContact>
+    return <WrapperContact id="bottom">
     <ItemContact theme={color}>
         <Typography sx={{ fontWeight: 700}}>{footer.phone}</Typography>
         <a href="tel:+79887166917">+7(988)716-69-17</a>
@@ -23,20 +23,20 @@ export default memo(function Footer (){
         <Social color={color} />
     </ItemContact>
     <ItemContact>
-        <Typography sx={{ fontWeight: 700}}>React Application</Typography>
-        <Typography sx={{ fontWeight: 700}}>By Michael Okhtov.</Typography>
+        <Typography sx={{ fontWeight: 700}}>© okmic </Typography>
+        <Typography sx={{ fontWeight: 700}}>{new Date().getFullYear()}</Typography>
     </ItemContact>
 </WrapperContact>
 })
 
 export const Social: React.FC<{color: string}> = ({color}) => <WrapperSocial>
-    <a href="mailto:Okhtov.mz@gmail.com">
+    <a href="mailto:okmic.dev@gmail.com">
         <EmailIcon sx={{ fontSize: '25px', marginRight: '5px', color: color}} />
     </a>
-    <a target="_blank" href=" https://wa.me/+79965248184">
+    <a target="_blank" href=" https://wa.me/+79184665096">
         <WhatsAppIcon sx={{ fontSize: '25px', color: color}} />
     </a>
-    <a target="_blank" href=" https://t.me/OkhMichael"
+    <a target="_blank" href=" https://t.me/MicoDevProd"
         style={{ marginRight: '3px' }}>
         <TelegramIcon sx={{ fontSize: '25px', color: color}} />
     </a>
