@@ -29,17 +29,18 @@ export const AWrapper = styled.div<{textColor: string}>`
 }`
 
 export const ImgWrapper = styled.div`
-    width: 100%;
+    max-width: 100%;
     heigth: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 & img {
-    width: 270px;
+    max-width: 270px;
     border-radius: 50%;
 }
 @media screen and (max-width: 670px) {
     & img {
+        display: none;
         margin: 0;
     }
 }

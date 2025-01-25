@@ -34,13 +34,27 @@ export const Hr = styled.hr`
   color: black;
 `
 
+export const BoxExpAndEducation = styled.div`
+    display: flex;
+    width: 1250px;
+    margin: 1em 0;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box; 
+
+    @media screen and (max-width: 1300px) {
+        flex-wrap: wrap;
+        width: 90vw; /* На мобильных устройствах остаётся 100% */
+    }
+`
+
 export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    min-width: 100%;
     margin: 1.5em 0;
 @media screen and (max-width: 650px) {
     flex-wrap: wrap;
+    width: 100%;
 }
 `
 export const Item = styled.div`

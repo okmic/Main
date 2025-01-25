@@ -5,6 +5,7 @@ const padding = "1rem"
 export const Content = styled.main`
 max-width: 1369px;
 width: 100%;
+padding: 1em;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -20,7 +21,7 @@ align-items: center;
 overflow: hidden;
 padding-top: 1em;
 @media screen and (max-width: 650px) {
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 `
 export const Me = styled.div`
@@ -28,17 +29,12 @@ display: flex;
 max-width: 500px;
 max-height: 500px;
 justify-content: flex-end;
-
 padding: ${padding};
 & img {
     object-fit: cover;
     max-width: 100%;
     border-radius: 50%;
     border: #0071c5 1px solid;
-}
-@media screen and (max-width: 650px) {
-    width: 300px;
-    height: 300px;
 }
 `
 export const Description = styled.div`

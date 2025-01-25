@@ -11,12 +11,6 @@ export const WrapperContact = styled.footer`
     margin-top: 10vh;
     & a {
         color: #fff;
-    };
-    @media screen and (max-width: 650px){
-        dispay: flex;
-        flex-direction: column;
-        aling-items: center;
-        margin-top: 5vh;
     }
 `
 export const ItemContact = styled.div<{theme: string}>`

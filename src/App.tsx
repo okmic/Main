@@ -20,6 +20,32 @@ type RoutesType = {
 
 function App() {
 
+  useEffect(() => {
+    const handleAnchorClick = (event: any) => {
+        const targetId = event.currentTarget.getAttribute('href')
+        if (targetId.startsWith('#')) {
+            event.preventDefault()
+            const targetElement = document.querySelector(targetId)
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+        }
+    }
+
+    const anchorLinks = document.querySelectorAll('a[href^="#"]')
+
+    anchorLinks.forEach((link) => {
+        link.addEventListener('click', handleAnchorClick)
+    })
+
+    return () => {
+        anchorLinks.forEach((link) => {
+            link.removeEventListener('click', handleAnchorClick)
+        })
+    }
+    
+}, [])
+
   const routes = [
     { path: '/', Component: Main },
     { path: '/Main', Component: Main },
