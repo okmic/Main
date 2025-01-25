@@ -3,12 +3,10 @@ import { AppWrapper, Loading } from './index.styled'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Suspense, useEffect } from 'react'
 import ScrollToTop from './ScrollToTop/ScrollToTop'
-//components
 import Header from './components/AppBar/Header'
 import Main from './components/Main/Main'
 import NotFound from './components/NotFound/NotFound'
 import Footer from './components/Footer/Footer'
-
 import { useDispatch, useSelector } from 'react-redux'
 import { stateType } from './redux/store'
 import { changeAppTheme } from './redux/appReducer'
@@ -43,7 +41,7 @@ function App() {
             link.removeEventListener('click', handleAnchorClick)
         })
     }
-    
+
 }, [])
 
   const routes = [
