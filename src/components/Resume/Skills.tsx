@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { SkillsType } from "../../types/types";
-import { Item, Wrapper, Title, Span, Description } from '../index.styled';
+import { Item, Wrapper, Span, Description } from '../index.styled';
 
 const SkillItem = styled.div`
     width: 100%;

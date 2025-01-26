@@ -1,5 +1,4 @@
 import React from "react"
-import { NavLink } from "react-router-dom"
 import { LinkBall } from "../Main/index.styled"
 
 type PropsType = {

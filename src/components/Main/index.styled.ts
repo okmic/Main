@@ -27,7 +27,7 @@ padding-top: 1em;
 export const Me = styled.div`
 display: flex;
 max-width: 500px;
-max-height: 500px;
+max-height: 100vh;
 justify-content: flex-end;
 padding: ${padding};
 & img {

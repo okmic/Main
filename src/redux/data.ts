@@ -1,7 +1,6 @@
 import canvas from '../img/Canvas.jpg'
 import hadidja from '../img/Hadidja.jpg'
 import gb from '../img/gb.jpg'
-import html from '../img/skills/htmlcss.png'
 import node from '../img/skills/nodejs.png'
 import react from '../img/skills/react.png'
 import go from '../img/skills/go.png'
