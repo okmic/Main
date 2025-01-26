@@ -61,7 +61,7 @@ export const DataEng: dataType = {
             },
             {
                 "about": "Outsourcing Development",
-                "descr": "Over 40 outsourcing projects completed in various fields. Active participation in open-source projects on GitHub and involvement in numerous hackathons."
+                "descr": "40+ outsourcing projects completed in various fields. Active participation in open-source projects on GitHub and involvement in numerous hackathons."
             }
         ],
         skills: {
@@ -178,7 +178,7 @@ export const DataRu: dataType = {
             },
             {
                 "about": "Аутсорс-разработка",
-                "descr": "Более 40 аутсорс-проектов, выполненных в различных областях. Активное участие в открытых проектах на GitHub и участие в многочисленных хакатонах."
+                "descr": "40+ аутсорс-проектов, выполненных в различных областях. Активное участие в открытых проектах на GitHub и участие в многочисленных хакатонах."
             }
         ],
         skills: {
