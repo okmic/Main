@@ -10,7 +10,7 @@ flex-direction: column;
 `
 
 export const TitleScreen = styled.h1`
-  width: 90%;
+  width: 100%;
   text-align: left;
   position: relative;
   margin: 0;

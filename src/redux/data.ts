@@ -4,7 +4,7 @@ import gb from '../img/gb.jpg'
 import node from '../img/skills/nodejs.png'
 import react from '../img/skills/react.png'
 import go from '../img/skills/go.png'
-import sql from '../img/skills/sql.png'
+import unix from '../img/skills/unix.png'
 import docker from "../img/skills/docker.svg"
 import python from "../img/skills/python.png"
 import kubernetes from "../img/skills/kubernetes.svg"
@@ -26,7 +26,7 @@ export const DataEng: dataType = {
     main: {
         title: '👋',
         about: '✨ About Me',
-        descr: "I am a passionate software developer with a strong focus on creating innovative solutions. Since 2017, I have been actively engaged in software development and maintenance, working on various projects that have enriched my experience and skills."
+        descr: "Development is not just a job; it’s an opportunity to create solutions that transform everyday life. Since 2017, I have been working in software development, exploring various technologies and approaches. Each project opens new horizons for learning and creative thinking. These challenges inspire me to grow and evolve, and I strive to ensure that my work brings real value to users and society."
     },
     header: {
         name: "Michael Okhtov"
@@ -42,57 +42,68 @@ export const DataEng: dataType = {
         writeMe: "Text me"
     },
     cv: {
-        title: 'Curriculum Vitae',
-        cv: [
+        "title": "Experience and Education",
+        "cv": [
             {
-                about: '2017 - Present',
-                descr: 'Developed comprehensive ecosystems for managing customer data, enhancing client interactions. Worked with CRM systems, databases, web applications, mobile applications, satellite data, fire safety software, and emergency notification systems. Currently studying prompt engineering and working with GPT models for effective queries.'
+                "about": "*20.07.2016 - 26.06.2021*",
+                "descr": "Bachelor's degree in Applied Informatics. Diploma in Information Systems."
             },
             {
-                about: '20.07.2016 - 26.06.2021',
-                descr: "Bachelor's Degree in Applied Informatics. 1000924 5276007",
-                aboutTwo: '23.07.2011 - 25.06.2015',
-                descrTwo: 'Diploma in Information Systems (by Industry). Qualification, Information Systems Technician. 110904 0000091.'
+                "about": "*23.07.2011 - 25.06.2015*",
+                "descr": "Vocational education. Diploma in Information Systems. Qualification: Information Systems Technician."
+            },
+            {
+                "about": "*2019 - 2021*",
+                "descr": "North Caucasus State Academy (SKGA) - Automation of internal processes using Python and Node.js, training employees and students in relational database management, and enhancing qualifications in working with local, secure networks."
+            },
+            {
+                "about": "*2022 - Present*",
+                "descr": "ConvertMe - Working in an organization focused on digital technologies, developing high-performance, scalable applications on a microservices architecture."
+            },
+            {
+                "about": "Outsourcing Development",
+                "descr": "Over 40 outsourcing projects completed in various fields. Active participation in open-source projects on GitHub and involvement in numerous hackathons."
             }
         ],
         skills: {
-            skill: [
+            "title": "Technical Stack",
+            "skill": [
                 {
                     img: react,
-                    descr: 'Proficient in creating fast and adaptive user interfaces using the React library. Application of best practices for writing clean and maintainable code, including unit testing to enhance the reliability of key components.'
+                    descr: "Experience in creating fast and responsive user interfaces using the React library. Aiming to improve skills in writing clean and maintainable code, including studying best practices and modular testing to enhance the reliability of components."
                 },
                 {
                     img: node,
-                    descr: "Expertise in developing server-side applications using Node.js. Creation of high-performance RESTful APIs for data transmission over HTTP and WebSocket, as well as integration with MySQL and MongoDB databases. Utilization of asynchronous programming to optimize performance and scalability of applications."
+                    descr: "Expert experience in developing server-side applications using Node.js. Creating high-performance RESTful APIs for data transmission over HTTP and WebSocket, as well as working with relational databases and document-oriented databases using ORM."
                 },
                 {
                     img: python,
-                    descr: "Utilization of Python for task automation and scripting, enhancing workflow efficiency and simplifying routine operations."
+                    descr: "Using Python for task automation and scripting, which increases workflow efficiency and simplifies routine operations. Aiming to develop skills in this area."
                 },
                 {
-                    img: go, 
-                    descr: "Development of high-performance and scalable applications using the Go programming language, enabling the creation of effective solutions for complex challenges."
+                    img: go,
+                    descr: "Developing high-performance and scalable applications using the Go programming language, allowing for the creation of efficient solutions for complex tasks."
                 },
                 {
-                    img: sql,
-                    descr: "Experience with SQL for database management and optimization, including schema design and writing complex queries for data retrieval."
+                    img: unix,
+                    descr: "Good understanding of Unix-like systems, including command line usage, file and process management, as well as writing scripts for task automation."
                 },
                 {
                     img: docker,
-                    descr: "Application of Docker for containerizing applications, ensuring stability and portability of environments, while simplifying deployment processes."
+                    descr: "Applying Docker for containerizing applications, ensuring stability and portability of environments, and simplifying deployment processes."
                 },
                 {
                     img: kubernetes,
-                    descr: "Knowledge in Kubernetes for orchestrating containerized applications, including management of deployments and scaling, contributing to the reliability and availability of services."
+                    descr: "Knowledge of Kubernetes for orchestrating containerized applications, including deployment management and scaling, contributing to the reliability and availability of services."
                 },
                 {
                     img: microservices,
-                    descr: "Experience in developing applications using microservices architecture, including interactions via HTTP and gRPC, allowing for the creation of flexible and scalable solutions that adapt to changing business requirements."
+                    descr: "Experience in developing applications using microservices architecture, including interaction via HTTP and gRPC, allowing for the creation of flexible and scalable solutions that adapt to changing business requirements."
                 }
-            ]            
+            ]
         }
     },
-    
+
     contacts: {
         title: "Contacts",
         valid: "The field cannot be empty",
@@ -112,16 +123,16 @@ export const DataEng: dataType = {
             {
                 title: 'GitHub',
                 linkRep: {
-                    title: 'GitHub profile link', 
+                    title: 'GitHub profile link',
                     href: 'https://github.com/okmic'
                 },
                 img: gb,
-                descr: 'Since the vast majority of my projects are private, I am not allowed to show them publicly. But I have posted all my public projects and templates on the GitHub web service, where you can see how I write code!'
+                descr: 'While most of my projects are private, you can check out my GitHub profile, where I share open projects and templates. If you`re interested, you can see what I`ve been working on and how I`m developing as a programmer.'
             },
 
         ]
     },
-    
+
 }
 export const DataRu: dataType = {
     order: "Ru",
@@ -132,7 +143,7 @@ export const DataRu: dataType = {
     main: {
         title: '👋',
         about: '✨ Обо мне',
-        descr: "Я увлеченный разработчик программного обеспечения с сильным акцентом на создание инновационных решений. С 2017 года я активно занимаюсь разработкой и поддержкой программного обеспечения, работая над различными проектами, которые обогатили мой опыт и навыки."
+        descr: "Разработка — это не просто работа, а шанс создавать решения, которые меняют повседневную жизнь. С 2017 года я занимаюсь программным обеспечением, исследуя различные технологии и подходы. Каждый проект открывает новые горизонты для обучения и нестандартного мышления. Эти вызовы вдохновляют меня расти и развиваться, и я стремлюсь, чтобы мои разработки приносили реальную пользу пользователям и обществу."
     },
     header: {
         name: "Михаил Охтов"
@@ -148,40 +159,51 @@ export const DataRu: dataType = {
         writeMe: "Напишите мне"
     },
     cv: {
-        title: 'Резюме',
+        title: "Опыт и образование",
         cv: [
             {
-                about: '2017 - Настоящее время',
-                descr: 'Разработал комплексные экосистемы для управления данными клиентов, улучшая взаимодействие с клиентами. Работал с CRM-системами, базами данных, веб-приложениями, мобильными приложениями, спутниковыми данными, программным обеспечением для обеспечения пожарной безопасности и системами экстренного уведомления. В настоящее время изучаю инженерное проектирование запросов и работаю с моделями GPT для эффективных запросов.'
+                "about": "*20.07.2016 - 26.06.2021*",
+                "descr": "Степень бакалавра в области прикладной информатики. Диплом в области информационных систем."
             },
             {
-                about: '20.07.2016 - 26.06.2021',
-                descr: "Степень бакалавра в области прикладной информатики.",
-                aboutTwo: '23.07.2011 - 25.06.2015',
-                descrTwo: 'Диплом в области информационных систем (по отраслям). Квалификация: техник информационных систем.'
+                "about": "*23.07.2011 - 25.06.2015*",
+                "descr": "Среднее профессиональное образование. Диплом в области информационных систем. Квалификация: техник информационных систем."
+            },
+            {
+                "about": "*2019 - 2021*",
+                "descr": "Северо-Кавказская государственная академия (СКГА) - Автоматизация внутренних процессов с использованием Python и Node.js, обучение сотрудников и студентов работе с реляционными базами данных, а также повышение квалификации в сфере работы с локальными, защищёнными сетями."
+            },
+            {
+                "about": "*2022 - Настоящее время*",
+                "descr": "ConvertMe - Работа в организации, занимающейся цифровыми технологиями, разработка высокопроизводительных, масштабируемых приложений на микросервисной архитектуре."
+            },
+            {
+                "about": "Аутсорс-разработка",
+                "descr": "Более 40 аутсорс-проектов, выполненных в различных областях. Активное участие в открытых проектах на GitHub и участие в многочисленных хакатонах."
             }
         ],
         skills: {
-            skill: [
+            "title": "Технический стек",
+            "skill": [
                 {
                     img: react,
-                    descr: 'Опыт создания быстрых и адаптивных пользовательских интерфейсов с использованием библиотеки React. Применение лучших практик написания чистого и поддерживаемого кода, включая модульное тестирование для повышения надежности ключевых компонентов.'
+                    descr: "Опыт создания быстрых и адаптивных пользовательских интерфейсов с использованием библиотеки React. Стремление к улучшению навыков написания чистого и поддерживаемого кода, включая изучение лучших практик и модульного тестирования для повышения надежности компонентов."
                 },
                 {
                     img: node,
-                    descr: "Экспертный опыт в разработке серверных приложений с использованием Node.js. Создание высокопроизводительных RESTful API для передачи данных по HTTP и WebSocket, а также интеграция с базами данных MySQL и MongoDB. Применение асинхронного программирования для оптимизации производительности и масштабируемости приложений."
+                    descr: "Экспертный опыт в разработке серверных приложений с использованием Node.js. Создание высокопроизводительных RESTful API для передачи данных по HTTP и WebSocket, а также работа с реляционными СУБД и документно-ориентированными базами данных с применением ORM."
                 },
                 {
                     img: python,
-                    descr: "Использование Python для автоматизации задач и написания скриптов, что повышает эффективность рабочих процессов и упрощает рутинные операции."
+                    descr: "Использование Python для автоматизации задач и написания скриптов, что повышает эффективность рабочих процессов и упрощает рутинные операции. Стремление развивать навыки в этой области."
                 },
                 {
-                    img: go, 
+                    img: go,
                     descr: "Разработка высокопроизводительных и масштабируемых приложений с использованием языка Go, что позволяет создавать эффективные решения для сложных задач."
                 },
                 {
-                    img: sql,
-                    descr: "Опыт работы с SQL для управления и оптимизации баз данных, включая проектирование схем и написание сложных запросов для извлечения данных."
+                    img: unix,
+                    descr: "Хорошее понимание Unix-подобных систем, включая работу с командной строкой, управление файлами и процессами, а также написание скриптов для автоматизации задач."
                 },
                 {
                     img: docker,
@@ -193,10 +215,9 @@ export const DataRu: dataType = {
                 },
                 {
                     img: microservices,
-                    descr: "Опыт разработки приложений с использованием архитектуры микросервисов, включая взаимодействие через HTTP и gRPC, что позволяет создавать гибкие и масштабируемые решения, адаптирующиеся к изменениям в бизнес-требованиях."
+                    descr: "Опыт разработки приложений с использованием микросервисной архитектуры, включая взаимодействие через HTTP и gRPC, что позволяет создавать гибкие и масштабируемые решения, адаптирующиеся к изменениям в бизнес-требованиях."
                 }
             ]
-            
         }
     },
     projects: {
@@ -205,11 +226,11 @@ export const DataRu: dataType = {
             {
                 title: 'GitHub',
                 linkRep: {
-                    title: 'Ссылка на профиль GitHub', 
+                    title: 'Ссылка на профиль GitHub',
                     href: 'https://github.com/okmic'
                 },
                 img: gb,
-                descr: 'Поскольку подавляющее большинство моих проектов являются частными, мне не разрешается показывать их публично. Но я разместил все свои публичные проекты и шаблоны на веб-сервисе GitHub, где вы можете увидеть, как я пишу код!'
+                descr: 'Хотя большинство моих проектов являются приватными, вы можете заглянуть на мой профиль GitHub, где я размещаю открытые проекты и шаблоны. Если вам интересно, вы сможете увидеть, что я делал и как развиваюсь в программировании.'
             },
 
         ]
@@ -226,7 +247,7 @@ export const DataRu: dataType = {
             submit: 'Отправить'
         }
     }
-    
+
 }
 export const BrowserInitialState: InitTypeBrowser = {
     links: {
@@ -245,8 +266,8 @@ export const BrowserInitialState: InitTypeBrowser = {
         name: ''
     },
     mainScreen: [
-        {img: canvas, desktop: canvasD, mobile: canvasM, name: "Canvas", type: "Fine Art Canvas"},
-        {img: hadidja, desktop: hadidjaD, mobile: hadidjaM, name: "hadidja-sweets", type: 'Hadidja Sweets'},
-        {img: gb, link: 'https://github.com/okmic', desktop: null, mobile: null, name: "", type: 'GitHub' }
+        { img: canvas, desktop: canvasD, mobile: canvasM, name: "Canvas", type: "Fine Art Canvas" },
+        { img: hadidja, desktop: hadidjaD, mobile: hadidjaM, name: "hadidja-sweets", type: 'Hadidja Sweets' },
+        { img: gb, link: 'https://github.com/okmic', desktop: null, mobile: null, name: "", type: 'GitHub' }
     ]
 } 

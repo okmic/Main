@@ -43,6 +43,7 @@ export type CVDataType = {
 }
 
 export type SkillsType = {
+    title: string
     skill: Array<{
         img: string
         descr: string 

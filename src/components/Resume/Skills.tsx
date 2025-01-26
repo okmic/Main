@@ -26,19 +26,19 @@ const Skill: React.FC<SkillType> = ({ image, description, color }) => <SkillItem
 type PropsType = {
     skills: SkillsType
     color: string
-  }
+}
 
 export const Skills: React.FC<PropsType> = (
     { skills, color }) => <Wrapper>
-      <Item>
-        <Description>
-            {skills.skill.map((s, index) => <Skill
-                key={index}
-                color={color}
-                image={s.img}
-                description={s.descr}
-            />)}
-        </Description>
-</Item>
-</Wrapper>
+        <Item>
+            <Description>
+                {skills.skill.map((s, index) => <Skill
+                    key={index}
+                    color={color}
+                    image={s.img}
+                    description={s.descr}
+                />)}
+            </Description>
+        </Item>
+    </Wrapper>
 
