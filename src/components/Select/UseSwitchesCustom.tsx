@@ -20,9 +20,9 @@ export default function UseSwitchesCustom ()  {
   }
 
   return (
-    <SwitchRoot className={clsx(stateClasses)} onClick={onChange}>
+    <SwitchRoot aria-readonly  className={clsx(stateClasses)} onClick={onChange}>
       <SwitchTrack>
-        <SwitchThumb  sx={{backgroundColor: color}} className={clsx(stateClasses)} />
+        <SwitchThumb  aria-readonly sx={{backgroundColor: color}} className={clsx(stateClasses)} />
       </SwitchTrack>
       <SwitchInput />
     </SwitchRoot>
