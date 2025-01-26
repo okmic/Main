@@ -9,16 +9,11 @@
 <h2 align="center">✨ About Me</h2>
 <p align="justify">I am a passionate software developer with a strong focus on creating innovative solutions. Since 2017, I have been actively engaged in software development and maintenance, working on various projects that have enriched my experience and skills.</p>
 
-<h2 align="center">✨ Work Experience (2017 - Present)</h2>
+<h2 align="center">✨ Work Experience</h2>
 <ul>
-    <li><em>CRM Systems:</em> Developed comprehensive ecosystems for managing customer data, enhancing client interactions.</li>
-    <li><em>Databases:</em> Designed and optimized structures for high performance and reliability.</li>
-    <li><em>Web Applications:</em> Crafted intuitive interfaces for engaging user interactions.</li>
-    <li><em>Mobile Applications:</em> Developed mobile solutions for on-the-go access to information and services.</li>
-    <li><em>Satellite Data:</em> Analyzed and processed satellite data for insights into climate and ecological changes.</li>
-    <li><em>Fire Safety Software:</em> Contributed to systems ensuring safety for people and property.</li>
-    <li><em>Emergency Notification Systems:</em> Implemented solutions for rapid communication in emergencies.</li>
-    <li><em>Prompt Engineering:</em> Currently studying prompt engineering and working with GPT models for effective queries.</li>
+    <li><em>Digital company:</em> Working in an organization focused on digital technologies, developing high-performance, scalable applications on a microservices architecture (2022 - Present).</li>
+    <li><em>North Caucasus State Academy (SKGA):</em> Automation of internal processes using Python and Node.js, training employees and students in relational database management, and enhancing qualifications in working with local, secure networks (2019 - 2021).</li>
+    <li><em>Outsourcing Development:</em> Completed 40+ outsourcing projects in various fields, actively participated in open-source projects on GitHub, and engaged in numerous hackathons.</li>
 </ul>
 
 <h2 align="center">🎓 Education</h2>
@@ -33,7 +28,7 @@
    <td align="center"><b>GO</b></td>
    <td align="center"><b>Node.js</b></td>
    <td align="center"><b>Python</b></td>
-   <td align="center"><b>SQL</b></td>
+   <td align="center"><b>Unix-like system</b></td>
    <td align="center"><b>REACT</b></td>
    <td align="center"><b>Docker</b></td>
    <td align="center"><b>Kubernetes</b></td>
