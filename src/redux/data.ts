@@ -5,11 +5,10 @@ import node from '../img/skills/nodejs.png'
 import react from '../img/skills/react.png'
 import go from '../img/skills/go.png'
 import unix from '../img/skills/unix.png'
-import docker from "../img/skills/docker.svg"
+import docker from "../img/skills/docker.png"
 import python from "../img/skills/python.png"
 import kubernetes from "../img/skills/kubernetes.svg"
 import microservices from "../img/skills/microservices.png"
-
 import canvasD from '../img/canvasPage.png'
 import canvasM from '../img/canvasMobile.png'
 import hadidjaD from '../img/hadidjaPage.png'
@@ -34,7 +33,7 @@ export const DataEng: dataType = {
     links: {
         cv: 'CV',
         projects: "Projects",
-        contacts: "📫 Contacts"
+        contacts: "Contacts"
     },
     footer: {
         phone: "Call me",
@@ -118,7 +117,7 @@ export const DataEng: dataType = {
     },
 
     projects: {
-        title: 'Projects',
+        title: '',
         projects: [
             {
                 title: 'GitHub',
@@ -149,7 +148,7 @@ export const DataRu: dataType = {
         name: "Михаил Охтов"
     },
     links: {
-        cv: 'Резюме',
+        cv: 'Опыт',
         projects: "Проекты",
         contacts: "Контакты"
     },

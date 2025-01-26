@@ -55,6 +55,7 @@ type PropsType = {
 const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen, colors }) => {
 
     const state = useSelector((state: stateType) => state.appReducer.language.links)
+    const stateTheme = useSelector((state: stateType) => state.appReducer.theme.status)
     
     return (
         <Root>
@@ -95,7 +96,7 @@ const SwipeableEdgeDrawer: React.FC<PropsType> = ({ open, toggleDrawer, setOpen,
                         backgroundColor: colors.color
                     }} />
                     <Navigation >
-                        <WrapperLinks links={state} setOpen={setOpen} color={colors.color} />
+                        <WrapperLinks links={state} setOpen={setOpen} theme={stateTheme} />
                     </Navigation>
                     <Switch>
                     <SelectSwitches colors={colors} />

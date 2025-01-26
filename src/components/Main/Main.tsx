@@ -11,14 +11,13 @@ export default memo(function Main() {
 
     const main = useSelector((state: stateType) => state.appReducer.language.main)
     const links = useSelector((state: stateType) => state.appReducer.language.links)
-    const color = useSelector((state: stateType) => state.appReducer.theme.styles.app.color)
+    const theme = useSelector((state: stateType) => state.appReducer.theme)
 
     const lang = main.title === "Hello"
 
     const fontSize = lang ? "95px" : "70px"
 
     return <Content>
-
         <ContentMe>
             <Me>
                 <img src={me} alt="me" />
@@ -30,7 +29,7 @@ export default memo(function Main() {
                     <i>{main.descr}</i>
                 </Title>
                 <Links>
-                    <WrapperLinks color={color} links={links} />
+                    <WrapperLinks links={links} theme={theme.status} />
                 </Links>
             </Description>
 

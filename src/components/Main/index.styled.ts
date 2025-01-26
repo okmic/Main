@@ -71,47 +71,52 @@ export const LinkBall = styled.div<{ color?: string, background?: string, fontFa
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: ${(props) => props.color ? props.color : "black"};
-    text-shadow: 0 0 1em black;
+    color: ${(props) => props.color ? props.color : "white"};
     font-size: 15px;
     font-weight: 600;
     width: 115px;
     height: 115px;
     padding: 5px;
     border-radius: 50%;
-    background-color: ${(props) => props.background ? props.background : "rgb(238, 163, 2)"};
-    border: 1px solid ${(props) => props.color ? props.color : "black"};;
+    background: ${(props) => props.background ? props.background : "linear-gradient(145deg, rgb(238, 163, 2), rgb(255, 204, 0))"};
+    border: 1px solid ${(props) => props.color ? props.color : "black"};
     margin-right: 15px;
-    transition: 0.7s;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), 
+                inset 5px 5px 10px rgba(255, 255, 255, 0.3);
+    transition: background 0.5s, transform 0.3s;
+
     &:hover {
-        transition: 0.5s;
         background-color: #bbbbbb;
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     }
-@media screen and (max-width: 750px) {
-    width: 75px;
-    height: 75px;
-}
-@media screen and (max-width: 650px) {
-    width:  100px;
-    height: 100px;
-}
-@media screen and (max-width: 350px) {
-    width: 86px;
-    height: 86px;
-}
-@media screen and (max-width: 300px) {
-    width: 70px;
-    height: 70px;
-}
-@media screen and (max-height: 450px) {
-    max-width: 70px;
-    max-height: 70px;
-}
-@media screen and (max-height: 300px) {
-    width: 70px;
-    height: 30px;
-}
+
+    @media screen and (max-width: 750px) {
+        width: 75px;
+        height: 75px;
+    }
+    @media screen and (max-width: 650px) {
+        width: 100px;
+        height: 100px;
+    }
+    @media screen and (max-width: 350px) {
+        width: 86px;
+        height: 86px;
+    }
+    @media screen and (max-width: 300px) {
+        width: 70px;
+        height: 70px;
+    }
+    @media screen and (max-height: 450px) {
+        max-width: 70px;
+        max-height: 70px;
+    }
+    @media screen and (max-height: 300px) {
+        width: 70px;
+        height: 30px;
+    }
 `
+
 export const BallHeader = styled.span`
     background-color: rgb(238, 163, 2);
     width: 21px;
