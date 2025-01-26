@@ -18,6 +18,7 @@ type RoutesType = {
 
 function App() {
 
+  
   useEffect(() => {
     const handleAnchorClick = (event: any) => {
         const targetId = event.currentTarget.getAttribute('href')
