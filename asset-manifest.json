@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/okmic/static/js/main.173df4d3.js",
+    "main.js": "/okmic/static/js/main.48b36b7a.js",
     "static/js/787.182fd71d.chunk.js": "/okmic/static/js/787.182fd71d.chunk.js",
     "static/media/hadidjaMobile.png": "/okmic/static/media/hadidjaMobile.e2221a57f94b4c79f8f8.png",
     "static/media/hadidjaPage.png": "/okmic/static/media/hadidjaPage.30de54ff9c9b9716f750.png",
@@ -18,10 +18,10 @@
     "static/media/kubernetes.svg": "/okmic/static/media/kubernetes.69f6c4411fc98e5e50dafe77f8ea8ea1.svg",
     "static/media/docker.svg": "/okmic/static/media/docker.9e17371a75cda52d2dd0c9212c1265cd.svg",
     "index.html": "/okmic/index.html",
-    "main.173df4d3.js.map": "/okmic/static/js/main.173df4d3.js.map",
+    "main.48b36b7a.js.map": "/okmic/static/js/main.48b36b7a.js.map",
     "787.182fd71d.chunk.js.map": "/okmic/static/js/787.182fd71d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.173df4d3.js"
+    "static/js/main.48b36b7a.js"
   ]
 }
