@@ -61,6 +61,7 @@ export const Links = styled.nav`
 width: 100%;
 display: flex;
 animation: balls 1.1s 1 forwards;
+margin: 0 0 1.5rem 0;
 @keyframes balls {
     0% { transform: translateX(15vw); }
     100% { transform: translateX(0);}
