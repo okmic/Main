@@ -25,7 +25,7 @@ export const DataEng: dataType = {
     main: {
         title: '👋',
         about: '✨ About Me',
-        descr: "Development is not just a job; it’s an opportunity to create solutions that transform everyday life. Since 2017, I have been working in software development, exploring various technologies and approaches. Each project opens new horizons for learning and creative thinking. These challenges inspire me to grow and evolve, and I strive to ensure that my work brings real value to users and society."
+        descr: "Development is not just a job, it’s an opportunity to create solutions that transform everyday life. Since 2017, I have been working in software development, exploring various technologies and approaches. Each project opens new horizons for learning and creative thinking. These challenges inspire me to grow and evolve, and I strive to ensure that my work brings real value to users and society."
     },
     header: {
         name: "Michael Okhtov"
@@ -142,7 +142,7 @@ export const DataRu: dataType = {
     main: {
         title: '👋',
         about: '✨ Обо мне',
-        descr: "Разработка — это не просто работа, а шанс создавать решения, которые меняют повседневную жизнь. С 2017 года я занимаюсь программным обеспечением, исследуя различные технологии и подходы. Каждый проект открывает новые горизонты для обучения и нестандартного мышления. Эти вызовы вдохновляют меня расти и развиваться, и я стремлюсь, чтобы мои разработки приносили реальную пользу пользователям и обществу."
+        descr: "Программная инженерия — это не просто работа, а шанс создавать решения, которые меняют повседневную жизнь. С 2017 года я занимаюсь программным обеспечением, исследуя различные технологии и подходы. Каждый проект открывает новые горизонты для обучения и нестандартного мышления. Эти вызовы вдохновляют меня расти и развиваться, и я стремлюсь, чтобы мои разработки приносили реальную пользу пользователям и обществу."
     },
     header: {
         name: "Михаил Охтов"
