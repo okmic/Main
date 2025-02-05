@@ -44,7 +44,7 @@
 
 <h2 align="center">📫 Contacts </h2>
 <p align="center">
-  <a href="mailto:okmic.g@gmail.com">
+  <a href="mailto:okmic.dev@gmail.com">
     <img align="center" src="https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg" width="55" height="50" alt="Mail" />
   </a>
   &nbsp;&nbsp;&nbsp;
